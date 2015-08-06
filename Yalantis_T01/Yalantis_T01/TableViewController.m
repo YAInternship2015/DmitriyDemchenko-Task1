@@ -29,7 +29,7 @@ static NSString *const ReuseIdentifier = @"ReuseCell";
     
     self.tableView.contentInset = UIEdgeInsetsMake(20.f, 0.f, 0.f, 0.f);
     
-    self.imagesArray = [[NSArray alloc] initWithObjects:@"Daisy", @"Donald", @"Goofy", @"Jerry", @"Lion", @"Mickey", @"Minnie", @"Monkey", @"Pluto", @"Tweety", nil];
+    self.imagesArray = @[@"Daisy", @"Donald", @"Goofy", @"Jerry", @"Lion", @"Mickey", @"Minnie", @"Monkey", @"Pluto", @"Tweety"];
 }
 
 #pragma mark - UITableViewDataSource
@@ -43,7 +43,7 @@ static NSString *const ReuseIdentifier = @"ReuseCell";
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReuseIdentifier forIndexPath:indexPath];
     
-    NSString *item = [self.imagesArray objectAtIndex:indexPath.row];
+    NSString *item = self.imagesArray[indexPath.row];
     
     cell.imageView.image = [UIImage imageNamed:item];
     cell.textLabel.text = item;
