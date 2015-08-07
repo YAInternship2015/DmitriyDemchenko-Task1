@@ -1,18 +1,18 @@
 //
-//  AppDelegate.m
+//  DDAppDelegate.m
 //  Yalantis_T01
 //
 //  Created by Dmitriy Demchenko on 7/31/15.
 //  Copyright (c) 2015 Dmitriy Demchenko. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "DDAppDelegate.h"
 
-@interface AppDelegate ()
+@interface DDAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation DDAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

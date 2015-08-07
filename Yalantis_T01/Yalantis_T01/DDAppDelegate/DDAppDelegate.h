@@ -1,5 +1,5 @@
 //
-//  TableViewController.h
+//  DDAppDelegate.h
 //  Yalantis_T01
 //
 //  Created by Dmitriy Demchenko on 7/31/15.
@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UITableViewController
+@interface DDAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
 
 @end
+

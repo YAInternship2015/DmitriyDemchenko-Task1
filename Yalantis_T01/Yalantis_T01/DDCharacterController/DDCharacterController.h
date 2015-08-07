@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  DDCharacterController.h
 //  Yalantis_T01
 //
 //  Created by Dmitriy Demchenko on 7/31/15.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface DDCharacterController : UITableViewController
 
 @end
-

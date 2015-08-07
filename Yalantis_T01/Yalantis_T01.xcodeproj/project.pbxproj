@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2C03CA631B6C03DF00782D8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C03CA621B6C03DF00782D8E /* main.m */; };
-		2C03CA661B6C03DF00782D8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C03CA651B6C03DF00782D8E /* AppDelegate.m */; };
 		2C03CA6C1B6C03DF00782D8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C03CA6A1B6C03DF00782D8E /* Main.storyboard */; };
 		2C03CA6E1B6C03DF00782D8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C03CA6D1B6C03DF00782D8E /* Images.xcassets */; };
 		2C03CA711B6C03DF00782D8E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C03CA6F1B6C03DF00782D8E /* LaunchScreen.xib */; };
 		2C03CA7D1B6C03DF00782D8E /* Yalantis_T01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C03CA7C1B6C03DF00782D8E /* Yalantis_T01Tests.m */; };
-		2C03CA881B6C043400782D8E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C03CA871B6C043400782D8E /* TableViewController.m */; };
+		2C990F8E1B7534A7001EAFA1 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990F8D1B7534A7001EAFA1 /* DDAppDelegate.m */; };
+		2C990F9F1B753942001EAFA1 /* DDCharacterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990F9D1B753942001EAFA1 /* DDCharacterCell.m */; };
+		2C990FA01B753942001EAFA1 /* DDCharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C990F9E1B753942001EAFA1 /* DDCharacterCell.xib */; };
+		2C990FA31B753E87001EAFA1 /* DDCharacterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FA21B753E87001EAFA1 /* DDCharacterController.m */; };
+		2C990FA71B753EAC001EAFA1 /* Characters.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FA61B753EAC001EAFA1 /* Characters.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +33,21 @@
 		2C03CA5D1B6C03DF00782D8E /* Yalantis_T01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yalantis_T01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C03CA611B6C03DF00782D8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C03CA621B6C03DF00782D8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2C03CA641B6C03DF00782D8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2C03CA651B6C03DF00782D8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2C03CA6B1B6C03DF00782D8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C03CA6D1B6C03DF00782D8E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C03CA701B6C03DF00782D8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2C03CA761B6C03DF00782D8E /* Yalantis_T01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Yalantis_T01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C03CA7B1B6C03DF00782D8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C03CA7C1B6C03DF00782D8E /* Yalantis_T01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Yalantis_T01Tests.m; sourceTree = "<group>"; };
-		2C03CA861B6C043400782D8E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		2C03CA871B6C043400782D8E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		2C990F8C1B7534A7001EAFA1 /* DDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAppDelegate.h; path = DDAppDelegate/DDAppDelegate.h; sourceTree = "<group>"; };
+		2C990F8D1B7534A7001EAFA1 /* DDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAppDelegate.m; path = DDAppDelegate/DDAppDelegate.m; sourceTree = "<group>"; };
+		2C990F9C1B753942001EAFA1 /* DDCharacterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCharacterCell.h; path = DDCharacterCell/DDCharacterCell.h; sourceTree = "<group>"; };
+		2C990F9D1B753942001EAFA1 /* DDCharacterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCharacterCell.m; path = DDCharacterCell/DDCharacterCell.m; sourceTree = "<group>"; };
+		2C990F9E1B753942001EAFA1 /* DDCharacterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DDCharacterCell.xib; path = DDCharacterCell/DDCharacterCell.xib; sourceTree = "<group>"; };
+		2C990FA11B753E87001EAFA1 /* DDCharacterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCharacterController.h; path = DDCharacterController/DDCharacterController.h; sourceTree = "<group>"; };
+		2C990FA21B753E87001EAFA1 /* DDCharacterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCharacterController.m; path = DDCharacterController/DDCharacterController.m; sourceTree = "<group>"; };
+		2C990FA51B753EAC001EAFA1 /* Characters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Characters.h; sourceTree = "<group>"; };
+		2C990FA61B753EAC001EAFA1 /* Characters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Characters.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +89,13 @@
 		2C03CA5F1B6C03DF00782D8E /* Yalantis_T01 */ = {
 			isa = PBXGroup;
 			children = (
-				2C03CA641B6C03DF00782D8E /* AppDelegate.h */,
-				2C03CA651B6C03DF00782D8E /* AppDelegate.m */,
-				2C03CA861B6C043400782D8E /* TableViewController.h */,
-				2C03CA871B6C043400782D8E /* TableViewController.m */,
+				2C990F8A1B753420001EAFA1 /* AppDelegate */,
+				2C990F8B1B753444001EAFA1 /* CharacterController */,
+				2C990F9B1B753913001EAFA1 /* CharacterCell */,
+				2C990FA41B753EAC001EAFA1 /* Characters */,
 				2C03CA6A1B6C03DF00782D8E /* Main.storyboard */,
-				2C03CA6D1B6C03DF00782D8E /* Images.xcassets */,
 				2C03CA6F1B6C03DF00782D8E /* LaunchScreen.xib */,
+				2C03CA6D1B6C03DF00782D8E /* Images.xcassets */,
 				2C03CA601B6C03DF00782D8E /* Supporting Files */,
 			);
 			path = Yalantis_T01;
@@ -117,6 +125,43 @@
 				2C03CA7B1B6C03DF00782D8E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C990F8A1B753420001EAFA1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2C990F8C1B7534A7001EAFA1 /* DDAppDelegate.h */,
+				2C990F8D1B7534A7001EAFA1 /* DDAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2C990F8B1B753444001EAFA1 /* CharacterController */ = {
+			isa = PBXGroup;
+			children = (
+				2C990FA11B753E87001EAFA1 /* DDCharacterController.h */,
+				2C990FA21B753E87001EAFA1 /* DDCharacterController.m */,
+			);
+			name = CharacterController;
+			sourceTree = "<group>";
+		};
+		2C990F9B1B753913001EAFA1 /* CharacterCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C990F9C1B753942001EAFA1 /* DDCharacterCell.h */,
+				2C990F9D1B753942001EAFA1 /* DDCharacterCell.m */,
+				2C990F9E1B753942001EAFA1 /* DDCharacterCell.xib */,
+			);
+			name = CharacterCell;
+			sourceTree = "<group>";
+		};
+		2C990FA41B753EAC001EAFA1 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				2C990FA51B753EAC001EAFA1 /* Characters.h */,
+				2C990FA61B753EAC001EAFA1 /* Characters.m */,
+			);
+			path = Characters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +246,7 @@
 			files = (
 				2C03CA6C1B6C03DF00782D8E /* Main.storyboard in Resources */,
 				2C03CA711B6C03DF00782D8E /* LaunchScreen.xib in Resources */,
+				2C990FA01B753942001EAFA1 /* DDCharacterCell.xib in Resources */,
 				2C03CA6E1B6C03DF00782D8E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C03CA661B6C03DF00782D8E /* AppDelegate.m in Sources */,
-				2C03CA881B6C043400782D8E /* TableViewController.m in Sources */,
+				2C990FA31B753E87001EAFA1 /* DDCharacterController.m in Sources */,
+				2C990FA71B753EAC001EAFA1 /* Characters.m in Sources */,
 				2C03CA631B6C03DF00782D8E /* main.m in Sources */,
+				2C990F8E1B7534A7001EAFA1 /* DDAppDelegate.m in Sources */,
+				2C990F9F1B753942001EAFA1 /* DDCharacterCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +464,7 @@
 				2C03CA821B6C03DF00782D8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C03CA831B6C03DF00782D8E /* Build configuration list for PBXNativeTarget "Yalantis_T01Tests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +473,7 @@
 				2C03CA851B6C03DF00782D8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

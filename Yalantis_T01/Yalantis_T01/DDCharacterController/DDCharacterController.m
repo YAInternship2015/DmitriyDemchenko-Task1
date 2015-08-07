@@ -1,5 +1,5 @@
 //
-//  TableViewController.m
+//  DDCharacterController.m
 //  Yalantis_T01
 //
 //  Created by Dmitriy Demchenko on 7/31/15.
@@ -9,17 +9,18 @@
 #define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.f && [[[UIDevice currentDevice] systemVersion] floatValue] < 8.f)
 #define IOS8_AND_LETER ([[[UIDevice currentDevice] systemVersion] compare:@"8" options:NSNumericSearch] != NSOrderedAscending)
 
-#import "TableViewController.h"
+#import "DDCharacterController.h"
+#import "DDCharacterCell.h"
+#import "Characters.h"
 
-@interface TableViewController ()
+@interface DDCharacterController ()
 
-@property (strong, nonatomic) NSArray *imagesArray;
+@property (strong, nonatomic) NSArray *dataSourceArray;
 
 @end
 
-static NSString *const ReuseIdentifier = @"ReuseCell";
 
-@implementation TableViewController
+@implementation DDCharacterController
 
 #pragma mark - Life cycle
 
@@ -29,24 +30,26 @@ static NSString *const ReuseIdentifier = @"ReuseCell";
     
     self.tableView.contentInset = UIEdgeInsetsMake(20.f, 0.f, 0.f, 0.f);
     
-    self.imagesArray = @[@"Daisy", @"Donald", @"Goofy", @"Jerry", @"Lion", @"Mickey", @"Minnie", @"Monkey", @"Pluto", @"Tweety"];
+    Characters *items = [[Characters alloc] init];
+    self.dataSourceArray = items.cartoonCharacters;
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.imagesArray count];
+    return [self.dataSourceArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReuseIdentifier forIndexPath:indexPath];
+    DDCharacterCell *cell = [tableView dequeueReusableCellWithIdentifier:[DDCharacterCell reuseIdentifier]];
     
-    NSString *item = self.imagesArray[indexPath.row];
+    if (!cell) {
+        cell = [DDCharacterCell initCharacterCell];
+    }
     
-    cell.imageView.image = [UIImage imageNamed:item];
-    cell.textLabel.text = item;
+    [cell configForItem:self.dataSourceArray[indexPath.row]];
     
     return cell;
 }
