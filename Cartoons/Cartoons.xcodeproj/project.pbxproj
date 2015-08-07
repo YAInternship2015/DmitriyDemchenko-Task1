@@ -12,11 +12,12 @@
 		2C990FD11B753F63001EAFA1 /* CartoonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FD01B753F63001EAFA1 /* CartoonsTests.m */; };
 		2C990FEB1B753FA3001EAFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FE31B753FA3001EAFA1 /* Main.storyboard */; };
 		2C990FED1B753FA3001EAFA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FE51B753FA3001EAFA1 /* Images.xcassets */; };
-		2C990FFB1B754026001EAFA1 /* DDCharactersModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FF01B754026001EAFA1 /* DDCharactersModel.m */; };
 		2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FF31B754026001EAFA1 /* DDAppDelegate.m */; };
 		2C990FFD1B754026001EAFA1 /* DDCharacterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FF61B754026001EAFA1 /* DDCharacterCell.m */; };
 		2C990FFE1B754026001EAFA1 /* DDCharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FF71B754026001EAFA1 /* DDCharacterCell.xib */; };
 		2C990FFF1B754026001EAFA1 /* DDCharacterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FFA1B754026001EAFA1 /* DDCharacterController.m */; };
+		2C9910041B754676001EAFA1 /* DDCharactersModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9910031B754676001EAFA1 /* DDCharactersModel.m */; };
+		2C9910061B75472E001EAFA1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2C9910051B75472E001EAFA1 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 		2C990FD01B753F63001EAFA1 /* CartoonsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartoonsTests.m; sourceTree = "<group>"; };
 		2C990FE31B753FA3001EAFA1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2C990FE51B753FA3001EAFA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2C990FEF1B754026001EAFA1 /* DDCharactersModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharactersModel.h; sourceTree = "<group>"; };
-		2C990FF01B754026001EAFA1 /* DDCharactersModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharactersModel.m; sourceTree = "<group>"; };
 		2C990FF21B754026001EAFA1 /* DDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAppDelegate.h; sourceTree = "<group>"; };
 		2C990FF31B754026001EAFA1 /* DDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAppDelegate.m; sourceTree = "<group>"; };
 		2C990FF51B754026001EAFA1 /* DDCharacterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharacterCell.h; sourceTree = "<group>"; };
@@ -48,6 +47,9 @@
 		2C990FF71B754026001EAFA1 /* DDCharacterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDCharacterCell.xib; sourceTree = "<group>"; };
 		2C990FF91B754026001EAFA1 /* DDCharacterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharacterController.h; sourceTree = "<group>"; };
 		2C990FFA1B754026001EAFA1 /* DDCharacterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterController.m; sourceTree = "<group>"; };
+		2C9910021B754676001EAFA1 /* DDCharactersModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharactersModel.h; sourceTree = "<group>"; };
+		2C9910031B754676001EAFA1 /* DDCharactersModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharactersModel.m; sourceTree = "<group>"; };
+		2C9910051B75472E001EAFA1 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = SupportingFiles/.gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				2C990FF11B754026001EAFA1 /* DDAppDelegate */,
-				2C990FEE1B754026001EAFA1 /* CharactersModel */,
+				2C9910011B754676001EAFA1 /* DDCharactersModel */,
 				2C990FF41B754026001EAFA1 /* DDCharacterCell */,
 				2C990FF81B754026001EAFA1 /* DDCharacterController */,
 				2C990FE31B753FA3001EAFA1 /* Main.storyboard */,
@@ -106,6 +108,7 @@
 			children = (
 				2C990FB51B753F63001EAFA1 /* Info.plist */,
 				2C990FB61B753F63001EAFA1 /* main.m */,
+				2C9910051B75472E001EAFA1 /* .gitignore */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -125,15 +128,6 @@
 				2C990FCF1B753F63001EAFA1 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2C990FEE1B754026001EAFA1 /* CharactersModel */ = {
-			isa = PBXGroup;
-			children = (
-				2C990FEF1B754026001EAFA1 /* DDCharactersModel.h */,
-				2C990FF01B754026001EAFA1 /* DDCharactersModel.m */,
-			);
-			path = CharactersModel;
 			sourceTree = "<group>";
 		};
 		2C990FF11B754026001EAFA1 /* DDAppDelegate */ = {
@@ -170,6 +164,15 @@
 				2C990FE51B753FA3001EAFA1 /* Images.xcassets */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		2C9910011B754676001EAFA1 /* DDCharactersModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C9910021B754676001EAFA1 /* DDCharactersModel.h */,
+				2C9910031B754676001EAFA1 /* DDCharactersModel.m */,
+			);
+			path = DDCharactersModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9910061B75472E001EAFA1 /* .gitignore in Resources */,
 				2C990FED1B753FA3001EAFA1 /* Images.xcassets in Resources */,
 				2C990FEB1B753FA3001EAFA1 /* Main.storyboard in Resources */,
 				2C990FFE1B754026001EAFA1 /* DDCharacterCell.xib in Resources */,
@@ -275,9 +279,9 @@
 			files = (
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
 				2C990FFD1B754026001EAFA1 /* DDCharacterCell.m in Sources */,
-				2C990FFB1B754026001EAFA1 /* DDCharactersModel.m in Sources */,
 				2C990FFF1B754026001EAFA1 /* DDCharacterController.m in Sources */,
 				2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */,
+				2C9910041B754676001EAFA1 /* DDCharactersModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
