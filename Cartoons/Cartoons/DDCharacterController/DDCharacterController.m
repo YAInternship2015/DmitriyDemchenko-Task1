@@ -1,6 +1,6 @@
 //
 //  DDCharacterController.m
-//  Yalantis_T01
+//  Cartoons
 //
 //  Created by Dmitriy Demchenko on 7/31/15.
 //  Copyright (c) 2015 Dmitriy Demchenko. All rights reserved.
@@ -11,7 +11,7 @@
 
 #import "DDCharacterController.h"
 #import "DDCharacterCell.h"
-#import "Characters.h"
+#import "DDCharactersModel.h"
 
 @interface DDCharacterController ()
 
@@ -30,7 +30,7 @@
     
     self.tableView.contentInset = UIEdgeInsetsMake(20.f, 0.f, 0.f, 0.f);
     
-    Characters *items = [[Characters alloc] init];
+    DDCharactersModel *items = [[DDCharactersModel alloc] init];
     self.dataSourceArray = items.cartoonCharacters;
 }
 

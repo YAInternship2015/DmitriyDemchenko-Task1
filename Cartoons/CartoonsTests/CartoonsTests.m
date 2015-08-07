@@ -1,19 +1,19 @@
 //
-//  Yalantis_T01Tests.m
-//  Yalantis_T01Tests
+//  CartoonsTests.m
+//  CartoonsTests
 //
-//  Created by Dmitriy Demchenko on 7/31/15.
+//  Created by Dmitriy Demchenko on 8/7/15.
 //  Copyright (c) 2015 Dmitriy Demchenko. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface Yalantis_T01Tests : XCTestCase
+@interface CartoonsTests : XCTestCase
 
 @end
 
-@implementation Yalantis_T01Tests
+@implementation CartoonsTests
 
 - (void)setUp {
     [super setUp];

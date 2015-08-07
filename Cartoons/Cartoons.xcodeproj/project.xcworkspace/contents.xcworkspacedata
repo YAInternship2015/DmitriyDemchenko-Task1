@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Yalantis_T01.xcodeproj">
+      location = "self:Cartoons.xcodeproj">
    </FileRef>
 </Workspace>

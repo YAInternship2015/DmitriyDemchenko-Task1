@@ -1,14 +1,14 @@
 //
 //  Characters.m
-//  Yalantis_T01
+//  Cartoons
 //
 //  Created by Dmitriy Demchenko on 8/7/15.
 //  Copyright (c) 2015 Dmitriy Demchenko. All rights reserved.
 //
 
-#import "Characters.h"
+#import "DDCharactersModel.h"
 
-@implementation Characters
+@implementation DDCharactersModel
 
 - (instancetype)init
 {
