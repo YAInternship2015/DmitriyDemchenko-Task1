@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1D93321B75C566000F4A32 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D93311B75C566000F4A32 /* .gitignore */; };
 		2C990FB71B753F63001EAFA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FB61B753F63001EAFA1 /* main.m */; };
 		2C990FC51B753F63001EAFA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FC31B753F63001EAFA1 /* LaunchScreen.xib */; };
 		2C990FD11B753F63001EAFA1 /* CartoonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FD01B753F63001EAFA1 /* CartoonsTests.m */; };
@@ -17,7 +18,6 @@
 		2C990FFE1B754026001EAFA1 /* DDCharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FF71B754026001EAFA1 /* DDCharacterCell.xib */; };
 		2C990FFF1B754026001EAFA1 /* DDCharacterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FFA1B754026001EAFA1 /* DDCharacterController.m */; };
 		2C9910041B754676001EAFA1 /* DDCharactersModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9910031B754676001EAFA1 /* DDCharactersModel.m */; };
-		2C9910061B75472E001EAFA1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2C9910051B75472E001EAFA1 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C1D93311B75C566000F4A32 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../../.gitignore; sourceTree = "<group>"; };
 		2C990FB11B753F63001EAFA1 /* Cartoons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cartoons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C990FB51B753F63001EAFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C990FB61B753F63001EAFA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		2C990FFA1B754026001EAFA1 /* DDCharacterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterController.m; sourceTree = "<group>"; };
 		2C9910021B754676001EAFA1 /* DDCharactersModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharactersModel.h; sourceTree = "<group>"; };
 		2C9910031B754676001EAFA1 /* DDCharactersModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharactersModel.m; sourceTree = "<group>"; };
-		2C9910051B75472E001EAFA1 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = SupportingFiles/.gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 			children = (
 				2C990FB51B753F63001EAFA1 /* Info.plist */,
 				2C990FB61B753F63001EAFA1 /* main.m */,
-				2C9910051B75472E001EAFA1 /* .gitignore */,
+				2C1D93311B75C566000F4A32 /* .gitignore */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -255,10 +255,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C9910061B75472E001EAFA1 /* .gitignore in Resources */,
 				2C990FED1B753FA3001EAFA1 /* Images.xcassets in Resources */,
 				2C990FEB1B753FA3001EAFA1 /* Main.storyboard in Resources */,
 				2C990FFE1B754026001EAFA1 /* DDCharacterCell.xib in Resources */,
+				2C1D93321B75C566000F4A32 /* .gitignore in Resources */,
 				2C990FC51B753F63001EAFA1 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
