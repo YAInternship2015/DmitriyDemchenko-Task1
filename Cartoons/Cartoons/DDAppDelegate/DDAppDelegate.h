@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#warning Не нашел .gitignore файла в корневом каталоге репозитория, добавьте его
-
 @interface DDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
