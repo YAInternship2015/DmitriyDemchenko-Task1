@@ -14,6 +14,7 @@
 {
     self = [super init];
     if (self) {
+#warning здесь нужно создавать объекты-модели
         _cartoonCharacters = @[@"Daisy", @"Donald", @"Goofy", @"Jerry", @"Lion", @"Mickey", @"Minnie", @"Monkey", @"Pluto", @"Tweety"];
     }
     return self;
