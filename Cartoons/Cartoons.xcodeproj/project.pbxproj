@@ -17,7 +17,8 @@
 		2C990FFD1B754026001EAFA1 /* DDCharacterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FF61B754026001EAFA1 /* DDCharacterCell.m */; };
 		2C990FFE1B754026001EAFA1 /* DDCharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FF71B754026001EAFA1 /* DDCharacterCell.xib */; };
 		2C990FFF1B754026001EAFA1 /* DDCharacterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FFA1B754026001EAFA1 /* DDCharacterController.m */; };
-		2C9910041B754676001EAFA1 /* DDCharactersModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9910031B754676001EAFA1 /* DDCharactersModel.m */; };
+		2C9910041B754676001EAFA1 /* DDCartoons.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9910031B754676001EAFA1 /* DDCartoons.m */; };
+		2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF1E041B7A5BDA0016135C /* DDDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,10 @@
 		2C990FF71B754026001EAFA1 /* DDCharacterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDCharacterCell.xib; sourceTree = "<group>"; };
 		2C990FF91B754026001EAFA1 /* DDCharacterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharacterController.h; sourceTree = "<group>"; };
 		2C990FFA1B754026001EAFA1 /* DDCharacterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterController.m; sourceTree = "<group>"; };
-		2C9910021B754676001EAFA1 /* DDCharactersModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharactersModel.h; sourceTree = "<group>"; };
-		2C9910031B754676001EAFA1 /* DDCharactersModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharactersModel.m; sourceTree = "<group>"; };
+		2C9910021B754676001EAFA1 /* DDCartoons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCartoons.h; sourceTree = "<group>"; };
+		2C9910031B754676001EAFA1 /* DDCartoons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCartoons.m; sourceTree = "<group>"; };
+		2CCF1E031B7A5BDA0016135C /* DDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDDataSource.h; path = DDDataSource/DDDataSource.h; sourceTree = "<group>"; };
+		2CCF1E041B7A5BDA0016135C /* DDDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDDataSource.m; path = DDDataSource/DDDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				2C990FF11B754026001EAFA1 /* DDAppDelegate */,
-				2C9910011B754676001EAFA1 /* DDCharactersModel */,
+				2CCF1E061B7A5BE30016135C /* DDDataSource */,
+				2C9910011B754676001EAFA1 /* DDCartoons */,
 				2C990FF41B754026001EAFA1 /* DDCharacterCell */,
 				2C990FF81B754026001EAFA1 /* DDCharacterController */,
 				2C990FE31B753FA3001EAFA1 /* Main.storyboard */,
@@ -166,13 +170,23 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		2C9910011B754676001EAFA1 /* DDCharactersModel */ = {
+		2C9910011B754676001EAFA1 /* DDCartoons */ = {
 			isa = PBXGroup;
 			children = (
-				2C9910021B754676001EAFA1 /* DDCharactersModel.h */,
-				2C9910031B754676001EAFA1 /* DDCharactersModel.m */,
+				2C9910021B754676001EAFA1 /* DDCartoons.h */,
+				2C9910031B754676001EAFA1 /* DDCartoons.m */,
 			);
+			name = DDCartoons;
 			path = DDCharactersModel;
+			sourceTree = "<group>";
+		};
+		2CCF1E061B7A5BE30016135C /* DDDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				2CCF1E031B7A5BDA0016135C /* DDDataSource.h */,
+				2CCF1E041B7A5BDA0016135C /* DDDataSource.m */,
+			);
+			name = DDDataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,9 +293,10 @@
 			files = (
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
 				2C990FFD1B754026001EAFA1 /* DDCharacterCell.m in Sources */,
+				2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */,
 				2C990FFF1B754026001EAFA1 /* DDCharacterController.m in Sources */,
 				2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */,
-				2C9910041B754676001EAFA1 /* DDCharactersModel.m in Sources */,
+				2C9910041B754676001EAFA1 /* DDCartoons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Cartoons/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -410,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Cartoons/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

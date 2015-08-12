@@ -10,11 +10,11 @@
 
 @interface DDCharacterCell : UITableViewCell
 
-#warning следующий метод не нужен, ячейка сама создается из одноименной xib'ы
+//#warning следующий метод не нужен, ячейка сама создается из одноименной xib'ы
 + (instancetype)initCharacterCell;
-+ (NSString *)reuseIdentifier;
+//+ (NSString *)reuseIdentifier;
 
-#warning когда создадите класс-модель, переименуйте метод. Например, модель называется Cartoon, и метод называется configWithCartoon:
-- (void)configForItem:(id)item;
+//#warning когда создадите класс-модель, переименуйте метод. Например, модель называется Cartoon, и метод называется configWithCartoon:
+- (void)configWithCartoons:(NSInteger)indexPath;
 
 @end

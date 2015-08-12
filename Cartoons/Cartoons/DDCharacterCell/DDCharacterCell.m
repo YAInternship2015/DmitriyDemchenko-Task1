@@ -7,6 +7,7 @@
 //
 
 #import "DDCharacterCell.h"
+#import "DDDataSource.h"
 
 @interface DDCharacterCell()
 
@@ -20,19 +21,18 @@
 
 + (instancetype)initCharacterCell
 {
-    NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:[self reuseIdentifier] owner:nil options:nil];
+    NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil];
     return nibObjects[0];
 }
 
-+ (NSString *)reuseIdentifier
+- (void)configWithCartoons:(NSInteger)indexPath
 {
-    return NSStringFromClass([self class]);
-}
-
-- (void)configForItem:(id)item
-{
+    NSString *item = [[DDDataSource sharedManager] objectFromModel:CartoonCharactersModel index:indexPath];
+    
     self.characterName.text = item;
     self.characterImame.image = [UIImage imageNamed:item];
 }
+
+
 
 @end
