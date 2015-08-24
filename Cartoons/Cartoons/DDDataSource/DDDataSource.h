@@ -8,15 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, ModelsArrayIndex) {
-    CartoonCharactersModel = 0
-};
+//typedef NS_ENUM(NSUInteger, ModelsArrayIndex) {
+//    CartoonCharactersModel = 0
+//};
 
 @interface DDDataSource : NSObject
 
-+ (DDDataSource *)sharedManager;
-
-- (NSInteger)countOfModel:(NSUInteger)model;
-- (id)objectFromModel:(NSUInteger)model index:(NSUInteger)index;
+- (NSArray *)getModels;
 
 @end

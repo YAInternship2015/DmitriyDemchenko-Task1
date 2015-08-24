@@ -8,16 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		2C1D93321B75C566000F4A32 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D93311B75C566000F4A32 /* .gitignore */; };
+		2C65E5A81B88887400FBCF1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5A61B88887400FBCF1E /* Images.xcassets */; };
+		2C65E5AA1B888EE800FBCF1E /* Characters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5A91B888EE800FBCF1E /* Characters.plist */; };
+		2C65E5BA1B88971500FBCF1E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5B91B88971500FBCF1E /* Default-568h@2x.png */; };
+		2C65E5C81B889A6900FBCF1E /* DDCharacterCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5C61B889A6900FBCF1E /* DDCharacterCollectionCell.m */; };
+		2C65E5CF1B889AD000FBCF1E /* DDCharacterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5CD1B889AD000FBCF1E /* DDCharacterTableCell.m */; };
+		2C65E5D01B889AD000FBCF1E /* DDCharacterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5CE1B889AD000FBCF1E /* DDCharacterTableCell.xib */; };
+		2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5D41B889B2F00FBCF1E /* DDCharacterCollectionController.m */; };
+		2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5D71B889B2F00FBCF1E /* DDCharacterTableController.m */; };
+		2C65E5E21B88AA1500FBCF1E /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5E01B88AA1500FBCF1E /* UIColor+RandomColor.m */; };
 		2C990FB71B753F63001EAFA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FB61B753F63001EAFA1 /* main.m */; };
 		2C990FC51B753F63001EAFA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FC31B753F63001EAFA1 /* LaunchScreen.xib */; };
 		2C990FD11B753F63001EAFA1 /* CartoonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FD01B753F63001EAFA1 /* CartoonsTests.m */; };
 		2C990FEB1B753FA3001EAFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FE31B753FA3001EAFA1 /* Main.storyboard */; };
-		2C990FED1B753FA3001EAFA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FE51B753FA3001EAFA1 /* Images.xcassets */; };
 		2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FF31B754026001EAFA1 /* DDAppDelegate.m */; };
-		2C990FFD1B754026001EAFA1 /* DDCharacterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FF61B754026001EAFA1 /* DDCharacterCell.m */; };
-		2C990FFE1B754026001EAFA1 /* DDCharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FF71B754026001EAFA1 /* DDCharacterCell.xib */; };
-		2C990FFF1B754026001EAFA1 /* DDCharacterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FFA1B754026001EAFA1 /* DDCharacterController.m */; };
-		2C9910041B754676001EAFA1 /* DDCartoons.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9910031B754676001EAFA1 /* DDCartoons.m */; };
+		2CCBD0401B88D4CB0079C75B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CCBD03F1B88D4CB0079C75B /* Info.plist */; };
 		2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF1E041B7A5BDA0016135C /* DDDataSource.m */; };
 /* End PBXBuildFile section */
 
@@ -33,24 +38,32 @@
 
 /* Begin PBXFileReference section */
 		2C1D93311B75C566000F4A32 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../../.gitignore; sourceTree = "<group>"; };
+		2C65E5A61B88887400FBCF1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2C65E5A91B888EE800FBCF1E /* Characters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Characters.plist; path = "Property List/Characters.plist"; sourceTree = "<group>"; };
+		2C65E5AB1B888F1F00FBCF1E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = SupportingFiles/Constants.h; sourceTree = "<group>"; };
+		2C65E5AD1B888F1F00FBCF1E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = SupportingFiles/PrefixHeader.pch; sourceTree = "<group>"; };
+		2C65E5B91B88971500FBCF1E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
+		2C65E5C51B889A6900FBCF1E /* DDCharacterCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCharacterCollectionCell.h; path = Cells/DDCharacterCollectionCell/DDCharacterCollectionCell.h; sourceTree = "<group>"; };
+		2C65E5C61B889A6900FBCF1E /* DDCharacterCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCharacterCollectionCell.m; path = Cells/DDCharacterCollectionCell/DDCharacterCollectionCell.m; sourceTree = "<group>"; };
+		2C65E5CC1B889AD000FBCF1E /* DDCharacterTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharacterTableCell.h; sourceTree = "<group>"; };
+		2C65E5CD1B889AD000FBCF1E /* DDCharacterTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterTableCell.m; sourceTree = "<group>"; };
+		2C65E5CE1B889AD000FBCF1E /* DDCharacterTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDCharacterTableCell.xib; sourceTree = "<group>"; };
+		2C65E5D31B889B2F00FBCF1E /* DDCharacterCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharacterCollectionController.h; sourceTree = "<group>"; };
+		2C65E5D41B889B2F00FBCF1E /* DDCharacterCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterCollectionController.m; sourceTree = "<group>"; };
+		2C65E5D61B889B2F00FBCF1E /* DDCharacterTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharacterTableController.h; sourceTree = "<group>"; };
+		2C65E5D71B889B2F00FBCF1E /* DDCharacterTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterTableController.m; sourceTree = "<group>"; };
+		2C65E5DF1B88AA1500FBCF1E /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
+		2C65E5E01B88AA1500FBCF1E /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
 		2C990FB11B753F63001EAFA1 /* Cartoons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cartoons.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C990FB51B753F63001EAFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C990FB61B753F63001EAFA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C990FC41B753F63001EAFA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2C990FCA1B753F63001EAFA1 /* CartoonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CartoonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C990FCF1B753F63001EAFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C990FD01B753F63001EAFA1 /* CartoonsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartoonsTests.m; sourceTree = "<group>"; };
 		2C990FE31B753FA3001EAFA1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2C990FE51B753FA3001EAFA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C990FF21B754026001EAFA1 /* DDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAppDelegate.h; sourceTree = "<group>"; };
 		2C990FF31B754026001EAFA1 /* DDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAppDelegate.m; sourceTree = "<group>"; };
-		2C990FF51B754026001EAFA1 /* DDCharacterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharacterCell.h; sourceTree = "<group>"; };
-		2C990FF61B754026001EAFA1 /* DDCharacterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterCell.m; sourceTree = "<group>"; };
-		2C990FF71B754026001EAFA1 /* DDCharacterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDCharacterCell.xib; sourceTree = "<group>"; };
-		2C990FF91B754026001EAFA1 /* DDCharacterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharacterController.h; sourceTree = "<group>"; };
-		2C990FFA1B754026001EAFA1 /* DDCharacterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterController.m; sourceTree = "<group>"; };
-		2C9910021B754676001EAFA1 /* DDCartoons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCartoons.h; sourceTree = "<group>"; };
-		2C9910031B754676001EAFA1 /* DDCartoons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCartoons.m; sourceTree = "<group>"; };
+		2CCBD03F1B88D4CB0079C75B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CCF1E031B7A5BDA0016135C /* DDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDDataSource.h; path = DDDataSource/DDDataSource.h; sourceTree = "<group>"; };
 		2CCF1E041B7A5BDA0016135C /* DDDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDDataSource.m; path = DDDataSource/DDDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +86,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C65E5A41B88887400FBCF1E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C65E5A61B88887400FBCF1E /* Images.xcassets */,
+				2C65E5B91B88971500FBCF1E /* Default-568h@2x.png */,
+				2C65E5A91B888EE800FBCF1E /* Characters.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2C65E5C41B889A0900FBCF1E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2C65E5CB1B889AD000FBCF1E /* DDCharacterTableCell */,
+				2C65E5CA1B889A7B00FBCF1E /* DDCharacterCollectionCell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		2C65E5CA1B889A7B00FBCF1E /* DDCharacterCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C65E5C51B889A6900FBCF1E /* DDCharacterCollectionCell.h */,
+				2C65E5C61B889A6900FBCF1E /* DDCharacterCollectionCell.m */,
+			);
+			name = DDCharacterCollectionCell;
+			sourceTree = "<group>";
+		};
+		2C65E5CB1B889AD000FBCF1E /* DDCharacterTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C65E5CC1B889AD000FBCF1E /* DDCharacterTableCell.h */,
+				2C65E5CD1B889AD000FBCF1E /* DDCharacterTableCell.m */,
+				2C65E5CE1B889AD000FBCF1E /* DDCharacterTableCell.xib */,
+			);
+			name = DDCharacterTableCell;
+			path = Cells/DDCharacterTableCell;
+			sourceTree = "<group>";
+		};
+		2C65E5D11B889B2F00FBCF1E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C65E5D51B889B2F00FBCF1E /* DDCharacterTableController */,
+				2C65E5D21B889B2F00FBCF1E /* DDCharacterCollectionController.h */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2C65E5D21B889B2F00FBCF1E /* DDCharacterCollectionController.h */ = {
+			isa = PBXGroup;
+			children = (
+				2C65E5D31B889B2F00FBCF1E /* DDCharacterCollectionController.h */,
+				2C65E5D41B889B2F00FBCF1E /* DDCharacterCollectionController.m */,
+			);
+			path = DDCharacterCollectionController.h;
+			sourceTree = "<group>";
+		};
+		2C65E5D51B889B2F00FBCF1E /* DDCharacterTableController */ = {
+			isa = PBXGroup;
+			children = (
+				2C65E5D61B889B2F00FBCF1E /* DDCharacterTableController.h */,
+				2C65E5D71B889B2F00FBCF1E /* DDCharacterTableController.m */,
+			);
+			path = DDCharacterTableController;
+			sourceTree = "<group>";
+		};
+		2C65E5DA1B88AA1500FBCF1E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2C65E5DE1B88AA1500FBCF1E /* UIColor+RandomColor */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2C65E5DE1B88AA1500FBCF1E /* UIColor+RandomColor */ = {
+			isa = PBXGroup;
+			children = (
+				2C65E5DF1B88AA1500FBCF1E /* UIColor+RandomColor.h */,
+				2C65E5E01B88AA1500FBCF1E /* UIColor+RandomColor.m */,
+			);
+			path = "UIColor+RandomColor";
+			sourceTree = "<group>";
+		};
 		2C990FA81B753F63001EAFA1 = {
 			isa = PBXGroup;
 			children = (
@@ -94,14 +190,14 @@
 		2C990FB31B753F63001EAFA1 /* Cartoons */ = {
 			isa = PBXGroup;
 			children = (
+				2C65E5DA1B88AA1500FBCF1E /* Categories */,
 				2C990FF11B754026001EAFA1 /* DDAppDelegate */,
 				2CCF1E061B7A5BE30016135C /* DDDataSource */,
-				2C9910011B754676001EAFA1 /* DDCartoons */,
-				2C990FF41B754026001EAFA1 /* DDCharacterCell */,
-				2C990FF81B754026001EAFA1 /* DDCharacterController */,
+				2C65E5D11B889B2F00FBCF1E /* Controllers */,
+				2C65E5C41B889A0900FBCF1E /* Cells */,
 				2C990FE31B753FA3001EAFA1 /* Main.storyboard */,
 				2C990FC31B753F63001EAFA1 /* LaunchScreen.xib */,
-				2C9910001B754043001EAFA1 /* Resources */,
+				2C65E5A41B88887400FBCF1E /* Resources */,
 				2C990FB41B753F63001EAFA1 /* Supporting Files */,
 			);
 			path = Cartoons;
@@ -110,8 +206,10 @@
 		2C990FB41B753F63001EAFA1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2C990FB51B753F63001EAFA1 /* Info.plist */,
+				2CCBD03F1B88D4CB0079C75B /* Info.plist */,
 				2C990FB61B753F63001EAFA1 /* main.m */,
+				2C65E5AB1B888F1F00FBCF1E /* Constants.h */,
+				2C65E5AD1B888F1F00FBCF1E /* PrefixHeader.pch */,
 				2C1D93311B75C566000F4A32 /* .gitignore */,
 			);
 			name = "Supporting Files";
@@ -141,43 +239,6 @@
 				2C990FF31B754026001EAFA1 /* DDAppDelegate.m */,
 			);
 			path = DDAppDelegate;
-			sourceTree = "<group>";
-		};
-		2C990FF41B754026001EAFA1 /* DDCharacterCell */ = {
-			isa = PBXGroup;
-			children = (
-				2C990FF51B754026001EAFA1 /* DDCharacterCell.h */,
-				2C990FF61B754026001EAFA1 /* DDCharacterCell.m */,
-				2C990FF71B754026001EAFA1 /* DDCharacterCell.xib */,
-			);
-			path = DDCharacterCell;
-			sourceTree = "<group>";
-		};
-		2C990FF81B754026001EAFA1 /* DDCharacterController */ = {
-			isa = PBXGroup;
-			children = (
-				2C990FF91B754026001EAFA1 /* DDCharacterController.h */,
-				2C990FFA1B754026001EAFA1 /* DDCharacterController.m */,
-			);
-			path = DDCharacterController;
-			sourceTree = "<group>";
-		};
-		2C9910001B754043001EAFA1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2C990FE51B753FA3001EAFA1 /* Images.xcassets */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		2C9910011B754676001EAFA1 /* DDCartoons */ = {
-			isa = PBXGroup;
-			children = (
-				2C9910021B754676001EAFA1 /* DDCartoons.h */,
-				2C9910031B754676001EAFA1 /* DDCartoons.m */,
-			);
-			name = DDCartoons;
-			path = DDCharactersModel;
 			sourceTree = "<group>";
 		};
 		2CCF1E061B7A5BE30016135C /* DDDataSource */ = {
@@ -269,11 +330,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C990FED1B753FA3001EAFA1 /* Images.xcassets in Resources */,
+				2CCBD0401B88D4CB0079C75B /* Info.plist in Resources */,
+				2C65E5D01B889AD000FBCF1E /* DDCharacterTableCell.xib in Resources */,
 				2C990FEB1B753FA3001EAFA1 /* Main.storyboard in Resources */,
-				2C990FFE1B754026001EAFA1 /* DDCharacterCell.xib in Resources */,
+				2C65E5A81B88887400FBCF1E /* Images.xcassets in Resources */,
 				2C1D93321B75C566000F4A32 /* .gitignore in Resources */,
+				2C65E5BA1B88971500FBCF1E /* Default-568h@2x.png in Resources */,
 				2C990FC51B753F63001EAFA1 /* LaunchScreen.xib in Resources */,
+				2C65E5AA1B888EE800FBCF1E /* Characters.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,12 +355,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C65E5C81B889A6900FBCF1E /* DDCharacterCollectionCell.m in Sources */,
+				2C65E5E21B88AA1500FBCF1E /* UIColor+RandomColor.m in Sources */,
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
-				2C990FFD1B754026001EAFA1 /* DDCharacterCell.m in Sources */,
 				2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */,
-				2C990FFF1B754026001EAFA1 /* DDCharacterController.m in Sources */,
+				2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */,
+				2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */,
+				2C65E5CF1B889AD000FBCF1E /* DDCharacterTableCell.m in Sources */,
 				2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */,
-				2C9910041B754676001EAFA1 /* DDCartoons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +480,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Cartoons/Info.plist;
+				GCC_PREFIX_HEADER = Cartoons/SupportingFiles/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/Cartoons/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,7 +492,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Cartoons/Info.plist;
+				GCC_PREFIX_HEADER = Cartoons/SupportingFiles/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/Cartoons/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

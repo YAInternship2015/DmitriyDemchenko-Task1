@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Daisy</string>
+		<key>imageName</key>
+		<string>Daisy</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Donald</string>
+		<key>imageName</key>
+		<string>Donald</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Goofy</string>
+		<key>imageName</key>
+		<string>Goofy</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Jerry</string>
+		<key>imageName</key>
+		<string>Jerry</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lion</string>
+		<key>imageName</key>
+		<string>Lion</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mickey</string>
+		<key>imageName</key>
+		<string>Mickey</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Minnie</string>
+		<key>imageName</key>
+		<string>Minnie</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Monkey</string>
+		<key>imageName</key>
+		<string>Monkey</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pluto</string>
+		<key>imageName</key>
+		<string>Pluto</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tweety</string>
+		<key>imageName</key>
+		<string>Tweety</string>
+	</dict>
+</array>
+</plist>

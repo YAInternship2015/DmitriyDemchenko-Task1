@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DDCharacterController : UITableViewController
+@interface DDCharacterTableController : UITableViewController
 
 @end

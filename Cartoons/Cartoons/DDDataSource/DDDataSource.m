@@ -7,45 +7,27 @@
 //
 
 #import "DDDataSource.h"
-#import "DDCartoons.h"
 
 @interface DDDataSource ()
 
-@property (strong, nonatomic) NSArray *modelsArray;
+@property (strong, nonatomic) NSArray *charactersArray;
 
 @end
 
 
 @implementation DDDataSource
 
-+ (DDDataSource *)sharedManager
-{
-    static DDDataSource *manager = nil;
-    static dispatch_once_t onceTaken;
-    dispatch_once (&onceTaken, ^{
-        manager = [[DDDataSource alloc] init];
-    });
-    return manager;
-}
-
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
-        DDCartoons *cartoon = [[DDCartoons alloc] init];
-        _modelsArray = @[[cartoon getCartoonCharacters]];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Characters" ofType:@"plist"];
+        _charactersArray = [NSArray arrayWithContentsOfFile:path];
     }
     return self;
 }
 
-- (id)objectFromModel:(NSUInteger)model index:(NSUInteger)index
-{
-    return [_modelsArray[model] objectAtIndex:index];
-}
-
-- (NSInteger)countOfModel:(NSUInteger)model
-{
-    return [_modelsArray[model] count];
+- (NSArray *)getModels {
+    return _charactersArray;
 }
 
 @end

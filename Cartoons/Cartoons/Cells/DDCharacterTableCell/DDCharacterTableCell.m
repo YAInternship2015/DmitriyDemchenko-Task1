@@ -6,10 +6,9 @@
 //  Copyright (c) 2015 Dmitriy Demchenko. All rights reserved.
 //
 
-#import "DDCharacterCell.h"
-#import "DDDataSource.h"
+#import "DDCharacterTableCell.h"
 
-@interface DDCharacterCell()
+@interface DDCharacterTableCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *characterImame;
 @property (weak, nonatomic) IBOutlet UILabel *characterName;
@@ -17,22 +16,16 @@
 @end
 
 
-@implementation DDCharacterCell
+@implementation DDCharacterTableCell
 
-+ (instancetype)initCharacterCell
-{
++ (instancetype)initCharacterTableCell {
     NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil];
     return nibObjects[0];
 }
 
-- (void)configWithCartoons:(NSInteger)indexPath
-{
-    NSString *item = [[DDDataSource sharedManager] objectFromModel:CartoonCharactersModel index:indexPath];
-    
-    self.characterName.text = item;
-    self.characterImame.image = [UIImage imageNamed:item];
+- (void)configWithCartoons:(NSDictionary *)model {
+    self.characterName.text = model[kName];
+    self.characterImame.image = [UIImage imageNamed:model[kImageName]];
 }
-
-
 
 @end
