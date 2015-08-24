@@ -51,6 +51,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="k0b-yP-E3W">
+                        <barButtonItem key="leftBarButtonItem" image="CollectionViewIcon" id="60w-lL-5kl"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hzb-65-DLh"/>
                     </navigationItem>
                 </viewController>
@@ -174,4 +175,7 @@
             <point key="canvasLocation" x="536" y="-1014"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CollectionViewIcon" width="32" height="32"/>
+    </resources>
 </document>
