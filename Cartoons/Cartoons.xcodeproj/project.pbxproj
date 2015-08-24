@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C1D93321B75C566000F4A32 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2C1D93311B75C566000F4A32 /* .gitignore */; };
 		2C65E5A81B88887400FBCF1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5A61B88887400FBCF1E /* Images.xcassets */; };
 		2C65E5AA1B888EE800FBCF1E /* Characters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5A91B888EE800FBCF1E /* Characters.plist */; };
 		2C65E5BA1B88971500FBCF1E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5B91B88971500FBCF1E /* Default-568h@2x.png */; };
@@ -22,6 +21,8 @@
 		2C990FD11B753F63001EAFA1 /* CartoonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FD01B753F63001EAFA1 /* CartoonsTests.m */; };
 		2C990FEB1B753FA3001EAFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FE31B753FA3001EAFA1 /* Main.storyboard */; };
 		2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FF31B754026001EAFA1 /* DDAppDelegate.m */; };
+		2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C997EAB1B8B308E00EB2E74 /* DDContainerViewController.m */; };
+		2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C997EAF1B8B321000EB2E74 /* DDAddCharacterController.m */; };
 		2CCBD0401B88D4CB0079C75B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CCBD03F1B88D4CB0079C75B /* Info.plist */; };
 		2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF1E041B7A5BDA0016135C /* DDDataSource.m */; };
 /* End PBXBuildFile section */
@@ -37,7 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C1D93311B75C566000F4A32 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../../.gitignore; sourceTree = "<group>"; };
 		2C65E5A61B88887400FBCF1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C65E5A91B888EE800FBCF1E /* Characters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Characters.plist; path = "Property List/Characters.plist"; sourceTree = "<group>"; };
 		2C65E5AB1B888F1F00FBCF1E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = SupportingFiles/Constants.h; sourceTree = "<group>"; };
@@ -63,6 +63,10 @@
 		2C990FE31B753FA3001EAFA1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2C990FF21B754026001EAFA1 /* DDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAppDelegate.h; sourceTree = "<group>"; };
 		2C990FF31B754026001EAFA1 /* DDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAppDelegate.m; sourceTree = "<group>"; };
+		2C997EAA1B8B308E00EB2E74 /* DDContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDContainerViewController.h; path = DDContainerViewController/DDContainerViewController.h; sourceTree = "<group>"; };
+		2C997EAB1B8B308E00EB2E74 /* DDContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDContainerViewController.m; path = DDContainerViewController/DDContainerViewController.m; sourceTree = "<group>"; };
+		2C997EAE1B8B321000EB2E74 /* DDAddCharacterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAddCharacterController.h; path = DDAddCharacterController/DDAddCharacterController.h; sourceTree = "<group>"; };
+		2C997EAF1B8B321000EB2E74 /* DDAddCharacterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAddCharacterController.m; path = DDAddCharacterController/DDAddCharacterController.m; sourceTree = "<group>"; };
 		2CCBD03F1B88D4CB0079C75B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CCF1E031B7A5BDA0016135C /* DDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDDataSource.h; path = DDDataSource/DDDataSource.h; sourceTree = "<group>"; };
 		2CCF1E041B7A5BDA0016135C /* DDDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDDataSource.m; path = DDDataSource/DDDataSource.m; sourceTree = "<group>"; };
@@ -128,8 +132,10 @@
 		2C65E5D11B889B2F00FBCF1E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2C997EAD1B8B309400EB2E74 /* DDContainerViewController */,
 				2C65E5D51B889B2F00FBCF1E /* DDCharacterTableController */,
 				2C65E5D21B889B2F00FBCF1E /* DDCharacterCollectionController.h */,
+				2C997EB11B8B321400EB2E74 /* DDAddCharacterController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,7 +216,6 @@
 				2C990FB61B753F63001EAFA1 /* main.m */,
 				2C65E5AB1B888F1F00FBCF1E /* Constants.h */,
 				2C65E5AD1B888F1F00FBCF1E /* PrefixHeader.pch */,
-				2C1D93311B75C566000F4A32 /* .gitignore */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -239,6 +244,24 @@
 				2C990FF31B754026001EAFA1 /* DDAppDelegate.m */,
 			);
 			path = DDAppDelegate;
+			sourceTree = "<group>";
+		};
+		2C997EAD1B8B309400EB2E74 /* DDContainerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C997EAA1B8B308E00EB2E74 /* DDContainerViewController.h */,
+				2C997EAB1B8B308E00EB2E74 /* DDContainerViewController.m */,
+			);
+			name = DDContainerViewController;
+			sourceTree = "<group>";
+		};
+		2C997EB11B8B321400EB2E74 /* DDAddCharacterController */ = {
+			isa = PBXGroup;
+			children = (
+				2C997EAE1B8B321000EB2E74 /* DDAddCharacterController.h */,
+				2C997EAF1B8B321000EB2E74 /* DDAddCharacterController.m */,
+			);
+			name = DDAddCharacterController;
 			sourceTree = "<group>";
 		};
 		2CCF1E061B7A5BE30016135C /* DDDataSource */ = {
@@ -334,7 +357,6 @@
 				2C65E5D01B889AD000FBCF1E /* DDCharacterTableCell.xib in Resources */,
 				2C990FEB1B753FA3001EAFA1 /* Main.storyboard in Resources */,
 				2C65E5A81B88887400FBCF1E /* Images.xcassets in Resources */,
-				2C1D93321B75C566000F4A32 /* .gitignore in Resources */,
 				2C65E5BA1B88971500FBCF1E /* Default-568h@2x.png in Resources */,
 				2C990FC51B753F63001EAFA1 /* LaunchScreen.xib in Resources */,
 				2C65E5AA1B888EE800FBCF1E /* Characters.plist in Resources */,
@@ -360,7 +382,9 @@
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
 				2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */,
 				2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */,
+				2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */,
 				2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */,
+				2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */,
 				2C65E5CF1B889AD000FBCF1E /* DDCharacterTableCell.m in Sources */,
 				2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */,
 			);
