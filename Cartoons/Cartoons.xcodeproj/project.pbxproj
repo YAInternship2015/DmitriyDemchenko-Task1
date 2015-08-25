@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C1727F81B8C24610088402C /* DDMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1727F71B8C24610088402C /* DDMainController.m */; };
+		2C2CA5201B8C70F800474359 /* NSString+Validations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CA51F1B8C70F800474359 /* NSString+Validations.m */; };
+		2C2CA5231B8C8E4C00474359 /* DDCreateCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CA5221B8C8E4C00474359 /* DDCreateCharacter.m */; };
 		2C65E5A81B88887400FBCF1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5A61B88887400FBCF1E /* Images.xcassets */; };
 		2C65E5AA1B888EE800FBCF1E /* Characters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5A91B888EE800FBCF1E /* Characters.plist */; };
 		2C65E5BA1B88971500FBCF1E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5B91B88971500FBCF1E /* Default-568h@2x.png */; };
@@ -17,7 +19,6 @@
 		2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5D41B889B2F00FBCF1E /* DDCharacterCollectionController.m */; };
 		2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5D71B889B2F00FBCF1E /* DDCharacterTableController.m */; };
 		2C65E5E21B88AA1500FBCF1E /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5E01B88AA1500FBCF1E /* UIColor+RandomColor.m */; };
-		2C6E2D881B8BAB3500648590 /* UIViewController+Container.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E2D871B8BAB3500648590 /* UIViewController+Container.m */; };
 		2C990FB71B753F63001EAFA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FB61B753F63001EAFA1 /* main.m */; };
 		2C990FC51B753F63001EAFA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FC31B753F63001EAFA1 /* LaunchScreen.xib */; };
 		2C990FD11B753F63001EAFA1 /* CartoonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FD01B753F63001EAFA1 /* CartoonsTests.m */; };
@@ -42,6 +43,10 @@
 /* Begin PBXFileReference section */
 		2C1727F61B8C24610088402C /* DDMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMainController.h; path = DDMainController/DDMainController.h; sourceTree = "<group>"; };
 		2C1727F71B8C24610088402C /* DDMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMainController.m; path = DDMainController/DDMainController.m; sourceTree = "<group>"; };
+		2C2CA51E1B8C70F800474359 /* NSString+Validations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validations.h"; sourceTree = "<group>"; };
+		2C2CA51F1B8C70F800474359 /* NSString+Validations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validations.m"; sourceTree = "<group>"; };
+		2C2CA5211B8C8E4C00474359 /* DDCreateCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCreateCharacter.h; path = DDCreateCharacter/DDCreateCharacter.h; sourceTree = "<group>"; };
+		2C2CA5221B8C8E4C00474359 /* DDCreateCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCreateCharacter.m; path = DDCreateCharacter/DDCreateCharacter.m; sourceTree = "<group>"; };
 		2C65E5A61B88887400FBCF1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C65E5A91B888EE800FBCF1E /* Characters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Characters.plist; path = "Property List/Characters.plist"; sourceTree = "<group>"; };
 		2C65E5AB1B888F1F00FBCF1E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = SupportingFiles/Constants.h; sourceTree = "<group>"; };
@@ -58,8 +63,6 @@
 		2C65E5D71B889B2F00FBCF1E /* DDCharacterTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterTableController.m; sourceTree = "<group>"; };
 		2C65E5DF1B88AA1500FBCF1E /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
 		2C65E5E01B88AA1500FBCF1E /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
-		2C6E2D861B8BAB3500648590 /* UIViewController+Container.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Container.h"; path = "UIColor+RandomColor/UIViewController+Container.h"; sourceTree = "<group>"; };
-		2C6E2D871B8BAB3500648590 /* UIViewController+Container.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Container.m"; path = "UIColor+RandomColor/UIViewController+Container.m"; sourceTree = "<group>"; };
 		2C990FB11B753F63001EAFA1 /* Cartoons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cartoons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C990FB61B753F63001EAFA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C990FC41B753F63001EAFA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -103,6 +106,24 @@
 				2C1727F71B8C24610088402C /* DDMainController.m */,
 			);
 			name = DDMainController;
+			sourceTree = "<group>";
+		};
+		2C2CA51D1B8C70F800474359 /* NSString+Validations */ = {
+			isa = PBXGroup;
+			children = (
+				2C2CA51E1B8C70F800474359 /* NSString+Validations.h */,
+				2C2CA51F1B8C70F800474359 /* NSString+Validations.m */,
+			);
+			path = "NSString+Validations";
+			sourceTree = "<group>";
+		};
+		2C2CA5241B8C8E5200474359 /* DDCreateCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				2C2CA5211B8C8E4C00474359 /* DDCreateCharacter.h */,
+				2C2CA5221B8C8E4C00474359 /* DDCreateCharacter.m */,
+			);
+			name = DDCreateCharacter;
 			sourceTree = "<group>";
 		};
 		2C65E5A41B88887400FBCF1E /* Resources */ = {
@@ -177,8 +198,7 @@
 		2C65E5DA1B88AA1500FBCF1E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				2C6E2D861B8BAB3500648590 /* UIViewController+Container.h */,
-				2C6E2D871B8BAB3500648590 /* UIViewController+Container.m */,
+				2C2CA51D1B8C70F800474359 /* NSString+Validations */,
 				2C65E5DE1B88AA1500FBCF1E /* UIColor+RandomColor */,
 			);
 			path = Categories;
@@ -217,6 +237,7 @@
 				2C65E5DA1B88AA1500FBCF1E /* Categories */,
 				2C990FF11B754026001EAFA1 /* DDAppDelegate */,
 				2CCF1E061B7A5BE30016135C /* DDDataSource */,
+				2C2CA5241B8C8E5200474359 /* DDCreateCharacter */,
 				2C65E5D11B889B2F00FBCF1E /* Controllers */,
 				2C65E5C41B889A0900FBCF1E /* Cells */,
 				2C990FE31B753FA3001EAFA1 /* Main.storyboard */,
@@ -399,13 +420,14 @@
 				2C65E5E21B88AA1500FBCF1E /* UIColor+RandomColor.m in Sources */,
 				2C1727F81B8C24610088402C /* DDMainController.m in Sources */,
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
-				2C6E2D881B8BAB3500648590 /* UIViewController+Container.m in Sources */,
 				2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */,
 				2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */,
 				2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */,
 				2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */,
+				2C2CA5231B8C8E4C00474359 /* DDCreateCharacter.m in Sources */,
 				2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */,
 				2C65E5CF1B889AD000FBCF1E /* DDCharacterTableCell.m in Sources */,
+				2C2CA5201B8C70F800474359 /* NSString+Validations.m in Sources */,
 				2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

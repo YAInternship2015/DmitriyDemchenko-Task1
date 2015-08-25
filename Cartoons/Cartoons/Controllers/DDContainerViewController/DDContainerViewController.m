@@ -13,6 +13,8 @@
 
 @interface DDContainerViewController ()
 
+@property (strong, nonatomic) DDCharacterTableController *tableController;
+@property (strong, nonatomic) DDCharacterCollectionController *collectionController;
 @property (strong, nonatomic) UIViewController *currentViewController;
 @property (assign, nonatomic) BOOL isChange;
 
@@ -26,8 +28,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.isChange = NO;
-    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:TableControllerID];
-    [self presentController:controller];
+    
+    self.tableController = [self.storyboard instantiateViewControllerWithIdentifier:TableControllerID];
+    self.collectionController = [self.storyboard instantiateViewControllerWithIdentifier:CollectionControllerID];
+    
+    [self presentController:self.tableController];
 }
 
 #pragma mark - Container methods
@@ -84,11 +89,11 @@
 
 - (void)swapViewControllers:(UINavigationItem *)navigationItem {
     if (!self.isChange) {
-        [self swapCurrentControllerWith:[self.storyboard instantiateViewControllerWithIdentifier:CollectionControllerID]];
+        [self swapCurrentControllerWith:self.collectionController];
         [navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"TableViewIcon"]];
         self.isChange = YES;
     } else {
-        [self swapCurrentControllerWith:[self.storyboard instantiateViewControllerWithIdentifier:TableControllerID]];
+        [self swapCurrentControllerWith:self.tableController];
         [navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"CollectionViewIcon"]];
         self.isChange = NO;
     }

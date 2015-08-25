@@ -16,7 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:204.f/255.f green:255.f/255.f blue:102.f/255.f alpha:1.f]];
+    [[UINavigationBar appearance] setTintColor:[UIColor purpleColor]];
+    
+    [[UITextField appearance] setTintColor:[UIColor purpleColor]];
+    
     return YES;
 }
 
