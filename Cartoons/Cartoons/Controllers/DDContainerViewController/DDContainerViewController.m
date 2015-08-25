@@ -7,31 +7,91 @@
 //
 
 #import "DDContainerViewController.h"
+#import "DDCharacterTableController.h"
+#import "DDCharacterCollectionController.h"
+#import "DDAddCharacterController.h"
 
 @interface DDContainerViewController ()
 
+@property (strong, nonatomic) UIViewController *currentViewController;
+@property (assign, nonatomic) BOOL isChange;
+
 @end
+
 
 @implementation DDContainerViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.isChange = NO;
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:TableControllerID];
+    [self presentController:controller];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Container methods
+
+- (void)presentController:(UIViewController *)controller {
+    if (self.currentViewController) {
+        [self removeCurrentViewController];
+    }
+    [self addChildViewController:controller];
+    controller.view.frame = [self frameForCharacterController];
+    [self.view addSubview:controller.view];
+    self.currentViewController = controller;
+    [controller didMoveToParentViewController:self];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)removeCurrentViewController {
+    [self.currentViewController willMoveToParentViewController:nil];
+    [self.currentViewController.view removeFromSuperview];
+    [self.currentViewController removeFromParentViewController];
 }
-*/
+
+- (void)swapCurrentControllerWith:(UIViewController *)controller {
+    
+    __block CGRect tempRect;
+    tempRect.origin.x = 0.f;
+    tempRect.origin.y = 2000.f;
+    tempRect.size = CGSizeMake(CGRectGetWidth(controller.view.frame), CGRectGetHeight(controller.view.frame));
+    
+    [self.currentViewController willMoveToParentViewController:nil];
+    [self addChildViewController:controller];
+    controller.view.frame = tempRect;
+    [self.view addSubview:controller.view];
+    
+    [UIView animateWithDuration:1.3f animations:^{
+        
+        controller.view.frame = self.currentViewController.view.frame;
+        tempRect.origin.y = -2000.f;
+        self.currentViewController.view.frame = tempRect;
+        
+    } completion:^(BOOL finished) {
+        
+        [self.currentViewController.view removeFromSuperview];
+        [self.currentViewController removeFromParentViewController];
+        self.currentViewController = controller;
+        [self.currentViewController didMoveToParentViewController:self];
+    }];
+}
+
+- (CGRect)frameForCharacterController {
+    return self.view.bounds;
+}
+
+#pragma mark - Actions
+
+- (void)swapViewControllers:(UINavigationItem *)navigationItem {
+    if (!self.isChange) {
+        [self swapCurrentControllerWith:[self.storyboard instantiateViewControllerWithIdentifier:CollectionControllerID]];
+        [navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"TableViewIcon"]];
+        self.isChange = YES;
+    } else {
+        [self swapCurrentControllerWith:[self.storyboard instantiateViewControllerWithIdentifier:TableControllerID]];
+        [navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"CollectionViewIcon"]];
+        self.isChange = NO;
+    }
+}
 
 @end

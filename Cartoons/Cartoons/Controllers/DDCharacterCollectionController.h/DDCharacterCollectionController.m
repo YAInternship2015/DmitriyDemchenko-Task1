@@ -23,6 +23,15 @@
     [super viewDidLoad];
     DDDataSource *characters = [[DDDataSource alloc] init];
     self.dataSource = [characters getModels];
+    
+//    [self.collectionView registerClass:[DDCharacterCollectionCell class]forCellWithReuseIdentifier:NSStringFromClass([DDCharacterCollectionCell class])];
+//    
+//    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+//    [flow setItemSize:CGSizeMake(100, 100)];
+//    [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
+//    
+//    [self.collectionView setCollectionViewLayout:flow];
+    
 }
 
 #pragma mark UICollectionViewDataSource

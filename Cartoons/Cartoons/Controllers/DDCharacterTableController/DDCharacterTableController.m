@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     DDDataSource *characters = [[DDDataSource alloc] init];
     self.dataSource = [characters getModels];
 }
@@ -38,6 +39,7 @@
         cell = [DDCharacterTableCell initCharacterTableCell];
     }
     [cell configWithCartoons:self.dataSource[indexPath.row]];
+    
     return cell;
 }
 

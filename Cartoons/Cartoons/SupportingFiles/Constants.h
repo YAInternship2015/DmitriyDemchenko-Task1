@@ -34,4 +34,10 @@ static NSString *const kImageName = @"imageName";
 
 static NSString *const NoImage = @"NoImage";
 
+
+#pragma mark - Stroryboard IDs
+
+static NSString *const TableControllerID = @"DDCharacterTableController";
+static NSString *const CollectionControllerID = @"DDCharacterCollectionController";
+
 #endif
