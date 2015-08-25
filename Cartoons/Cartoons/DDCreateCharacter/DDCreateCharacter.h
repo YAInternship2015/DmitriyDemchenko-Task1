@@ -10,6 +10,6 @@
 
 @interface DDCreateCharacter : NSObject
 
-- (NSDictionary *)newModelFrom:(NSString *)string;
++ (NSDictionary *)newModelFrom:(NSString *)string;
 
 @end

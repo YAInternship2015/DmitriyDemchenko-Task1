@@ -22,12 +22,17 @@
     if (self) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Characters" ofType:@"plist"];
         _charactersArray = [NSArray arrayWithContentsOfFile:path];
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addNewModel:) name:NotificationDataFileContentDidChange object:nil];
     }
     return self;
 }
 
 - (NSArray *)getModels {
     return _charactersArray;
+}
+
+- (void)addNewModel:(NSDictionary *)model {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

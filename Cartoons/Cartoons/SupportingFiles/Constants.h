@@ -11,21 +11,6 @@
 #ifndef CARTOONS_Constants_h
 #define CARTOONS_Constants_h
 
-//#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:(v) options:NSNumericSearch] != NSOrderedAscending)
-//#define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 && [[[UIDevice currentDevice] systemVersion] floatValue] < 8.0)
-//#define IOS8_AND_LETER ([[[UIDevice currentDevice] systemVersion] compare:@"8" options:NSNumericSearch] != NSOrderedAscending)
-//
-//static float const DefaultFeedCellHeight = 350.f;
-//
-//static NSString *const LoginStoryboardName = @"Login";
-//static NSString *const MainStoryboardName = @"Main";
-//
-//static NSString *const ErrorDeskriptionKey = @"Description";
-//
-//static float const FourInchDisplayHeight = 568.f;
-//
-//
-//static NSUInteger MaxFeedBodyTextLength = 3000;
 
 #pragma mark - DataSource keys
 
@@ -39,5 +24,10 @@ static NSString *const NoImage = @"NoImage";
 
 static NSString *const TableControllerID = @"DDCharacterTableController";
 static NSString *const CollectionControllerID = @"DDCharacterCollectionController";
+
+
+#pragma mark - Notifications
+
+static NSString *const NotificationDataFileContentDidChange = @"Notification";
 
 #endif

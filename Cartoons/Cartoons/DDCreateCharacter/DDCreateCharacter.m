@@ -10,8 +10,8 @@
 
 @implementation DDCreateCharacter
 
-- (NSDictionary *)newModelFrom:(NSString *)string {
-    NSDictionary *dict = [[NSDictionary alloc] init];
++ (NSDictionary *)newModelFrom:(NSString *)string {
+    NSDictionary *dict = [NSDictionary dictionary];
     [dict setValue:string forKey:kName];
     [dict setValue:NoImage forKey:kImageName];
     return dict;

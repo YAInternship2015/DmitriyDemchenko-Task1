@@ -15,5 +15,6 @@
 @interface DDDataSource : NSObject
 
 - (NSArray *)getModels;
+- (void)addNewModel:(NSDictionary *)model;
 
 @end

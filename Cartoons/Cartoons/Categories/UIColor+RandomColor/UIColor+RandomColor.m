@@ -1,8 +1,8 @@
 //
 //  UIColor+RandomColor.m
-//  Etsy
+//  Cartoons
 //
-//  Created by Dmitriy Demchenko on 7/9/15.
+//  Created by Dmitriy Demchenko on 8/25/15.
 //  Copyright (c) 2015 Dmitriy Demchenko. All rights reserved.
 //
 
