@@ -28,6 +28,6 @@ static NSString *const CollectionControllerID = @"DDCharacterCollectionControlle
 
 #pragma mark - Notifications
 
-static NSString *const NotificationDataFileContentDidChange = @"Notification";
+static NSString *const NotificationDataFileContentDidChange = @"NotificationDataFileContentDidChange";
 
 #endif

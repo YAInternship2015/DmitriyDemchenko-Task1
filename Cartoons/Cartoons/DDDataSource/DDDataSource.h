@@ -6,15 +6,21 @@
 //  Copyright (c) 2015 Dmitriy Demchenko. All rights reserved.
 //
 
+@class DDCharacterFactory;
+
 #import <Foundation/Foundation.h>
 
-//typedef NS_ENUM(NSUInteger, ModelsArrayIndex) {
-//    CartoonCharactersModel = 0
-//};
+//@protocol DDDataSourceDelegate <NSObject>
+//
+//- (void)dataSourceIsUpdated;
+//
+//@end
 
 @interface DDDataSource : NSObject
 
+//@property (nonatomic, weak) id<DDDataSourceDelegate>delegate;
+
++ (void)addCharacter:(DDCharacterFactory *)character;
 - (NSArray *)getModels;
-- (void)addNewModel:(NSDictionary *)model;
 
 @end

@@ -10,32 +10,30 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="SC6-Fr-N7t">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dmitriy Demchenko, YAInternship2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
                     <rect key="frame" x="20" y="439" width="441" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="b11-Ve-ORF"/>
+                        <constraint firstAttribute="height" constant="21" id="60O-a2-gUf"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="9Hd-oK-50u">
+                    <rect key="frame" x="90" y="90" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="Pdq-EQ-Vf1"/>
+                        <constraint firstAttribute="width" constant="300" id="ZJO-3z-oXJ"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="SC6-Fr-N7t" secondAttribute="bottom" id="695-sE-acO"/>
-                <constraint firstItem="SC6-Fr-N7t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AA3-xu-1aG"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Eke-96-59z"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Frj-w6-flq"/>
-                <constraint firstAttribute="centerY" secondItem="SC6-Fr-N7t" secondAttribute="centerY" id="IP8-ZA-m5X"/>
-                <constraint firstAttribute="centerX" secondItem="SC6-Fr-N7t" secondAttribute="centerX" id="VyX-pS-B2C"/>
-                <constraint firstAttribute="trailing" secondItem="SC6-Fr-N7t" secondAttribute="trailing" id="ftK-aA-xnw"/>
-                <constraint firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing" constant="19" id="fuS-Ln-xMC"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="iMI-kG-b7p"/>
-                <constraint firstItem="SC6-Fr-N7t" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rCe-nQ-dDp"/>
+                <constraint firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing" constant="19" id="J60-fK-TzE"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="MtM-1F-OqG"/>
+                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="dMR-qx-ROF"/>
+                <constraint firstAttribute="centerX" secondItem="9Hd-oK-50u" secondAttribute="centerX" id="dRs-nt-LdB"/>
+                <constraint firstAttribute="centerY" secondItem="9Hd-oK-50u" secondAttribute="centerY" id="zK1-ti-1fc"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -43,6 +41,6 @@
         </view>
     </objects>
     <resources>
-        <image name="LaunchScreenBackground" width="320" height="568"/>
+        <image name="LaunchScreenBackground" width="300" height="300"/>
     </resources>
 </document>

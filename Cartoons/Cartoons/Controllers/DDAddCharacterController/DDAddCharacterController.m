@@ -7,6 +7,8 @@
 //
 
 #import "DDAddCharacterController.h"
+#import "DDCharacterFactory.h"
+#import "DDDataSource.h"
 #import "NSString+Validations.h"
 
 @interface DDAddCharacterController ()
@@ -34,7 +36,9 @@
     
     if ([self.textField.text isValidModelWithError:&error]) {
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDataFileContentDidChange object:nil];
+        NSString *name = ([self.textField.text isEqualToString:@"New Character"]) ? [NSString stringWithFormat:@"%@, %@", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
+        
+        [DDDataSource addCharacter:[DDCharacterFactory newModelWithName:name]];
         
         [self.navigationController popViewControllerAnimated:YES];
     }
