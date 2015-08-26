@@ -1,5 +1,5 @@
 //
-//  NSString+MainBundle.h
+//  DDDataManager.h
 //  Cartoons
 //
 //  Created by Dmitriy Demchenko on 8/26/15.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (MainBundle)
+@interface DDDataManager : NSObject
 
-+ (NSString *)dataSourcePath;
++ (void)copyCharactersPlistToMainBundle;
 
 @end

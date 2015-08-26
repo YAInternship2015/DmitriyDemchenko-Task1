@@ -8,7 +8,7 @@
 
 #import "DDDataSource.h"
 #import "DDCharacterFactory.h"
-#import "NSString+MainBundle.h"
+#import "NSString+ResourcePath.h"
 
 @interface DDDataSource ()
 
@@ -45,23 +45,8 @@
 }
 
 - (void)loadArrayWithPlist {
-    
-    NSString *str = [NSString dataSourcePath];
-    _charactersArray = [NSArray arrayWithContentsOfFile:[NSString dataSourcePath]];
+    _charactersArray = [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
 //    [self.delegate dataSourceIsUpdated];
-}
-
-- (void)copyInstrumentPlistToMainBundle {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *docPath = [NSString dataSourcePath];
-    BOOL fileExists = [fileManager fileExistsAtPath: docPath];
-    NSError *error = nil;
-    if(fileExists) {
-        [fileManager removeItemAtPath:docPath error:&error];
-    }
-    NSString *strSourcePath = [[NSBundle mainBundle] pathForResource:@"Characters" ofType:@"plist"];
-    [fileManager copyItemAtPath:strSourcePath toPath:docPath error:&error];
-//    [[NSNotificationCenter defaultCenter] postNotificationName: APModelDidChangeNotification object:nil];
 }
 
 
@@ -70,10 +55,10 @@
     NSDictionary *newModel = @{kName : character.name,
                                kImageName : NoImage};
     
-    NSMutableArray *tempModelsArray = [NSMutableArray arrayWithContentsOfFile:[NSString dataSourcePath]];
+    NSMutableArray *tempModelsArray = [NSMutableArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
     [tempModelsArray addObject:newModel];
     
-    if ([tempModelsArray writeToFile:[NSString dataSourcePath] atomically:YES]) {
+    if ([tempModelsArray writeToFile:[NSString documentsFolderPath] atomically:YES]) {
 //        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDataFileContentDidChange object:nil];
         [DDSerialConstructor showAlertWithTitle:@"Alert" message:@"Character added." delegate:self];
     } else {
@@ -81,7 +66,7 @@
     }
 //    ;
     
-    NSLog(@"%@", [NSArray arrayWithContentsOfFile:[NSString dataSourcePath]]);
+    NSLog(@"%@", [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]]);
     
 //    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }

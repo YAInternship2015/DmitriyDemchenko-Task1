@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C1727F81B8C24610088402C /* DDMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1727F71B8C24610088402C /* DDMainController.m */; };
+		2C1DBA611B8DF3DC0030E807 /* DDDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DBA601B8DF3DC0030E807 /* DDDataManager.m */; };
+		2C1DBA661B8E08C30030E807 /* NSString+ResourcePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DBA651B8E08C30030E807 /* NSString+ResourcePath.m */; };
 		2C2CA5201B8C70F800474359 /* NSString+Validations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CA51F1B8C70F800474359 /* NSString+Validations.m */; };
 		2C2CA5231B8C8E4C00474359 /* DDCharacterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CA5221B8C8E4C00474359 /* DDCharacterFactory.m */; };
 		2C65E5A81B88887400FBCF1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5A61B88887400FBCF1E /* Images.xcassets */; };
@@ -26,7 +28,6 @@
 		2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FF31B754026001EAFA1 /* DDAppDelegate.m */; };
 		2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C997EAB1B8B308E00EB2E74 /* DDContainerViewController.m */; };
 		2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C997EAF1B8B321000EB2E74 /* DDAddCharacterController.m */; };
-		2CACA18A1B8DC444008EA41D /* NSString+MainBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA1891B8DC444008EA41D /* NSString+MainBundle.m */; };
 		2CACA18E1B8DCD4C008EA41D /* DDSerialConstructor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA18D1B8DCD4C008EA41D /* DDSerialConstructor.m */; };
 		2CACA1951B8DD953008EA41D /* NSString+StringFromDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA1941B8DD953008EA41D /* NSString+StringFromDate.m */; };
 		2CCBD0401B88D4CB0079C75B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CCBD03F1B88D4CB0079C75B /* Info.plist */; };
@@ -46,6 +47,10 @@
 /* Begin PBXFileReference section */
 		2C1727F61B8C24610088402C /* DDMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMainController.h; path = DDMainController/DDMainController.h; sourceTree = "<group>"; };
 		2C1727F71B8C24610088402C /* DDMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMainController.m; path = DDMainController/DDMainController.m; sourceTree = "<group>"; };
+		2C1DBA5F1B8DF3DC0030E807 /* DDDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDDataManager.h; path = DDDataManager/DDDataManager.h; sourceTree = "<group>"; };
+		2C1DBA601B8DF3DC0030E807 /* DDDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDDataManager.m; path = DDDataManager/DDDataManager.m; sourceTree = "<group>"; };
+		2C1DBA641B8E08C30030E807 /* NSString+ResourcePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ResourcePath.h"; path = "NSString+ResourcePath/NSString+ResourcePath.h"; sourceTree = "<group>"; };
+		2C1DBA651B8E08C30030E807 /* NSString+ResourcePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ResourcePath.m"; path = "NSString+ResourcePath/NSString+ResourcePath.m"; sourceTree = "<group>"; };
 		2C2CA51E1B8C70F800474359 /* NSString+Validations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validations.h"; sourceTree = "<group>"; };
 		2C2CA51F1B8C70F800474359 /* NSString+Validations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validations.m"; sourceTree = "<group>"; };
 		2C2CA5211B8C8E4C00474359 /* DDCharacterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCharacterFactory.h; path = DDCreateCharacter/DDCharacterFactory.h; sourceTree = "<group>"; };
@@ -79,8 +84,6 @@
 		2C997EAB1B8B308E00EB2E74 /* DDContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDContainerViewController.m; path = DDContainerViewController/DDContainerViewController.m; sourceTree = "<group>"; };
 		2C997EAE1B8B321000EB2E74 /* DDAddCharacterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAddCharacterController.h; path = DDAddCharacterController/DDAddCharacterController.h; sourceTree = "<group>"; };
 		2C997EAF1B8B321000EB2E74 /* DDAddCharacterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAddCharacterController.m; path = DDAddCharacterController/DDAddCharacterController.m; sourceTree = "<group>"; };
-		2CACA1881B8DC444008EA41D /* NSString+MainBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MainBundle.h"; path = "NSString+MainBundle/NSString+MainBundle.h"; sourceTree = "<group>"; };
-		2CACA1891B8DC444008EA41D /* NSString+MainBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MainBundle.m"; path = "NSString+MainBundle/NSString+MainBundle.m"; sourceTree = "<group>"; };
 		2CACA18C1B8DCD4C008EA41D /* DDSerialConstructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDSerialConstructor.h; path = DDSerialConstructor/DDSerialConstructor.h; sourceTree = "<group>"; };
 		2CACA18D1B8DCD4C008EA41D /* DDSerialConstructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDSerialConstructor.m; path = DDSerialConstructor/DDSerialConstructor.m; sourceTree = "<group>"; };
 		2CACA1931B8DD953008EA41D /* NSString+StringFromDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+StringFromDate.h"; path = "NSString+StringFromDate/NSString+StringFromDate.h"; sourceTree = "<group>"; };
@@ -115,6 +118,25 @@
 				2C1727F71B8C24610088402C /* DDMainController.m */,
 			);
 			name = DDMainController;
+			sourceTree = "<group>";
+		};
+		2C1DBA621B8DF8B60030E807 /* DDDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C1DBA5F1B8DF3DC0030E807 /* DDDataManager.h */,
+				2C1DBA601B8DF3DC0030E807 /* DDDataManager.m */,
+			);
+			name = DDDataManager;
+			sourceTree = "<group>";
+		};
+		2C1DBA631B8DF8C60030E807 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C1DBA621B8DF8B60030E807 /* DDDataManager */,
+				2CCF1E061B7A5BE30016135C /* DDDataSource */,
+				2C2CA5241B8C8E5200474359 /* DDCharacterFactory */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		2C2CA51D1B8C70F800474359 /* NSString+Validations */ = {
@@ -209,7 +231,7 @@
 			children = (
 				2C2CA51D1B8C70F800474359 /* NSString+Validations */,
 				2C65E5DE1B88AA1500FBCF1E /* UIColor+RandomColor */,
-				2CACA18B1B8DC44D008EA41D /* NSString+MainBundle */,
+				2CACA18B1B8DC44D008EA41D /* NSString+ResourcePath */,
 				2CACA1961B8DD956008EA41D /* NSString+StringFromDate */,
 			);
 			path = Categories;
@@ -248,8 +270,7 @@
 				2C65E5DA1B88AA1500FBCF1E /* Categories */,
 				2C990FF11B754026001EAFA1 /* DDAppDelegate */,
 				2CACA18F1B8DCD56008EA41D /* DDSerialConstructor */,
-				2CCF1E061B7A5BE30016135C /* DDDataSource */,
-				2C2CA5241B8C8E5200474359 /* DDCharacterFactory */,
+				2C1DBA631B8DF8C60030E807 /* Model */,
 				2C65E5D11B889B2F00FBCF1E /* Controllers */,
 				2C65E5C41B889A0900FBCF1E /* Cells */,
 				2C990FE31B753FA3001EAFA1 /* Main.storyboard */,
@@ -315,13 +336,13 @@
 			name = DDAddCharacterController;
 			sourceTree = "<group>";
 		};
-		2CACA18B1B8DC44D008EA41D /* NSString+MainBundle */ = {
+		2CACA18B1B8DC44D008EA41D /* NSString+ResourcePath */ = {
 			isa = PBXGroup;
 			children = (
-				2CACA1881B8DC444008EA41D /* NSString+MainBundle.h */,
-				2CACA1891B8DC444008EA41D /* NSString+MainBundle.m */,
+				2C1DBA641B8E08C30030E807 /* NSString+ResourcePath.h */,
+				2C1DBA651B8E08C30030E807 /* NSString+ResourcePath.m */,
 			);
-			name = "NSString+MainBundle";
+			name = "NSString+ResourcePath";
 			sourceTree = "<group>";
 		};
 		2CACA18F1B8DCD56008EA41D /* DDSerialConstructor */ = {
@@ -466,11 +487,12 @@
 				2C2CA5231B8C8E4C00474359 /* DDCharacterFactory.m in Sources */,
 				2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */,
 				2C65E5CF1B889AD000FBCF1E /* DDCharacterTableCell.m in Sources */,
+				2C1DBA611B8DF3DC0030E807 /* DDDataManager.m in Sources */,
+				2C1DBA661B8E08C30030E807 /* NSString+ResourcePath.m in Sources */,
 				2CACA1951B8DD953008EA41D /* NSString+StringFromDate.m in Sources */,
 				2C2CA5201B8C70F800474359 /* NSString+Validations.m in Sources */,
 				2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */,
 				2CACA18E1B8DCD4C008EA41D /* DDSerialConstructor.m in Sources */,
-				2CACA18A1B8DC444008EA41D /* NSString+MainBundle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

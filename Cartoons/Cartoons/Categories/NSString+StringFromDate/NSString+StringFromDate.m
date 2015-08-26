@@ -12,6 +12,7 @@ static NSString *const DateFormatFromServer =               @"yyyy-MM-dd HH:mm:s
 static NSString *const RequestDateFormat =                  @"yyyy-MM-dd";
 static NSString *const DepartureDateButtonFormat =          @"E, d MMMM yyyy";
 static NSString *const DepartureArrivalLabelDateFormat =    @"E, d MMM, HH:mm";
+static NSString *const PrefixForModelName =                 @"dd.MM, HH:mm";
 
 static NSString *const LocaleIdentifierRU =  @"ru_RU";
 static NSString *const LocaleIdentifierUA =  @"uk_UA";
@@ -22,7 +23,7 @@ static NSString *const LocaleIdentifierUS =  @"en_US";
 + (NSString *)stringWithDate:(NSDate *)date {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:LocaleIdentifierUS]];
-    [dateFormatter setDateFormat:DepartureDateButtonFormat];
+    [dateFormatter setDateFormat:PrefixForModelName];
     
     return [dateFormatter stringFromDate:date];
 }

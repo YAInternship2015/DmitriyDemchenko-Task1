@@ -7,6 +7,7 @@
 //
 
 #import "DDAppDelegate.h"
+#import "DDDataManager.h"
 
 @interface DDAppDelegate ()
 
@@ -18,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [DDDataManager copyCharactersPlistToMainBundle];
+    
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:204.f/255.f green:255.f/255.f blue:102.f/255.f alpha:1.f]];
     [[UINavigationBar appearance] setTintColor:[UIColor purpleColor]];
     
