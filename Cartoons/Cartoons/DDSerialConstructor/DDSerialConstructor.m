@@ -10,10 +10,22 @@
 
 @implementation DDSerialConstructor
 
+#pragma mark - Alert
+
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:delegate cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
     [alert show];
+}
+
+#pragma mark - Application Colors
+
++ (UIColor *)appYellowColor {
+    return [UIColor colorWithRed:204.f/255.f green:255.f/255.f blue:102.f/255.f alpha:1.f];
+}
+
++ (UIColor *)appPurpleColor {
+    return [UIColor purpleColor];
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import "DDAddCharacterController.h"
 #import "DDCharacterFactory.h"
-#import "DDDataSource.h"
+#import "DDDataManager.h"
 #import "NSString+Validations.h"
 
 @interface DDAddCharacterController ()
@@ -24,9 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.textField.backgroundColor = [UIColor randomColor];
 }
+
+
+
 
 #pragma mark - Actions
 
@@ -36,9 +38,9 @@
     
     if ([self.textField.text isValidModelWithError:&error]) {
         
-        NSString *name = ([self.textField.text isEqualToString:@"New Character"]) ? [NSString stringWithFormat:@"%@, %@", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
+        NSString *name = ([self.textField.text isEqualToString:@"New Character"]) ? [NSString stringWithFormat: @"%@ (%@)", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
         
-        [DDDataSource addCharacter:[DDCharacterFactory newModelWithName:name]];
+        [DDDataManager addCharacter:[DDCharacterFactory modelWithName:name]];
         
         [self.navigationController popViewControllerAnimated:YES];
     }

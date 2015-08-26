@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class DDCharacterFactory;
+
 @interface DDDataManager : NSObject
 
-+ (void)copyCharactersPlistToMainBundle;
++ (void)copyCharactersPlistToAppDocumentsFolder;
++ (void)addCharacter:(DDCharacterFactory *)character;
 
 @end

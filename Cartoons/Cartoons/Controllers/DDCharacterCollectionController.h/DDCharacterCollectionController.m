@@ -10,7 +10,7 @@
 #import "DDCharacterCollectionCell.h"
 #import "DDDataSource.h"
 
-@interface DDCharacterCollectionController ()
+@interface DDCharacterCollectionController () <DDModelsDataSourceDelegate>
 
 @property (strong, nonatomic) NSArray *dataSource;
 
@@ -19,18 +19,15 @@
 
 @implementation DDCharacterCollectionController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    DDDataSource *characters = [[DDDataSource alloc] init];
+    
+    DDDataSource *characters = [[DDDataSource alloc] initWithDelegate:self];
     self.dataSource = [characters getModels];
     
-//    [self.collectionView registerClass:[DDCharacterCollectionCell class]forCellWithReuseIdentifier:NSStringFromClass([DDCharacterCollectionCell class])];
-//    
-//    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-//    [flow setItemSize:CGSizeMake(100, 100)];
-//    [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-//    
-//    [self.collectionView setCollectionViewLayout:flow];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataWasChanged) name:NotificationDataFileContentDidChange object:nil];
     
 }
 
@@ -55,6 +52,12 @@
     CGFloat mainScreen = CGRectGetWidth([UIScreen mainScreen].bounds);
     CGFloat cellSize = (mainScreen / 100 < 4) ? (mainScreen - 20.f) / 3 : (mainScreen - 25.f) / 4;
     return CGSizeMake(cellSize, cellSize);
+}
+
+#pragma mark - DDModelsDataSourceDelegate
+
+- (void)dataWasChanged {
+    [self.collectionView reloadData];
 }
 
 @end

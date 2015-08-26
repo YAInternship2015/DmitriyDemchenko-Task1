@@ -10,7 +10,7 @@
 #import "DDCharacterTableCell.h"
 #import "DDDataSource.h"
 
-@interface DDCharacterTableController ()
+@interface DDCharacterTableController () <DDModelsDataSourceDelegate>
 
 @property (strong, nonatomic) NSArray *dataSource;
 
@@ -23,8 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    DDDataSource *characters = [[DDDataSource alloc] init];
+    DDDataSource *characters = [[DDDataSource alloc] initWithDelegate:self];
     self.dataSource = [characters getModels];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataWasChanged) name:NotificationDataFileContentDidChange object:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -41,6 +43,12 @@
     [cell configWithCartoons:self.dataSource[indexPath.row]];
     
     return cell;
+}
+
+#pragma mark - DDModelsDataSourceDelegate
+
+- (void)dataWasChanged {
+    [self.tableView reloadData];
 }
 
 @end

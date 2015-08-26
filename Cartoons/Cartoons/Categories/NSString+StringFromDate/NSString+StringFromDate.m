@@ -8,11 +8,11 @@
 
 #import "NSString+StringFromDate.h"
 
-static NSString *const DateFormatFromServer =               @"yyyy-MM-dd HH:mm:ss";
-static NSString *const RequestDateFormat =                  @"yyyy-MM-dd";
-static NSString *const DepartureDateButtonFormat =          @"E, d MMMM yyyy";
-static NSString *const DepartureArrivalLabelDateFormat =    @"E, d MMM, HH:mm";
-static NSString *const PrefixForModelName =                 @"dd.MM, HH:mm";
+static NSString *const DateFormatLong =         @"yyyy-MM-dd HH:mm:ss";
+static NSString *const DateFormatShot =         @"yyyy-MM-dd";
+static NSString *const DateFormatEdMMMyyyy =    @"E, d MMMM yyyy";
+static NSString *const DateFormatEdMMMHHmm =    @"E, d MMM, HH:mm";
+static NSString *const DateFormatHHmmss =       @"HH:mm:ss";
 
 static NSString *const LocaleIdentifierRU =  @"ru_RU";
 static NSString *const LocaleIdentifierUA =  @"uk_UA";
@@ -23,7 +23,7 @@ static NSString *const LocaleIdentifierUS =  @"en_US";
 + (NSString *)stringWithDate:(NSDate *)date {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:LocaleIdentifierUS]];
-    [dateFormatter setDateFormat:PrefixForModelName];
+    [dateFormatter setDateFormat:DateFormatHHmmss];
     
     return [dateFormatter stringFromDate:date];
 }

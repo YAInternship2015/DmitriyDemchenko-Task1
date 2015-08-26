@@ -13,6 +13,6 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *imageName;
 
-+ (DDCharacterFactory *)newModelWithName:(NSString *)name;
++ (DDCharacterFactory *)modelWithName:(NSString *)name;
 
 @end

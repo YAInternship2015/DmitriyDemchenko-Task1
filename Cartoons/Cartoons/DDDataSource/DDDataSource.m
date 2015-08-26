@@ -19,26 +19,41 @@
 
 @implementation DDDataSource
 
-- (instancetype)init {
-    self = [super init];
+#pragma mark - Lifecycle
+
+//- (instancetype)init {
+//    self = [super init];
+//    if (self) {
+////        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveTestNotification:) name:NotificationDataFileContentDidChange object:nil];
+//        [self loadArrayWithPlist];
+//    }
+//    return self;
+//}
+
+- (instancetype)initWithDelegate:(id<DDModelsDataSourceDelegate>)delegate {
+    self = [self init];
     if (self) {
+        self.delegate = delegate;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(testMethod) name:NotificationDataFileContentDidChange object:nil];
         [self loadArrayWithPlist];
-//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadArrayWithPlist) name:NotificationDataFileContentDidChange object:nil];
     }
     return self;
 }
 
-/*
-- (instancetype)initWithDelegate:(id<DDDataSourceDelegate>)delegate
-{
-    self = [self init];
-    if (self) {
-        self.delegate = delegate;
-    }
-    NSLog(@"APMusicInstrumentsDataSource init");
-    return self;
+- (void)testMethod {
+    NSLog(@"CALL");
 }
-*/
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)receiveTestNotification:(NSNotification *)notification {
+    if ([[notification name] isEqualToString:NotificationDataFileContentDidChange])
+        NSLog (@"Successfully received the test notification!");
+}
+
+#pragma mark - Private methods
 
 - (NSArray *)getModels {
     return _charactersArray;
@@ -46,33 +61,7 @@
 
 - (void)loadArrayWithPlist {
     _charactersArray = [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
-//    [self.delegate dataSourceIsUpdated];
-}
-
-
-+ (void)addCharacter:(DDCharacterFactory *)character {
-    
-    NSDictionary *newModel = @{kName : character.name,
-                               kImageName : NoImage};
-    
-    NSMutableArray *tempModelsArray = [NSMutableArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
-    [tempModelsArray addObject:newModel];
-    
-    if ([tempModelsArray writeToFile:[NSString documentsFolderPath] atomically:YES]) {
-//        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDataFileContentDidChange object:nil];
-        [DDSerialConstructor showAlertWithTitle:@"Alert" message:@"Character added." delegate:self];
-    } else {
-        [DDSerialConstructor showAlertWithTitle:@"Alert" message:@"Character not added." delegate:self];
-    }
-//    ;
-    
-    NSLog(@"%@", [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]]);
-    
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.delegate dataWasChanged];
 }
 
 @end

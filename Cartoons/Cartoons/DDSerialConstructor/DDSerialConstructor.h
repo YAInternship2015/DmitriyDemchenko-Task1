@@ -12,4 +12,7 @@
 
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate;
 
++ (UIColor *)appYellowColor;
++ (UIColor *)appPurpleColor;
+
 @end

@@ -10,17 +10,19 @@
 
 #import <Foundation/Foundation.h>
 
-//@protocol DDDataSourceDelegate <NSObject>
-//
-//- (void)dataSourceIsUpdated;
-//
-//@end
+@protocol DDModelsDataSourceDelegate <NSObject>
+
+@required
+- (void)dataWasChanged;
+
+@end
+
 
 @interface DDDataSource : NSObject
 
-//@property (nonatomic, weak) id<DDDataSourceDelegate>delegate;
+@property (weak, nonatomic) id<DDModelsDataSourceDelegate>delegate;
 
-+ (void)addCharacter:(DDCharacterFactory *)character;
 - (NSArray *)getModels;
+- (instancetype)initWithDelegate:(id<DDModelsDataSourceDelegate>)delegate;
 
 @end

@@ -19,12 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [DDDataManager copyCharactersPlistToMainBundle];
+    [DDDataManager copyCharactersPlistToAppDocumentsFolder];
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:204.f/255.f green:255.f/255.f blue:102.f/255.f alpha:1.f]];
-    [[UINavigationBar appearance] setTintColor:[UIColor purpleColor]];
+    [[UINavigationBar appearance] setBarTintColor:[DDSerialConstructor appYellowColor]];
+    [[UINavigationBar appearance] setTintColor:[DDSerialConstructor appPurpleColor]];
     
-    [[UITextField appearance] setTintColor:[UIColor purpleColor]];
+    [[UITextField appearance] setTintColor:[DDSerialConstructor appPurpleColor]];
     
     return YES;
 }
