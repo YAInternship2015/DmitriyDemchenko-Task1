@@ -21,39 +21,29 @@
 
 #pragma mark - Lifecycle
 
-//- (instancetype)init {
-//    self = [super init];
-//    if (self) {
-////        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveTestNotification:) name:NotificationDataFileContentDidChange object:nil];
-//        [self loadArrayWithPlist];
-//    }
-//    return self;
-//}
-
-- (instancetype)initWithDelegate:(id<DDModelsDataSourceDelegate>)delegate {
-    self = [self init];
+- (instancetype)init {
+    self = [super init];
     if (self) {
-        self.delegate = delegate;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(testMethod) name:NotificationDataFileContentDidChange object:nil];
+#warning Don't call
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadArrayWithPlist) name:NotificationDataFileContentDidChange object:nil];
         [self loadArrayWithPlist];
     }
     return self;
 }
 
-- (void)testMethod {
-    NSLog(@"CALL");
+- (instancetype)initWithDelegate:(id<DDModelsDataSourceDelegate>)delegate {
+    self = [self init];
+    if (self) {
+        self.delegate = delegate;
+    }
+    return self;
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)receiveTestNotification:(NSNotification *)notification {
-    if ([[notification name] isEqualToString:NotificationDataFileContentDidChange])
-        NSLog (@"Successfully received the test notification!");
-}
-
-#pragma mark - Private methods
+#pragma mark - DataSource methods
 
 - (NSArray *)getModels {
     return _charactersArray;
@@ -61,7 +51,11 @@
 
 - (void)loadArrayWithPlist {
     _charactersArray = [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
-    [self.delegate dataWasChanged];
+    [self.delegate dataWasChanged:self];
+}
+
+- (void)reloadArrayWithPlist {
+    [self loadArrayWithPlist];
 }
 
 @end

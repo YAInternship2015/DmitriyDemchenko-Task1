@@ -10,12 +10,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol DDModelsDataSourceDelegate <NSObject>
-
-@required
-- (void)dataWasChanged;
-
-@end
+@protocol DDModelsDataSourceDelegate;
 
 
 @interface DDDataSource : NSObject
@@ -24,5 +19,13 @@
 
 - (NSArray *)getModels;
 - (instancetype)initWithDelegate:(id<DDModelsDataSourceDelegate>)delegate;
+
+@end
+
+
+@protocol DDModelsDataSourceDelegate <NSObject>
+
+@required
+- (void)dataWasChanged:(DDDataSource *)dataSource;
 
 @end

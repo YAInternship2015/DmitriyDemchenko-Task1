@@ -16,6 +16,7 @@
 
 @end
 
+
 @implementation DDCharacterTableController
 
 #pragma mark - Life cycle
@@ -25,8 +26,6 @@
     
     DDDataSource *characters = [[DDDataSource alloc] initWithDelegate:self];
     self.dataSource = [characters getModels];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataWasChanged) name:NotificationDataFileContentDidChange object:nil];
 }
 
 #pragma mark - UITableViewDataSource
@@ -47,7 +46,7 @@
 
 #pragma mark - DDModelsDataSourceDelegate
 
-- (void)dataWasChanged {
+- (void)dataWasChanged:(DDDataSource *)dataSource {
     [self.tableView reloadData];
 }
 

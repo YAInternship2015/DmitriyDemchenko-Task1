@@ -25,10 +25,7 @@
     [super viewDidLoad];
     
     DDDataSource *characters = [[DDDataSource alloc] initWithDelegate:self];
-    self.dataSource = [characters getModels];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataWasChanged) name:NotificationDataFileContentDidChange object:nil];
-    
+    self.dataSource = [characters getModels];    
 }
 
 #pragma mark UICollectionViewDataSource
@@ -56,7 +53,7 @@
 
 #pragma mark - DDModelsDataSourceDelegate
 
-- (void)dataWasChanged {
+- (void)dataWasChanged:(DDDataSource *)dataSource {
     [self.collectionView reloadData];
 }
 
