@@ -2,18 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "09-1.jpg"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "09-2.jpg"
+      "filename" : "Goofy@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "09-3.jpg"
+      "filename" : "Goofy@3x.png"
     }
   ],
   "info" : {

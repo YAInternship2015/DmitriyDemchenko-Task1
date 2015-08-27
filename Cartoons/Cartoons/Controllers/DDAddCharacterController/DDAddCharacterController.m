@@ -26,8 +26,6 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.topItem.title = @"";
     
-    self.navigationItem.title = self.textField.text;
-    
     CAGradientLayer *gradient = [DDSerialConstructor gradientForFrame:self.view.frame fromColor:[DDSerialConstructor appYellowColor] toColor:[UIColor whiteColor]];
     [self.view.layer insertSublayer:gradient atIndex:0];
     

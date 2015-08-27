@@ -12,7 +12,7 @@
 
 @interface DDCharacterCollectionController () <DDModelsDataSourceDelegate>
 
-@property (strong, nonatomic) NSArray *dataSource;
+@property (strong, nonatomic) DDDataSource *dataSource;
 
 @end
 
@@ -23,22 +23,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    DDDataSource *characters = [[DDDataSource alloc] initWithDelegate:self];
-    self.dataSource = [characters getModels];    
+    self.dataSource = [[DDDataSource alloc] initWithDelegate:self];
 }
 
 #pragma mark UICollectionViewDataSource
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.dataSource count];
+    return [self.dataSource countModels];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DDCharacterCollectionCell *cell = (DDCharacterCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([DDCharacterCollectionCell class]) forIndexPath:indexPath];
-    
-    [cell configWithCartoons:self.dataSource[indexPath.row]];
+    [cell configWithCartoons:[self.dataSource modelForIndex:indexPath.row]];
     
     return cell;
 }

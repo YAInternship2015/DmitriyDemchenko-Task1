@@ -13,7 +13,7 @@
 		2C2CA5201B8C70F800474359 /* NSString+Validations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CA51F1B8C70F800474359 /* NSString+Validations.m */; };
 		2C2CA5231B8C8E4C00474359 /* DDCharacterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CA5221B8C8E4C00474359 /* DDCharacterFactory.m */; };
 		2C4B9D8A1B8EF37000FE3A1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B9D891B8EF37000FE3A1D /* Default-568h@2x.png */; };
-		2C65E5A81B88887400FBCF1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5A61B88887400FBCF1E /* Images.xcassets */; };
+		2C4B9D8C1B8F1F3400FE3A1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B9D8B1B8F1F3400FE3A1D /* Images.xcassets */; };
 		2C65E5AA1B888EE800FBCF1E /* Characters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5A91B888EE800FBCF1E /* Characters.plist */; };
 		2C65E5C81B889A6900FBCF1E /* DDCharacterCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5C61B889A6900FBCF1E /* DDCharacterCollectionCell.m */; };
 		2C65E5CF1B889AD000FBCF1E /* DDCharacterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5CD1B889AD000FBCF1E /* DDCharacterTableCell.m */; };
@@ -56,7 +56,7 @@
 		2C2CA5211B8C8E4C00474359 /* DDCharacterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCharacterFactory.h; path = DDCreateCharacter/DDCharacterFactory.h; sourceTree = "<group>"; };
 		2C2CA5221B8C8E4C00474359 /* DDCharacterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCharacterFactory.m; path = DDCreateCharacter/DDCharacterFactory.m; sourceTree = "<group>"; };
 		2C4B9D891B8EF37000FE3A1D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		2C65E5A61B88887400FBCF1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2C4B9D8B1B8F1F3400FE3A1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C65E5A91B888EE800FBCF1E /* Characters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Characters.plist; path = "Property List/Characters.plist"; sourceTree = "<group>"; };
 		2C65E5AB1B888F1F00FBCF1E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = SupportingFiles/Constants.h; sourceTree = "<group>"; };
 		2C65E5AD1B888F1F00FBCF1E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = SupportingFiles/PrefixHeader.pch; sourceTree = "<group>"; };
@@ -160,8 +160,8 @@
 		2C65E5A41B88887400FBCF1E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2C4B9D8B1B8F1F3400FE3A1D /* Images.xcassets */,
 				2C4B9D891B8EF37000FE3A1D /* Default-568h@2x.png */,
-				2C65E5A61B88887400FBCF1E /* Images.xcassets */,
 				2C65E5A91B888EE800FBCF1E /* Characters.plist */,
 			);
 			path = Resources;
@@ -454,8 +454,8 @@
 			files = (
 				2CCBD0401B88D4CB0079C75B /* Info.plist in Resources */,
 				2C65E5D01B889AD000FBCF1E /* DDCharacterTableCell.xib in Resources */,
+				2C4B9D8C1B8F1F3400FE3A1D /* Images.xcassets in Resources */,
 				2C990FEB1B753FA3001EAFA1 /* Main.storyboard in Resources */,
-				2C65E5A81B88887400FBCF1E /* Images.xcassets in Resources */,
 				2C4B9D8A1B8EF37000FE3A1D /* Default-568h@2x.png in Resources */,
 				2C990FC51B753F63001EAFA1 /* LaunchScreen.xib in Resources */,
 				2C65E5AA1B888EE800FBCF1E /* Characters.plist in Resources */,
