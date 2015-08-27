@@ -35,7 +35,7 @@
     [self presentController:self.tableController];
 }
 
-#pragma mark - Container methods
+#pragma mark - ContainerViewController methods
 
 - (void)presentController:(UIViewController *)controller {
     if (self.currentViewController) {

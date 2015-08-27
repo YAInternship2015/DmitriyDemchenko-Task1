@@ -12,7 +12,7 @@
 
 @interface DDCharacterTableController () <DDModelsDataSourceDelegate>
 
-@property (strong, nonatomic) NSArray *dataSource;
+@property (strong, nonatomic) DDDataSource *dataSource;
 
 @end
 
@@ -23,15 +23,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    DDDataSource *characters = [[DDDataSource alloc] initWithDelegate:self];
-    self.dataSource = [characters getModels];
+    self.dataSource = [[DDDataSource alloc] initWithDelegate:self];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.dataSource count];
+    return [self.dataSource countModels];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -39,7 +37,7 @@
     if (!cell) {
         cell = [DDCharacterTableCell initCharacterTableCell];
     }
-    [cell configWithCartoons:self.dataSource[indexPath.row]];
+    [cell configWithCartoons:[self.dataSource modelForIndex:indexPath.row]];
     
     return cell;
 }

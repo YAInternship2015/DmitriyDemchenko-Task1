@@ -267,8 +267,8 @@
 		2C990FB31B753F63001EAFA1 /* Cartoons */ = {
 			isa = PBXGroup;
 			children = (
-				2C65E5DA1B88AA1500FBCF1E /* Categories */,
 				2C990FF11B754026001EAFA1 /* DDAppDelegate */,
+				2C65E5DA1B88AA1500FBCF1E /* Categories */,
 				2CACA18F1B8DCD56008EA41D /* DDSerialConstructor */,
 				2C1DBA631B8DF8C60030E807 /* Model */,
 				2C65E5D11B889B2F00FBCF1E /* Controllers */,

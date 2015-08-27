@@ -14,5 +14,6 @@
 
 + (UIColor *)appYellowColor;
 + (UIColor *)appPurpleColor;
++ (CAGradientLayer *)gradientForFrame:(CGRect)frame fromColor:(UIColor *)fromColor toColor:(UIColor *)toColor;
 
 @end

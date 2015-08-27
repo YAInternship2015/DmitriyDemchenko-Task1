@@ -21,20 +21,12 @@
 
 #pragma mark - Lifecycle
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-#warning Don't call
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadArrayWithPlist) name:NotificationDataFileContentDidChange object:nil];
-        [self loadArrayWithPlist];
-    }
-    return self;
-}
-
 - (instancetype)initWithDelegate:(id<DDModelsDataSourceDelegate>)delegate {
     self = [self init];
     if (self) {
         self.delegate = delegate;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadArrayWithPlist) name:NotificationDataFileContentDidChange object:nil];
+        [self loadArrayWithPlist];
     }
     return self;
 }
@@ -45,13 +37,17 @@
 
 #pragma mark - DataSource methods
 
-- (NSArray *)getModels {
-    return _charactersArray;
-}
-
 - (void)loadArrayWithPlist {
     _charactersArray = [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
     [self.delegate dataWasChanged:self];
+}
+
+- (NSUInteger)countModels {
+    return [self.charactersArray count];
+}
+
+- (NSDictionary *)modelForIndex:(NSInteger)index {
+    return self.charactersArray[index];
 }
 
 - (void)reloadArrayWithPlist {

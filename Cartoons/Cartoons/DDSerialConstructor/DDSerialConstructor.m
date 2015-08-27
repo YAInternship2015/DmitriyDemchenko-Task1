@@ -12,8 +12,7 @@
 
 #pragma mark - Alert
 
-+ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate
-{
++ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:delegate cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
     [alert show];
 }
@@ -26,6 +25,13 @@
 
 + (UIColor *)appPurpleColor {
     return [UIColor purpleColor];
+}
+
++ (CAGradientLayer *)gradientForFrame:(CGRect)frame fromColor:(UIColor *)fromColor toColor:(UIColor *)toColor {
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = frame;//[UIScreen mainScreen].bounds;
+    gradient.colors = @[(id)[fromColor CGColor], (id)[toColor CGColor]];
+    return gradient;
 }
 
 @end

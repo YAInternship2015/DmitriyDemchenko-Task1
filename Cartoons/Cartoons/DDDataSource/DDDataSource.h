@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Dmitriy Demchenko. All rights reserved.
 //
 
-@class DDCharacterFactory;
+//@class DDCharacterFactory;
 
 #import <Foundation/Foundation.h>
 
@@ -17,8 +17,10 @@
 
 @property (weak, nonatomic) id<DDModelsDataSourceDelegate>delegate;
 
-- (NSArray *)getModels;
 - (instancetype)initWithDelegate:(id<DDModelsDataSourceDelegate>)delegate;
+
+- (NSUInteger)countModels;
+- (NSDictionary *)modelForIndex:(NSInteger)index;
 
 @end
 

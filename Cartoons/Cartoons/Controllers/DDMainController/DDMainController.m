@@ -21,6 +21,8 @@ static NSString *const EmbedContainer = @"EmbedContainer";
 
 @implementation DDMainController
 
+#pragma mark - UIViewController methods
+
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     return YES;
 }
@@ -30,6 +32,8 @@ static NSString *const EmbedContainer = @"EmbedContainer";
         self.containerViewController = segue.destinationViewController;
     }
 }
+
+#pragma mark - Actions
 
 - (IBAction)changeView:(id)sender {
     [self.containerViewController swapViewControllers:self.navigationItem];

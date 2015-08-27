@@ -11,7 +11,7 @@
 #import "DDDataManager.h"
 #import "NSString+Validations.h"
 
-@interface DDAddCharacterController ()
+@interface DDAddCharacterController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
@@ -24,11 +24,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textField.backgroundColor = [UIColor randomColor];
+    self.navigationController.navigationBar.topItem.title = @"";
+    
+    self.navigationItem.title = self.textField.text;
+    
+    CAGradientLayer *gradient = [DDSerialConstructor gradientForFrame:self.view.frame fromColor:[DDSerialConstructor appYellowColor] toColor:[UIColor whiteColor]];
+    [self.view.layer insertSublayer:gradient atIndex:0];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+
+    self.textField.backgroundColor = [UIColor whiteColor];
 }
 
+#pragma mark - UITextFieldDelegate
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
 
+#pragma mark - Private methods
+
+-(void)dismissKeyboard {
+    [self.textField resignFirstResponder];
+}
 
 #pragma mark - Actions
 

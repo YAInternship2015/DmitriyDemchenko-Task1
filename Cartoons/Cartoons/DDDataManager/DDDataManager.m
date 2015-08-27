@@ -13,7 +13,6 @@
 @implementation DDDataManager
 
 + (void)copyCharactersPlistToAppDocumentsFolder {
-    
     NSString *documentsPath = [NSString documentsFolderPath];
     NSString *resourcesPath = [NSString resourcesFolderPath];
     
@@ -23,19 +22,9 @@
     if ([fileManager fileExistsAtPath:documentsPath] == NO) {
         [fileManager copyItemAtPath:resourcesPath toPath:documentsPath error:&error];
     }
-    
-    /*
-    if ([fileManager fileExistsAtPath:documentsPath] == YES) {
-        [fileManager removeItemAtPath:documentsPath error:&error];
-    }
-    
-    NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Characters" ofType:@"plist"];
-    [fileManager copyItemAtPath:resourcePath toPath:documentsPath error:&error];
-    */
 }
 
 + (void)addCharacter:(DDCharacterFactory *)character {
-    
     NSDictionary *newModel = @{kName : character.name,
                                kImageName : NoImage};
     
@@ -44,9 +33,9 @@
     
     if ([tempModelsArray writeToFile:[NSString documentsFolderPath] atomically:YES]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDataFileContentDidChange object:nil];
-//        [DDSerialConstructor showAlertWithTitle:@"Alert" message:@"Character added." delegate:self];
+        [DDSerialConstructor showAlertWithTitle:@"Alert" message:@"Character added." delegate:self];
     } else {
-//        [DDSerialConstructor showAlertWithTitle:@"Alert" message:@"Character not added." delegate:self];
+        NSLog(@"Character not added");
     }
 }
 
