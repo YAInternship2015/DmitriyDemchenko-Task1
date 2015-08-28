@@ -43,6 +43,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat mainScreen = CGRectGetWidth([UIScreen mainScreen].bounds);
+#warning куча "магических" чисел. Это не хорошо. Если они действительно нужны, то объявите их константами внутри этого метода с "говорящими" именами, чтобы вычисления стали читаемыми
     CGFloat cellSize = (mainScreen / 100 < 4) ? (mainScreen - 20.f) / 3 : (mainScreen - 25.f) / 4;
     return CGSizeMake(cellSize, cellSize);
 }

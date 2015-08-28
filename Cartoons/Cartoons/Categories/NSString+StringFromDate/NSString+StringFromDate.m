@@ -23,6 +23,7 @@ static NSString *const LocaleIdentifierUS =  @"en_US";
 + (NSString *)stringWithDate:(NSDate *)date {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:LocaleIdentifierUS]];
+#warning зачем остальные форматы даты объявлены?)
     [dateFormatter setDateFormat:DateFormatHHmmss];
     
     return [dateFormatter stringFromDate:date];

@@ -10,6 +10,7 @@
 
 @implementation UIColor (RandomColor)
 
+#warning открывающаяся фигурная скобка должна быть на той же строке, что и имя метода
 + (UIColor *)randomColor
 {
     CGFloat redLevel = rand() / (float) RAND_MAX;

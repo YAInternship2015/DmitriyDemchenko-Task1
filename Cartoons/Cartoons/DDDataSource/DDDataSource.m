@@ -12,6 +12,7 @@
 
 @interface DDDataSource ()
 
+#warning (nonatomic, strong)
 @property (strong, nonatomic) NSArray *charactersArray;
 
 @end

@@ -25,6 +25,7 @@
 }
 
 + (void)addCharacter:(DDCharacterFactory *)character {
+#warning конвертирование модели в NSDictionary лучше инкапсулировать в самой модели, добавив ей метод - (NSDictionary *)dictionaryRepresentation
     NSDictionary *newModel = @{kName : character.name,
                                kImageName : NoImage};
     

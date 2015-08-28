@@ -10,6 +10,7 @@
 
 @interface DDCharacterFactory : NSObject
 
+#warning не понял, зачем у фабрики есть эти свойства
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *imageName;
 

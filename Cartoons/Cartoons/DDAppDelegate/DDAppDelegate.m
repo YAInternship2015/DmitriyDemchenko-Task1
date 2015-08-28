@@ -20,6 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [DDDataManager copyCharactersPlistToAppDocumentsFolder];
     
+#warning настройку Appearance лучше вынести в какой-нибудь AppearanceConfigurator
     [[UINavigationBar appearance] setBarTintColor:[DDSerialConstructor appYellowColor]];
     [[UINavigationBar appearance] setTintColor:[DDSerialConstructor appPurpleColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [DDSerialConstructor appPurpleColor]}];

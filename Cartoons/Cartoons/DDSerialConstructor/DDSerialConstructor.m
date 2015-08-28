@@ -8,6 +8,7 @@
 
 #import "DDSerialConstructor.h"
 
+#warning честно говоря, не понимаю, каково назначение данного класса. Не забывайте, что каждый класс должен выполнять какую-то одну задачу (принцип SRP). Возможно, сделует разбить его на несколько классов, либо вообще обойтись без него
 @implementation DDSerialConstructor
 
 #pragma mark - Alert
@@ -19,6 +20,7 @@
 
 #pragma mark - Application Colors
 
+#warning цвета надо вынести в категорию UIColor
 + (UIColor *)appYellowColor {
     return [UIColor colorWithRed:204.f/255.f green:255.f/255.f blue:102.f/255.f alpha:1.f];
 }

@@ -10,6 +10,7 @@
 
 @implementation NSString (Validations)
 
+#warning сильно жирное расширение NSString выходит. Все же валидатор надо вынести в отдельный класс-валидатор
 - (BOOL)isValidModelWithError:(NSError **)error {
     
     BOOL success = [[self predicateWithRegularExpression:@"[\\w\\s]{3,100}"] evaluateWithObject:self];
@@ -17,7 +18,7 @@
     NSInteger errorCode = 0;
     
     if (!success) {
-        
+#warning все тексты, которые увидит пользователь, надо поместить в файл Localizable.strings. Почитайте в гугл, что это за файл и зачем он нужен
         errorMessage = @"Name can't be less than 3 characters.";
         errorCode = 9000;
         

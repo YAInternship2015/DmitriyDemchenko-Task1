@@ -29,9 +29,11 @@
     CAGradientLayer *gradient = [DDSerialConstructor gradientForFrame:self.view.frame fromColor:[DDSerialConstructor appYellowColor] toColor:[UIColor whiteColor]];
     [self.view.layer insertSublayer:gradient atIndex:0];
     
+#warning рекогнайзер можно дабавить в сториборде
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
 
+#warning это лучше сделать в сториборде
     self.textField.backgroundColor = [UIColor whiteColor];
 }
 
