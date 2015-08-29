@@ -10,11 +10,8 @@
 
 @implementation DDCharacterFactory
 
-+ (DDCharacterFactory *)modelWithName:(NSString *)name {
-    DDCharacterFactory *model = [[DDCharacterFactory alloc] init];
-    model.name = name;
-    model.imageName = @"NoImage";
-    return model;
++ (NSDictionary *)modelWithName:(NSString *)name {
+    return @{kName : name, kImageName : NoImage};
 }
 
 @end

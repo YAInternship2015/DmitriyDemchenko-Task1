@@ -30,6 +30,7 @@
 		2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C997EAB1B8B308E00EB2E74 /* DDContainerViewController.m */; };
 		2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C997EAF1B8B321000EB2E74 /* DDAddCharacterController.m */; };
 		2CACA1951B8DD953008EA41D /* NSString+StringFromDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA1941B8DD953008EA41D /* NSString+StringFromDate.m */; };
+		2CC0D2541B91D265005E1EDC /* UIAlertView+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0D2531B91D265005E1EDC /* UIAlertView+Convenience.m */; };
 		2CCBD0401B88D4CB0079C75B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CCBD03F1B88D4CB0079C75B /* Info.plist */; };
 		2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF1E041B7A5BDA0016135C /* DDDataSource.m */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,8 @@
 		2C997EAF1B8B321000EB2E74 /* DDAddCharacterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAddCharacterController.m; path = DDAddCharacterController/DDAddCharacterController.m; sourceTree = "<group>"; };
 		2CACA1931B8DD953008EA41D /* NSString+StringFromDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+StringFromDate.h"; path = "NSString+StringFromDate/NSString+StringFromDate.h"; sourceTree = "<group>"; };
 		2CACA1941B8DD953008EA41D /* NSString+StringFromDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StringFromDate.m"; path = "NSString+StringFromDate/NSString+StringFromDate.m"; sourceTree = "<group>"; };
+		2CC0D2521B91D265005E1EDC /* UIAlertView+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+Convenience.h"; path = "UIAlertView+Convenience/UIAlertView+Convenience.h"; sourceTree = "<group>"; };
+		2CC0D2531B91D265005E1EDC /* UIAlertView+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Convenience.m"; path = "UIAlertView+Convenience/UIAlertView+Convenience.m"; sourceTree = "<group>"; };
 		2CCBD03F1B88D4CB0079C75B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CCF1E031B7A5BDA0016135C /* DDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDDataSource.h; path = DDDataSource/DDDataSource.h; sourceTree = "<group>"; };
 		2CCF1E041B7A5BDA0016135C /* DDDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDDataSource.m; path = DDDataSource/DDDataSource.m; sourceTree = "<group>"; };
@@ -234,6 +237,7 @@
 				2CACA1961B8DD956008EA41D /* NSString+StringFromDate */,
 				2C6E02F21B91BCC700B465A7 /* UIColor+AppColors */,
 				2C6E02F61B91BEF400B465A7 /* CAGradientLayer+Colors */,
+				2CC0D2551B91D26B005E1EDC /* UIAlertView+Convenience */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -363,6 +367,15 @@
 			name = "NSString+StringFromDate";
 			sourceTree = "<group>";
 		};
+		2CC0D2551B91D26B005E1EDC /* UIAlertView+Convenience */ = {
+			isa = PBXGroup;
+			children = (
+				2CC0D2521B91D265005E1EDC /* UIAlertView+Convenience.h */,
+				2CC0D2531B91D265005E1EDC /* UIAlertView+Convenience.m */,
+			);
+			name = "UIAlertView+Convenience";
+			sourceTree = "<group>";
+		};
 		2CCF1E061B7A5BE30016135C /* DDDataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +494,7 @@
 				2C1727F81B8C24610088402C /* DDMainController.m in Sources */,
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
 				2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */,
+				2CC0D2541B91D265005E1EDC /* UIAlertView+Convenience.m in Sources */,
 				2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */,
 				2C6E02F51B91BEF000B465A7 /* CAGradientLayer+Colors.m in Sources */,
 				2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */,

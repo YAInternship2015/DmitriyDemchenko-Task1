@@ -10,10 +10,10 @@
 
 @interface DDCharacterFactory : NSObject
 
-#warning не понял, зачем у фабрики есть эти свойства
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *imageName;
+//#warning не понял, зачем у фабрики есть эти свойства
+//@property (strong, nonatomic) NSString *name;
+//@property (strong, nonatomic) NSString *imageName;
 
-+ (DDCharacterFactory *)modelWithName:(NSString *)name;
++ (NSDictionary *)modelWithName:(NSString *)name;
 
 @end

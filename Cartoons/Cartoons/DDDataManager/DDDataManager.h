@@ -13,6 +13,6 @@
 @interface DDDataManager : NSObject
 
 + (void)copyCharactersPlistToAppDocumentsFolder;
-+ (void)addCharacter:(DDCharacterFactory *)character;
++ (void)addCharacter:(NSDictionary *)character;
 
 @end

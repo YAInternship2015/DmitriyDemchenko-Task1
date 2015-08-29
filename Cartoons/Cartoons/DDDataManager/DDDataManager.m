@@ -24,17 +24,14 @@
     }
 }
 
-+ (void)addCharacter:(DDCharacterFactory *)character {
-#warning конвертирование модели в NSDictionary лучше инкапсулировать в самой модели, добавив ей метод - (NSDictionary *)dictionaryRepresentation
-    NSDictionary *newModel = @{kName : character.name,
-                               kImageName : NoImage};
-    
++ (void)addCharacter:(NSDictionary *)character {
+//#warning конвертирование модели в NSDictionary лучше инкапсулировать в самой модели, добавив ей метод - (NSDictionary *)dictionaryRepresentation
     NSMutableArray *tempModelsArray = [NSMutableArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
-    [tempModelsArray addObject:newModel];
+    [tempModelsArray addObject:character];
     
     if ([tempModelsArray writeToFile:[NSString documentsFolderPath] atomically:YES]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDataFileContentDidChange object:nil];
-        [[[UIAlertView alloc] initWithTitle:@"Alert" message:@"Character added." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil] show];
+        [UIAlertView showAlertWithMessage:@"Character added."];
     } else {
         NSLog(@"Character not added");
     }
