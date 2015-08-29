@@ -20,7 +20,6 @@
 		2C65E5D01B889AD000FBCF1E /* DDCharacterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C65E5CE1B889AD000FBCF1E /* DDCharacterTableCell.xib */; };
 		2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5D41B889B2F00FBCF1E /* DDCharacterCollectionController.m */; };
 		2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5D71B889B2F00FBCF1E /* DDCharacterTableController.m */; };
-		2C65E5E21B88AA1500FBCF1E /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5E01B88AA1500FBCF1E /* UIColor+RandomColor.m */; };
 		2C6E02F11B91BCBE00B465A7 /* UIColor+AppColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E02F01B91BCBE00B465A7 /* UIColor+AppColors.m */; };
 		2C6E02F51B91BEF000B465A7 /* CAGradientLayer+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E02F41B91BEF000B465A7 /* CAGradientLayer+Colors.m */; };
 		2C990FB71B753F63001EAFA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FB61B753F63001EAFA1 /* main.m */; };
@@ -70,8 +69,6 @@
 		2C65E5D41B889B2F00FBCF1E /* DDCharacterCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterCollectionController.m; sourceTree = "<group>"; };
 		2C65E5D61B889B2F00FBCF1E /* DDCharacterTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharacterTableController.h; sourceTree = "<group>"; };
 		2C65E5D71B889B2F00FBCF1E /* DDCharacterTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterTableController.m; sourceTree = "<group>"; };
-		2C65E5DF1B88AA1500FBCF1E /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
-		2C65E5E01B88AA1500FBCF1E /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
 		2C6E02EF1B91BCBE00B465A7 /* UIColor+AppColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+AppColors.h"; path = "UIColor+AppColors/UIColor+AppColors.h"; sourceTree = "<group>"; };
 		2C6E02F01B91BCBE00B465A7 /* UIColor+AppColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+AppColors.m"; path = "UIColor+AppColors/UIColor+AppColors.m"; sourceTree = "<group>"; };
 		2C6E02F31B91BEF000B465A7 /* CAGradientLayer+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAGradientLayer+Colors.h"; path = "CAGradientLayer+Colors/CAGradientLayer+Colors.h"; sourceTree = "<group>"; };
@@ -233,22 +230,12 @@
 			isa = PBXGroup;
 			children = (
 				2C2CA51D1B8C70F800474359 /* NSString+Validations */,
-				2C65E5DE1B88AA1500FBCF1E /* UIColor+RandomColor */,
 				2CACA18B1B8DC44D008EA41D /* NSString+ResourcePath */,
 				2CACA1961B8DD956008EA41D /* NSString+StringFromDate */,
 				2C6E02F21B91BCC700B465A7 /* UIColor+AppColors */,
 				2C6E02F61B91BEF400B465A7 /* CAGradientLayer+Colors */,
 			);
 			path = Categories;
-			sourceTree = "<group>";
-		};
-		2C65E5DE1B88AA1500FBCF1E /* UIColor+RandomColor */ = {
-			isa = PBXGroup;
-			children = (
-				2C65E5DF1B88AA1500FBCF1E /* UIColor+RandomColor.h */,
-				2C65E5E01B88AA1500FBCF1E /* UIColor+RandomColor.m */,
-			);
-			path = "UIColor+RandomColor";
 			sourceTree = "<group>";
 		};
 		2C6E02F21B91BCC700B465A7 /* UIColor+AppColors */ = {
@@ -491,7 +478,6 @@
 			files = (
 				2C65E5C81B889A6900FBCF1E /* DDCharacterCollectionCell.m in Sources */,
 				2C6E02F11B91BCBE00B465A7 /* UIColor+AppColors.m in Sources */,
-				2C65E5E21B88AA1500FBCF1E /* UIColor+RandomColor.m in Sources */,
 				2C1727F81B8C24610088402C /* DDMainController.m in Sources */,
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
 				2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */,
