@@ -19,15 +19,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [DDDataManager copyCharactersPlistToAppDocumentsFolder];
+//#warning настройку Appearance лучше вынести в какой-нибудь AppearanceConfigurator
+    [self appearanceConfigurator];
     
-#warning настройку Appearance лучше вынести в какой-нибудь AppearanceConfigurator
+    return YES;
+}
+
+- (void)appearanceConfigurator {
     [[UINavigationBar appearance] setBarTintColor:[DDSerialConstructor appYellowColor]];
     [[UINavigationBar appearance] setTintColor:[DDSerialConstructor appPurpleColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [DDSerialConstructor appPurpleColor]}];
-    
     [[UITextField appearance] setTintColor:[DDSerialConstructor appPurpleColor]];
-    
-    return YES;
 }
 
 @end
