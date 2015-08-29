@@ -25,13 +25,13 @@
 		2C990FB71B753F63001EAFA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FB61B753F63001EAFA1 /* main.m */; };
 		2C990FC51B753F63001EAFA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FC31B753F63001EAFA1 /* LaunchScreen.xib */; };
 		2C990FD11B753F63001EAFA1 /* CartoonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FD01B753F63001EAFA1 /* CartoonsTests.m */; };
-		2C990FEB1B753FA3001EAFA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C990FE31B753FA3001EAFA1 /* Main.storyboard */; };
 		2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FF31B754026001EAFA1 /* DDAppDelegate.m */; };
 		2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C997EAB1B8B308E00EB2E74 /* DDContainerViewController.m */; };
 		2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C997EAF1B8B321000EB2E74 /* DDAddCharacterController.m */; };
 		2CACA1951B8DD953008EA41D /* NSString+StringFromDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA1941B8DD953008EA41D /* NSString+StringFromDate.m */; };
 		2CC0D2541B91D265005E1EDC /* UIAlertView+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0D2531B91D265005E1EDC /* UIAlertView+Convenience.m */; };
-		2CC0D25C1B91DA32005E1EDC /* DDContainerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0D25B1B91DA32005E1EDC /* DDContainerSegue.m */; };
+		2CC0D2631B91DB20005E1EDC /* DDContainerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0D2611B91DB20005E1EDC /* DDContainerSegue.m */; };
+		2CC0D2641B91DB20005E1EDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC0D2621B91DB20005E1EDC /* Main.storyboard */; };
 		2CCBD0401B88D4CB0079C75B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CCBD03F1B88D4CB0079C75B /* Info.plist */; };
 		2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF1E041B7A5BDA0016135C /* DDDataSource.m */; };
 /* End PBXBuildFile section */
@@ -81,7 +81,6 @@
 		2C990FCA1B753F63001EAFA1 /* CartoonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CartoonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C990FCF1B753F63001EAFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C990FD01B753F63001EAFA1 /* CartoonsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartoonsTests.m; sourceTree = "<group>"; };
-		2C990FE31B753FA3001EAFA1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2C990FF21B754026001EAFA1 /* DDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAppDelegate.h; sourceTree = "<group>"; };
 		2C990FF31B754026001EAFA1 /* DDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAppDelegate.m; sourceTree = "<group>"; };
 		2C997EAA1B8B308E00EB2E74 /* DDContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDContainerViewController.h; path = DDContainerViewController/DDContainerViewController.h; sourceTree = "<group>"; };
@@ -92,8 +91,9 @@
 		2CACA1941B8DD953008EA41D /* NSString+StringFromDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StringFromDate.m"; path = "NSString+StringFromDate/NSString+StringFromDate.m"; sourceTree = "<group>"; };
 		2CC0D2521B91D265005E1EDC /* UIAlertView+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+Convenience.h"; path = "UIAlertView+Convenience/UIAlertView+Convenience.h"; sourceTree = "<group>"; };
 		2CC0D2531B91D265005E1EDC /* UIAlertView+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Convenience.m"; path = "UIAlertView+Convenience/UIAlertView+Convenience.m"; sourceTree = "<group>"; };
-		2CC0D25A1B91DA32005E1EDC /* DDContainerSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDContainerSegue.h; path = Cells/DDContainerSegue/DDContainerSegue.h; sourceTree = "<group>"; };
-		2CC0D25B1B91DA32005E1EDC /* DDContainerSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDContainerSegue.m; path = Cells/DDContainerSegue/DDContainerSegue.m; sourceTree = "<group>"; };
+		2CC0D2601B91DB20005E1EDC /* DDContainerSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDContainerSegue.h; sourceTree = "<group>"; };
+		2CC0D2611B91DB20005E1EDC /* DDContainerSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDContainerSegue.m; sourceTree = "<group>"; };
+		2CC0D2621B91DB20005E1EDC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2CCBD03F1B88D4CB0079C75B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CCF1E031B7A5BDA0016135C /* DDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDDataSource.h; path = DDDataSource/DDDataSource.h; sourceTree = "<group>"; };
 		2CCF1E041B7A5BDA0016135C /* DDDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDDataSource.m; path = DDDataSource/DDDataSource.m; sourceTree = "<group>"; };
@@ -173,14 +173,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		2C65E5C41B889A0900FBCF1E /* Views & Cells */ = {
+		2C65E5C41B889A0900FBCF1E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				2C65E5CB1B889AD000FBCF1E /* DDCharacterTableCell */,
 				2C65E5CA1B889A7B00FBCF1E /* DDCharacterCollectionCell */,
-				2CC0D25D1B91DA37005E1EDC /* DDContainerSegue */,
 			);
-			name = "Views & Cells";
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		2C65E5CA1B889A7B00FBCF1E /* DDCharacterCollectionCell */ = {
@@ -289,8 +288,8 @@
 				2C65E5DA1B88AA1500FBCF1E /* Categories */,
 				2C1DBA631B8DF8C60030E807 /* Model */,
 				2C65E5D11B889B2F00FBCF1E /* Controllers */,
-				2C65E5C41B889A0900FBCF1E /* Views & Cells */,
-				2C990FE31B753FA3001EAFA1 /* Main.storyboard */,
+				2C65E5C41B889A0900FBCF1E /* Cells */,
+				2CC0D25E1B91DB20005E1EDC /* Storyboards */,
 				2C990FC31B753F63001EAFA1 /* LaunchScreen.xib */,
 				2C65E5A41B88887400FBCF1E /* Resources */,
 				2C990FB41B753F63001EAFA1 /* Supporting Files */,
@@ -380,13 +379,22 @@
 			name = "UIAlertView+Convenience";
 			sourceTree = "<group>";
 		};
-		2CC0D25D1B91DA37005E1EDC /* DDContainerSegue */ = {
+		2CC0D25E1B91DB20005E1EDC /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				2CC0D25A1B91DA32005E1EDC /* DDContainerSegue.h */,
-				2CC0D25B1B91DA32005E1EDC /* DDContainerSegue.m */,
+				2CC0D25F1B91DB20005E1EDC /* DDContainerSegue */,
+				2CC0D2621B91DB20005E1EDC /* Main.storyboard */,
 			);
-			name = DDContainerSegue;
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2CC0D25F1B91DB20005E1EDC /* DDContainerSegue */ = {
+			isa = PBXGroup;
+			children = (
+				2CC0D2601B91DB20005E1EDC /* DDContainerSegue.h */,
+				2CC0D2611B91DB20005E1EDC /* DDContainerSegue.m */,
+			);
+			path = DDContainerSegue;
 			sourceTree = "<group>";
 		};
 		2CCF1E061B7A5BE30016135C /* DDDataSource */ = {
@@ -481,7 +489,7 @@
 				2CCBD0401B88D4CB0079C75B /* Info.plist in Resources */,
 				2C65E5D01B889AD000FBCF1E /* DDCharacterTableCell.xib in Resources */,
 				2C4B9D8C1B8F1F3400FE3A1D /* Images.xcassets in Resources */,
-				2C990FEB1B753FA3001EAFA1 /* Main.storyboard in Resources */,
+				2CC0D2641B91DB20005E1EDC /* Main.storyboard in Resources */,
 				2C4B9D8A1B8EF37000FE3A1D /* Default-568h@2x.png in Resources */,
 				2C990FC51B753F63001EAFA1 /* LaunchScreen.xib in Resources */,
 				2C65E5AA1B888EE800FBCF1E /* Characters.plist in Resources */,
@@ -511,10 +519,10 @@
 				2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */,
 				2C6E02F51B91BEF000B465A7 /* CAGradientLayer+Colors.m in Sources */,
 				2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */,
+				2CC0D2631B91DB20005E1EDC /* DDContainerSegue.m in Sources */,
 				2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */,
 				2C2CA5231B8C8E4C00474359 /* DDCharacterFactory.m in Sources */,
 				2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */,
-				2CC0D25C1B91DA32005E1EDC /* DDContainerSegue.m in Sources */,
 				2C65E5CF1B889AD000FBCF1E /* DDCharacterTableCell.m in Sources */,
 				2C1DBA611B8DF3DC0030E807 /* DDDataManager.m in Sources */,
 				2C1DBA661B8E08C30030E807 /* NSString+ResourcePath.m in Sources */,

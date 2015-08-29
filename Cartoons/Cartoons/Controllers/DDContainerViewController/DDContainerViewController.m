@@ -17,8 +17,8 @@
 @property (nonatomic, strong) DDCharacterTableController *tableController;
 @property (nonatomic, strong) DDCharacterCollectionController *collectionController;
 @property (nonatomic, strong) UIViewController *currentViewController;
-#warning не очень ясно, что лежит в этой переменной
-@property (nonatomic, assign) BOOL isChange;
+//#warning не очень ясно, что лежит в этой переменной
+@property (nonatomic, assign) BOOL isChangeViewController;
 
 @end
 
@@ -29,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.isChange = NO;
+    self.isChangeViewController = NO;
     
     self.tableController = [self.storyboard instantiateViewControllerWithIdentifier:TableControllerID];
     self.collectionController = [self.storyboard instantiateViewControllerWithIdentifier:CollectionControllerID];
@@ -90,14 +90,14 @@
 #pragma mark - Actions
 
 - (void)swapViewControllers:(UINavigationItem *)navigationItem {
-    if (!self.isChange) {
+    if (!self.isChangeViewController) {
         [self swapCurrentControllerWith:self.collectionController];
         [navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"TableViewIcon"]];
-        self.isChange = YES;
+        self.isChangeViewController = YES;
     } else {
         [self swapCurrentControllerWith:self.tableController];
         [navigationItem.leftBarButtonItem setImage:[UIImage imageNamed:@"CollectionViewIcon"]];
-        self.isChange = NO;
+        self.isChangeViewController = NO;
     }
 }
 
