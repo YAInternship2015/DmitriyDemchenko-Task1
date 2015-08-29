@@ -82,6 +82,7 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Character" textAlignment="center" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zTZ-MM-zc7">
                                 <rect key="frame" x="0.0" y="56" width="600" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="33q-zf-65y"/>
                                 </constraints>
@@ -93,11 +94,15 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="zTZ-MM-zc7" secondAttribute="trailing" id="Gjs-f2-QP5"/>
                             <constraint firstItem="zTZ-MM-zc7" firstAttribute="leading" secondItem="cK5-Oz-3a8" secondAttribute="leading" id="wNj-U2-ce9"/>
                             <constraint firstItem="zTZ-MM-zc7" firstAttribute="top" secondItem="6OZ-gf-J4v" secondAttribute="bottom" constant="56" id="x6E-1D-nDY"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Nfz-Qr-xZ8" appends="YES" id="dKM-aU-fvO"/>
+                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="zSY-it-RYt">
@@ -108,10 +113,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tap" destination="Nfz-Qr-xZ8" id="eot-bU-fg8"/>
                         <outlet property="textField" destination="zTZ-MM-zc7" id="Gwr-oY-eOF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZA-WQ-3kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Nfz-Qr-xZ8"/>
             </objects>
             <point key="canvasLocation" x="1348" y="-261"/>
         </scene>

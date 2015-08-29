@@ -14,6 +14,7 @@
 @interface DDAddCharacterController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tap;
 
 @end
 
@@ -29,12 +30,15 @@
     CAGradientLayer *gradient = [CAGradientLayer gradientForFrame:self.view.frame fromColor:[UIColor appYellowColor] toColor:[UIColor whiteColor]];
     [self.view.layer insertSublayer:gradient atIndex:0];
     
+    [self.tap addTarget:self action:@selector(dismissKeyboard)];
+/*
 #warning рекогнайзер можно дабавить в сториборде
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
-
+    
 #warning это лучше сделать в сториборде
     self.textField.backgroundColor = [UIColor whiteColor];
+ */
 }
 
 #pragma mark - UITextFieldDelegate
