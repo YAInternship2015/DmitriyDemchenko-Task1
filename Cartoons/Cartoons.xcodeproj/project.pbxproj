@@ -31,6 +31,7 @@
 		2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C997EAF1B8B321000EB2E74 /* DDAddCharacterController.m */; };
 		2CACA1951B8DD953008EA41D /* NSString+StringFromDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA1941B8DD953008EA41D /* NSString+StringFromDate.m */; };
 		2CC0D2541B91D265005E1EDC /* UIAlertView+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0D2531B91D265005E1EDC /* UIAlertView+Convenience.m */; };
+		2CC0D25C1B91DA32005E1EDC /* DDContainerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0D25B1B91DA32005E1EDC /* DDContainerSegue.m */; };
 		2CCBD0401B88D4CB0079C75B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CCBD03F1B88D4CB0079C75B /* Info.plist */; };
 		2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF1E041B7A5BDA0016135C /* DDDataSource.m */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,8 @@
 		2CACA1941B8DD953008EA41D /* NSString+StringFromDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StringFromDate.m"; path = "NSString+StringFromDate/NSString+StringFromDate.m"; sourceTree = "<group>"; };
 		2CC0D2521B91D265005E1EDC /* UIAlertView+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+Convenience.h"; path = "UIAlertView+Convenience/UIAlertView+Convenience.h"; sourceTree = "<group>"; };
 		2CC0D2531B91D265005E1EDC /* UIAlertView+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Convenience.m"; path = "UIAlertView+Convenience/UIAlertView+Convenience.m"; sourceTree = "<group>"; };
+		2CC0D25A1B91DA32005E1EDC /* DDContainerSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDContainerSegue.h; path = Cells/DDContainerSegue/DDContainerSegue.h; sourceTree = "<group>"; };
+		2CC0D25B1B91DA32005E1EDC /* DDContainerSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDContainerSegue.m; path = Cells/DDContainerSegue/DDContainerSegue.m; sourceTree = "<group>"; };
 		2CCBD03F1B88D4CB0079C75B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CCF1E031B7A5BDA0016135C /* DDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDDataSource.h; path = DDDataSource/DDDataSource.h; sourceTree = "<group>"; };
 		2CCF1E041B7A5BDA0016135C /* DDDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDDataSource.m; path = DDDataSource/DDDataSource.m; sourceTree = "<group>"; };
@@ -170,13 +173,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		2C65E5C41B889A0900FBCF1E /* Cells */ = {
+		2C65E5C41B889A0900FBCF1E /* Views & Cells */ = {
 			isa = PBXGroup;
 			children = (
 				2C65E5CB1B889AD000FBCF1E /* DDCharacterTableCell */,
 				2C65E5CA1B889A7B00FBCF1E /* DDCharacterCollectionCell */,
+				2CC0D25D1B91DA37005E1EDC /* DDContainerSegue */,
 			);
-			name = Cells;
+			name = "Views & Cells";
 			sourceTree = "<group>";
 		};
 		2C65E5CA1B889A7B00FBCF1E /* DDCharacterCollectionCell */ = {
@@ -285,7 +289,7 @@
 				2C65E5DA1B88AA1500FBCF1E /* Categories */,
 				2C1DBA631B8DF8C60030E807 /* Model */,
 				2C65E5D11B889B2F00FBCF1E /* Controllers */,
-				2C65E5C41B889A0900FBCF1E /* Cells */,
+				2C65E5C41B889A0900FBCF1E /* Views & Cells */,
 				2C990FE31B753FA3001EAFA1 /* Main.storyboard */,
 				2C990FC31B753F63001EAFA1 /* LaunchScreen.xib */,
 				2C65E5A41B88887400FBCF1E /* Resources */,
@@ -374,6 +378,15 @@
 				2CC0D2531B91D265005E1EDC /* UIAlertView+Convenience.m */,
 			);
 			name = "UIAlertView+Convenience";
+			sourceTree = "<group>";
+		};
+		2CC0D25D1B91DA37005E1EDC /* DDContainerSegue */ = {
+			isa = PBXGroup;
+			children = (
+				2CC0D25A1B91DA32005E1EDC /* DDContainerSegue.h */,
+				2CC0D25B1B91DA32005E1EDC /* DDContainerSegue.m */,
+			);
+			name = DDContainerSegue;
 			sourceTree = "<group>";
 		};
 		2CCF1E061B7A5BE30016135C /* DDDataSource */ = {
@@ -501,6 +514,7 @@
 				2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */,
 				2C2CA5231B8C8E4C00474359 /* DDCharacterFactory.m in Sources */,
 				2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */,
+				2CC0D25C1B91DA32005E1EDC /* DDContainerSegue.m in Sources */,
 				2C65E5CF1B889AD000FBCF1E /* DDCharacterTableCell.m in Sources */,
 				2C1DBA611B8DF3DC0030E807 /* DDDataManager.m in Sources */,
 				2C1DBA661B8E08C30030E807 /* NSString+ResourcePath.m in Sources */,

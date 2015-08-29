@@ -207,8 +207,8 @@
                     </view>
                     <toolbarItems/>
                     <connections>
-                        <segue destination="5eY-Pa-NF3" kind="custom" identifier="DDCharacterTableController" id="12Q-Lb-hCx"/>
-                        <segue destination="D6a-ps-qmw" kind="custom" identifier="DDCharacterCollectionController" id="Sdq-j3-7Zx"/>
+                        <segue destination="5eY-Pa-NF3" kind="custom" identifier="DDCharacterTableController" customClass="DDContainerSegue" id="12Q-Lb-hCx"/>
+                        <segue destination="D6a-ps-qmw" kind="custom" identifier="DDCharacterCollectionController" customClass="DDContainerSegue" id="Sdq-j3-7Zx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KN6-8p-UKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
