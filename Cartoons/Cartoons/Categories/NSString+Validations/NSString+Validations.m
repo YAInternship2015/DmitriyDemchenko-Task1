@@ -18,8 +18,8 @@
     NSInteger errorCode = 0;
     
     if (!success) {
-#warning все тексты, которые увидит пользователь, надо поместить в файл Localizable.strings. Почитайте в гугл, что это за файл и зачем он нужен
-        errorMessage = @"Name can't be less than 3 characters.";
+//#warning все тексты, которые увидит пользователь, надо поместить в файл Localizable.strings. Почитайте в гугл, что это за файл и зачем он нужен
+        errorMessage = NSLocalizedString(@"Name can't be less than 3 characters.", nil);
         errorCode = 9000;
         
         NSDictionary *userInfo = @{NSLocalizedDescriptionKey : errorMessage};

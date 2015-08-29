@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Cartoons
+
+  Created by Dmitriy Demchenko on 8/29/15.
+  Copyright (c) 2015 Dmitriy Demchenko. All rights reserved.
+*/
+
+"New Character" = "Новый персонаж";
+
+"Character added" = "Персонаж добавлен";
+"Name can't be less than 3 characters" = "Имя не может быть короче 3 символов";
+"Dismiss" = "Спрятать";
+
+"en_US" = "ru_RU";

@@ -31,7 +31,7 @@
     
     if ([tempModelsArray writeToFile:[NSString documentsFolderPath] atomically:YES]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDataFileContentDidChange object:nil];
-        [UIAlertView showAlertWithMessage:@"Character added."];
+        [UIAlertView showAlertWithMessage:NSLocalizedString(@"Character added", nil)];
     } else {
         NSLog(@"Character not added");
     }
