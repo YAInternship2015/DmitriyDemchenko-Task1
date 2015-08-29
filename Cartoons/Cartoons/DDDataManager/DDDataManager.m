@@ -34,7 +34,7 @@
     
     if ([tempModelsArray writeToFile:[NSString documentsFolderPath] atomically:YES]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDataFileContentDidChange object:nil];
-        [DDSerialConstructor showAlertWithTitle:@"Alert" message:@"Character added." delegate:self];
+        [[[UIAlertView alloc] initWithTitle:@"Alert" message:@"Character added." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil] show];
     } else {
         NSLog(@"Character not added");
     }

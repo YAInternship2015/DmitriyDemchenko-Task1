@@ -26,10 +26,10 @@
 }
 
 - (void)appearanceConfigurator {
-    [[UINavigationBar appearance] setBarTintColor:[DDSerialConstructor appYellowColor]];
-    [[UINavigationBar appearance] setTintColor:[DDSerialConstructor appPurpleColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [DDSerialConstructor appPurpleColor]}];
-    [[UITextField appearance] setTintColor:[DDSerialConstructor appPurpleColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor appYellowColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor appPurpleColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor appPurpleColor]}];
+    [[UITextField appearance] setTintColor:[UIColor appPurpleColor]];
 }
 
 @end

@@ -28,7 +28,7 @@
             *error = [NSError errorWithDomain:@"TestTask2" code:errorCode userInfo:userInfo];
         }
         
-        [DDSerialConstructor showAlertWithTitle:@"Alert" message:userInfo[NSLocalizedDescriptionKey] delegate:self];
+        [[[UIAlertView alloc] initWithTitle:@"Alert" message:userInfo[NSLocalizedDescriptionKey] delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil] show];
         
         return NO;
     }

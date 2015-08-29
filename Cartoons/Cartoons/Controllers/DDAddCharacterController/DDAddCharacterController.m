@@ -26,7 +26,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.topItem.title = @"";
     
-    CAGradientLayer *gradient = [DDSerialConstructor gradientForFrame:self.view.frame fromColor:[DDSerialConstructor appYellowColor] toColor:[UIColor whiteColor]];
+    CAGradientLayer *gradient = [CAGradientLayer gradientForFrame:self.view.frame fromColor:[UIColor appYellowColor] toColor:[UIColor whiteColor]];
     [self.view.layer insertSublayer:gradient atIndex:0];
     
 #warning рекогнайзер можно дабавить в сториборде
