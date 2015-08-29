@@ -12,7 +12,7 @@
 
 @interface DDCharacterTableController () <DDModelsDataSourceDelegate>
 
-@property (strong, nonatomic) DDDataSource *dataSource;
+@property (nonatomic, strong) DDDataSource *dataSource;
 
 @end
 

@@ -10,9 +10,9 @@
 
 @interface DDCharacterTableCell()
 
-#warning (nonatomic, weak)
-@property (weak, nonatomic) IBOutlet UIImageView *characterImame;
-@property (weak, nonatomic) IBOutlet UILabel *characterName;
+//#warning (nonatomic, weak)
+@property (nonatomic, weak) IBOutlet UIImageView *characterImame;
+@property (nonatomic, weak) IBOutlet UILabel *characterName;
 
 @end
 

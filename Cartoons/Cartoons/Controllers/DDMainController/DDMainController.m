@@ -11,7 +11,7 @@
 
 @interface DDMainController ()
 
-@property (strong, nonatomic) DDContainerViewController *containerViewController;
+@property (nonatomic, strong) DDContainerViewController *containerViewController;
 
 @end
 

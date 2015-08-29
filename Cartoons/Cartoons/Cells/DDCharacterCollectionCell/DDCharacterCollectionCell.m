@@ -10,7 +10,7 @@
 
 @interface DDCharacterCollectionCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *characterImage;
+@property (nonatomic, weak) IBOutlet UIImageView *characterImage;
 
 @end
 

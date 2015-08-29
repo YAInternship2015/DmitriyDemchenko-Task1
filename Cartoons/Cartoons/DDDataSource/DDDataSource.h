@@ -15,7 +15,7 @@
 
 @interface DDDataSource : NSObject
 
-@property (weak, nonatomic) id<DDModelsDataSourceDelegate>delegate;
+@property (nonatomic, weak) id<DDModelsDataSourceDelegate>delegate;
 
 - (instancetype)initWithDelegate:(id<DDModelsDataSourceDelegate>)delegate;
 

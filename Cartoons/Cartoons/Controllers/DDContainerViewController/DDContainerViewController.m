@@ -13,12 +13,12 @@
 
 @interface DDContainerViewController ()
 
-#warning старайтесь писать в формате (nonatimic, strong)
-@property (strong, nonatomic) DDCharacterTableController *tableController;
-@property (strong, nonatomic) DDCharacterCollectionController *collectionController;
-@property (strong, nonatomic) UIViewController *currentViewController;
+//#warning старайтесь писать в формате (nonatimic, strong)
+@property (nonatomic, strong) DDCharacterTableController *tableController;
+@property (nonatomic, strong) DDCharacterCollectionController *collectionController;
+@property (nonatomic, strong) UIViewController *currentViewController;
 #warning не очень ясно, что лежит в этой переменной
-@property (assign, nonatomic) BOOL isChange;
+@property (nonatomic, assign) BOOL isChange;
 
 @end
 
