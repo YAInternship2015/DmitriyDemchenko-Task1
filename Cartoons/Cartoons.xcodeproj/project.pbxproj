@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C1727F81B8C24610088402C /* DDMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1727F71B8C24610088402C /* DDMainController.m */; };
-		2C1DBA611B8DF3DC0030E807 /* DDDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DBA601B8DF3DC0030E807 /* DDDataManager.m */; };
 		2C1DBA661B8E08C30030E807 /* NSString+ResourcePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DBA651B8E08C30030E807 /* NSString+ResourcePath.m */; };
-		2C2CA5231B8C8E4C00474359 /* DDCharacterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CA5221B8C8E4C00474359 /* DDCharacterFactory.m */; };
 		2C4B9D8A1B8EF37000FE3A1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B9D891B8EF37000FE3A1D /* Default-568h@2x.png */; };
 		2C4B9D8C1B8F1F3400FE3A1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B9D8B1B8F1F3400FE3A1D /* Images.xcassets */; };
 		2C4E440D1B9232D100C62188 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E440F1B9232D100C62188 /* Localizable.strings */; };
@@ -26,15 +24,17 @@
 		2C6E02F11B91BCBE00B465A7 /* UIColor+AppColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E02F01B91BCBE00B465A7 /* UIColor+AppColors.m */; };
 		2C6E02F51B91BEF000B465A7 /* CAGradientLayer+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E02F41B91BEF000B465A7 /* CAGradientLayer+Colors.m */; };
 		2C81743B1B92FACE005E1472 /* DDInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81743A1B92FACE005E1472 /* DDInputValidator.m */; };
+		2C8174401B930072005E1472 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81743F1B930072005E1472 /* DDAppDelegate.m */; };
+		2C8174441B9300BC005E1472 /* DDDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8174431B9300BC005E1472 /* DDDataManager.m */; };
+		2C81744C1B9300F1005E1472 /* DDCharacterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8174481B9300F1005E1472 /* DDCharacterFactory.m */; };
+		2C81744D1B9300F1005E1472 /* DDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81744B1B9300F1005E1472 /* DDDataSource.m */; };
 		2C990FB71B753F63001EAFA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FB61B753F63001EAFA1 /* main.m */; };
 		2C990FD11B753F63001EAFA1 /* CartoonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FD01B753F63001EAFA1 /* CartoonsTests.m */; };
-		2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FF31B754026001EAFA1 /* DDAppDelegate.m */; };
 		2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C997EAB1B8B308E00EB2E74 /* DDContainerViewController.m */; };
 		2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C997EAF1B8B321000EB2E74 /* DDAddCharacterController.m */; };
 		2CACA1951B8DD953008EA41D /* NSString+StringFromDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CACA1941B8DD953008EA41D /* NSString+StringFromDate.m */; };
 		2CC0D2541B91D265005E1EDC /* UIAlertView+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0D2531B91D265005E1EDC /* UIAlertView+Convenience.m */; };
 		2CC0D2631B91DB20005E1EDC /* DDContainerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0D2611B91DB20005E1EDC /* DDContainerSegue.m */; };
-		2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCF1E041B7A5BDA0016135C /* DDDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +50,8 @@
 /* Begin PBXFileReference section */
 		2C1727F61B8C24610088402C /* DDMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMainController.h; path = DDMainController/DDMainController.h; sourceTree = "<group>"; };
 		2C1727F71B8C24610088402C /* DDMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMainController.m; path = DDMainController/DDMainController.m; sourceTree = "<group>"; };
-		2C1DBA5F1B8DF3DC0030E807 /* DDDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDDataManager.h; path = DDDataManager/DDDataManager.h; sourceTree = "<group>"; };
-		2C1DBA601B8DF3DC0030E807 /* DDDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDDataManager.m; path = DDDataManager/DDDataManager.m; sourceTree = "<group>"; };
 		2C1DBA641B8E08C30030E807 /* NSString+ResourcePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ResourcePath.h"; path = "NSString+ResourcePath/NSString+ResourcePath.h"; sourceTree = "<group>"; };
 		2C1DBA651B8E08C30030E807 /* NSString+ResourcePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ResourcePath.m"; path = "NSString+ResourcePath/NSString+ResourcePath.m"; sourceTree = "<group>"; };
-		2C2CA5211B8C8E4C00474359 /* DDCharacterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCharacterFactory.h; path = DDCreateCharacter/DDCharacterFactory.h; sourceTree = "<group>"; };
-		2C2CA5221B8C8E4C00474359 /* DDCharacterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCharacterFactory.m; path = DDCreateCharacter/DDCharacterFactory.m; sourceTree = "<group>"; };
 		2C4B9D891B8EF37000FE3A1D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2C4B9D8B1B8F1F3400FE3A1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C4E440E1B9232D100C62188 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -81,13 +77,19 @@
 		2C6E02F41B91BEF000B465A7 /* CAGradientLayer+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CAGradientLayer+Colors.m"; path = "CAGradientLayer+Colors/CAGradientLayer+Colors.m"; sourceTree = "<group>"; };
 		2C8174391B92FACE005E1472 /* DDInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDInputValidator.h; path = Utils/DDInputValidator/DDInputValidator.h; sourceTree = "<group>"; };
 		2C81743A1B92FACE005E1472 /* DDInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDInputValidator.m; path = Utils/DDInputValidator/DDInputValidator.m; sourceTree = "<group>"; };
+		2C81743E1B930072005E1472 /* DDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAppDelegate.h; sourceTree = "<group>"; };
+		2C81743F1B930072005E1472 /* DDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAppDelegate.m; sourceTree = "<group>"; };
+		2C8174421B9300BC005E1472 /* DDDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDataManager.h; sourceTree = "<group>"; };
+		2C8174431B9300BC005E1472 /* DDDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDataManager.m; sourceTree = "<group>"; };
+		2C8174471B9300F1005E1472 /* DDCharacterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharacterFactory.h; sourceTree = "<group>"; };
+		2C8174481B9300F1005E1472 /* DDCharacterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterFactory.m; sourceTree = "<group>"; };
+		2C81744A1B9300F1005E1472 /* DDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDataSource.h; sourceTree = "<group>"; };
+		2C81744B1B9300F1005E1472 /* DDDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDataSource.m; sourceTree = "<group>"; };
 		2C990FB11B753F63001EAFA1 /* Cartoons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cartoons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C990FB61B753F63001EAFA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C990FCA1B753F63001EAFA1 /* CartoonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CartoonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C990FCF1B753F63001EAFA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C990FD01B753F63001EAFA1 /* CartoonsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartoonsTests.m; sourceTree = "<group>"; };
-		2C990FF21B754026001EAFA1 /* DDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAppDelegate.h; sourceTree = "<group>"; };
-		2C990FF31B754026001EAFA1 /* DDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAppDelegate.m; sourceTree = "<group>"; };
 		2C997EAA1B8B308E00EB2E74 /* DDContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDContainerViewController.h; path = DDContainerViewController/DDContainerViewController.h; sourceTree = "<group>"; };
 		2C997EAB1B8B308E00EB2E74 /* DDContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDContainerViewController.m; path = DDContainerViewController/DDContainerViewController.m; sourceTree = "<group>"; };
 		2C997EAE1B8B321000EB2E74 /* DDAddCharacterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAddCharacterController.h; path = DDAddCharacterController/DDAddCharacterController.h; sourceTree = "<group>"; };
@@ -98,8 +100,6 @@
 		2CC0D2531B91D265005E1EDC /* UIAlertView+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Convenience.m"; path = "UIAlertView+Convenience/UIAlertView+Convenience.m"; sourceTree = "<group>"; };
 		2CC0D2601B91DB20005E1EDC /* DDContainerSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDContainerSegue.h; sourceTree = "<group>"; };
 		2CC0D2611B91DB20005E1EDC /* DDContainerSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDContainerSegue.m; sourceTree = "<group>"; };
-		2CCF1E031B7A5BDA0016135C /* DDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDDataSource.h; path = DDDataSource/DDDataSource.h; sourceTree = "<group>"; };
-		2CCF1E041B7A5BDA0016135C /* DDDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDDataSource.m; path = DDDataSource/DDDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,34 +127,6 @@
 				2C1727F71B8C24610088402C /* DDMainController.m */,
 			);
 			name = MainController;
-			sourceTree = "<group>";
-		};
-		2C1DBA621B8DF8B60030E807 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				2C1DBA5F1B8DF3DC0030E807 /* DDDataManager.h */,
-				2C1DBA601B8DF3DC0030E807 /* DDDataManager.m */,
-			);
-			name = DataManager;
-			sourceTree = "<group>";
-		};
-		2C1DBA631B8DF8C60030E807 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2C1DBA621B8DF8B60030E807 /* DataManager */,
-				2CCF1E061B7A5BE30016135C /* DataSource */,
-				2C2CA5241B8C8E5200474359 /* CharacterFactory */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		2C2CA5241B8C8E5200474359 /* CharacterFactory */ = {
-			isa = PBXGroup;
-			children = (
-				2C2CA5211B8C8E4C00474359 /* DDCharacterFactory.h */,
-				2C2CA5221B8C8E4C00474359 /* DDCharacterFactory.m */,
-			);
-			name = CharacterFactory;
 			sourceTree = "<group>";
 		};
 		2C65E5A41B88887400FBCF1E /* Resources */ = {
@@ -261,6 +233,7 @@
 		2C8174381B92FA94005E1472 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2C8174411B9300BC005E1472 /* DDDataManager */,
 				2C81743C1B92FAD6005E1472 /* InputValidator */,
 			);
 			name = Utils;
@@ -273,6 +246,52 @@
 				2C81743A1B92FACE005E1472 /* DDInputValidator.m */,
 			);
 			name = InputValidator;
+			sourceTree = "<group>";
+		};
+		2C81743D1B930072005E1472 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2C81743E1B930072005E1472 /* DDAppDelegate.h */,
+				2C81743F1B930072005E1472 /* DDAppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2C8174411B9300BC005E1472 /* DDDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C8174421B9300BC005E1472 /* DDDataManager.h */,
+				2C8174431B9300BC005E1472 /* DDDataManager.m */,
+			);
+			name = DDDataManager;
+			path = Utils/DDDataManager;
+			sourceTree = "<group>";
+		};
+		2C8174451B9300F1005E1472 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C8174461B9300F1005E1472 /* DDCharacterFactory */,
+				2C8174491B9300F1005E1472 /* DDDataSource */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C8174461B9300F1005E1472 /* DDCharacterFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2C8174471B9300F1005E1472 /* DDCharacterFactory.h */,
+				2C8174481B9300F1005E1472 /* DDCharacterFactory.m */,
+			);
+			path = DDCharacterFactory;
+			sourceTree = "<group>";
+		};
+		2C8174491B9300F1005E1472 /* DDDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				2C81744A1B9300F1005E1472 /* DDDataSource.h */,
+				2C81744B1B9300F1005E1472 /* DDDataSource.m */,
+			);
+			path = DDDataSource;
 			sourceTree = "<group>";
 		};
 		2C990FA81B753F63001EAFA1 = {
@@ -296,10 +315,10 @@
 		2C990FB31B753F63001EAFA1 /* Cartoons */ = {
 			isa = PBXGroup;
 			children = (
+				2C81743D1B930072005E1472 /* AppDelegate */,
 				2C8174381B92FA94005E1472 /* Utils */,
-				2C990FF11B754026001EAFA1 /* AppDelegate */,
 				2C65E5DA1B88AA1500FBCF1E /* Categories */,
-				2C1DBA631B8DF8C60030E807 /* Model */,
+				2C8174451B9300F1005E1472 /* Models */,
 				2C65E5D11B889B2F00FBCF1E /* Controllers */,
 				2C65E5C41B889A0900FBCF1E /* Cells */,
 				2CC0D25E1B91DB20005E1EDC /* Storyboards */,
@@ -336,16 +355,6 @@
 				2C990FCF1B753F63001EAFA1 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2C990FF11B754026001EAFA1 /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				2C990FF21B754026001EAFA1 /* DDAppDelegate.h */,
-				2C990FF31B754026001EAFA1 /* DDAppDelegate.m */,
-			);
-			name = AppDelegate;
-			path = DDAppDelegate;
 			sourceTree = "<group>";
 		};
 		2C997EAD1B8B309400EB2E74 /* ContainerViewController */ = {
@@ -411,15 +420,6 @@
 			);
 			name = ContainerSegue;
 			path = DDContainerSegue;
-			sourceTree = "<group>";
-		};
-		2CCF1E061B7A5BE30016135C /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				2CCF1E031B7A5BDA0016135C /* DDDataSource.h */,
-				2CCF1E041B7A5BDA0016135C /* DDDataSource.m */,
-			);
-			name = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,25 +528,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C81744C1B9300F1005E1472 /* DDCharacterFactory.m in Sources */,
 				2C65E5C81B889A6900FBCF1E /* DDCharacterCollectionCell.m in Sources */,
+				2C81744D1B9300F1005E1472 /* DDDataSource.m in Sources */,
 				2C6E02F11B91BCBE00B465A7 /* UIColor+AppColors.m in Sources */,
+				2C8174401B930072005E1472 /* DDAppDelegate.m in Sources */,
 				2C1727F81B8C24610088402C /* DDMainController.m in Sources */,
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
-				2CCF1E051B7A5BDA0016135C /* DDDataSource.m in Sources */,
 				2CC0D2541B91D265005E1EDC /* UIAlertView+Convenience.m in Sources */,
+				2C8174441B9300BC005E1472 /* DDDataManager.m in Sources */,
 				2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */,
 				2C6E02F51B91BEF000B465A7 /* CAGradientLayer+Colors.m in Sources */,
 				2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */,
 				2CC0D2631B91DB20005E1EDC /* DDContainerSegue.m in Sources */,
 				2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */,
 				2C81743B1B92FACE005E1472 /* DDInputValidator.m in Sources */,
-				2C2CA5231B8C8E4C00474359 /* DDCharacterFactory.m in Sources */,
 				2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */,
 				2C65E5CF1B889AD000FBCF1E /* DDCharacterTableCell.m in Sources */,
-				2C1DBA611B8DF3DC0030E807 /* DDDataManager.m in Sources */,
 				2C1DBA661B8E08C30030E807 /* NSString+ResourcePath.m in Sources */,
 				2CACA1951B8DD953008EA41D /* NSString+StringFromDate.m in Sources */,
-				2C990FFC1B754026001EAFA1 /* DDAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *error;
 
-    if ([fileManager fileExistsAtPath:documentsPath] == NO) {
+    if (![fileManager fileExistsAtPath:documentsPath]) {
         [fileManager copyItemAtPath:resourcesPath toPath:documentsPath error:&error];
     }
 }

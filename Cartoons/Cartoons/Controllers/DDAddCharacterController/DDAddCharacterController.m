@@ -13,8 +13,8 @@
 
 @interface DDAddCharacterController () <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tap;
+@property (nonatomic, weak) IBOutlet UITextField *textField;
+@property (nonatomic, strong) IBOutlet UITapGestureRecognizer *tap;
 
 @end
 
@@ -63,7 +63,7 @@
     
     if ([DDInputValidator validateInputString:self.textField.text error:&error]) {
         
-        NSString *name = ([self.textField.text isEqualToString:@"New Character"]) ? [NSString stringWithFormat: @"%@ (%@)", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
+        NSString *name = ([self.textField.text isEqualToString:NSLocalizedString(@"New Character", nil)]) ? [NSString stringWithFormat: @"%@ (%@)", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
         
         [DDDataManager addCharacter:[DDCharacterFactory modelWithName:name]];
         

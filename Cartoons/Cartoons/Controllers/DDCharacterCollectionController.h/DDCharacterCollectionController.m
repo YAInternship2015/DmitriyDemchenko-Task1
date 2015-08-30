@@ -48,6 +48,26 @@
     return CGSizeMake(cellSize, cellSize);
 }
 
+
+#pragma mark – UICollectionViewDelegateFlowLayout
+
+//// 1
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//    NSString *searchTerm = self.searches[indexPath.section];
+//    FlickrPhoto *photo = self.searchResults[searchTerm][indexPath.row];
+//    // 2
+//    CGSize retval = photo.thumbnail.size.width > 0 ? photo.thumbnail.size : CGSizeMake(100, 100);
+//    retval.height += 35; retval.width += 35;
+//    return retval;
+//}
+//
+//// 3
+//- (UIEdgeInsets)collectionView:
+//(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+//    return UIEdgeInsetsMake(50, 20, 50, 20);
+//}
+
+
 #pragma mark - DDModelsDataSourceDelegate
 
 - (void)dataWasChanged:(DDDataSource *)dataSource {
