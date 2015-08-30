@@ -19,11 +19,13 @@
 
 @implementation DDCharacterTableCell
 
-#warning этот init действительно нужен? если да, значит Вы что-то не так сделали
+//#warning этот init действительно нужен? если да, значит Вы что-то не так сделали
+/*
 + (instancetype)initCharacterTableCell {
     NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil];
     return nibObjects[0];
 }
+*/
 
 - (void)configWithCartoons:(NSDictionary *)model {
     self.backgroundColor = [UIColor randomColor];

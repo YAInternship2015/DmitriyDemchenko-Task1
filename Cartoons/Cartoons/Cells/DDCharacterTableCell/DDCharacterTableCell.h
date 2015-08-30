@@ -10,7 +10,7 @@
 
 @interface DDCharacterTableCell : UITableViewCell
 
-+ (instancetype)initCharacterTableCell;
+//+ (instancetype)initCharacterTableCell;
 - (void)configWithCartoons:(NSDictionary *)model;
 
 @end

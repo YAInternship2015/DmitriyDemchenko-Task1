@@ -33,9 +33,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DDCharacterTableCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([DDCharacterTableCell class])];
+    DDCharacterTableCell *cell = (DDCharacterTableCell *)[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([DDCharacterTableCell class])];
     if (!cell) {
-        cell = [DDCharacterTableCell initCharacterTableCell];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([DDCharacterTableCell class]) owner:nil options:nil];
+        cell = nib[0];
     }
     [cell configWithCartoons:[self.dataSource modelForIndex:indexPath.row]];
     
