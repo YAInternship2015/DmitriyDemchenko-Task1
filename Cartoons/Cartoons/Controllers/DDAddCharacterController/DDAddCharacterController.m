@@ -9,7 +9,7 @@
 #import "DDAddCharacterController.h"
 #import "DDCharacterFactory.h"
 #import "DDDataManager.h"
-#import "NSString+Validations.h"
+#import "DDInputValidator.h"
 
 @interface DDAddCharacterController () <UITextFieldDelegate>
 
@@ -61,7 +61,7 @@
     
     NSError *error = NULL;
     
-    if ([self.textField.text isValidModelWithError:&error]) {
+    if ([DDInputValidator validateInputString:self.textField.text error:&error]) {
         
         NSString *name = ([self.textField.text isEqualToString:@"New Character"]) ? [NSString stringWithFormat: @"%@ (%@)", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
         
