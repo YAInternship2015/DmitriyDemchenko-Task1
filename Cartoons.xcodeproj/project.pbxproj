@@ -23,6 +23,7 @@
 		2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5D71B889B2F00FBCF1E /* DDCharacterTableController.m */; };
 		2C6E02F11B91BCBE00B465A7 /* UIColor+AppColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E02F01B91BCBE00B465A7 /* UIColor+AppColors.m */; };
 		2C6E02F51B91BEF000B465A7 /* CAGradientLayer+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E02F41B91BEF000B465A7 /* CAGradientLayer+Colors.m */; };
+		2C78A3751B9A2B6A00281D7D /* DDCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C78A3741B9A2B6A00281D7D /* DDCoreDataManager.m */; };
 		2C81743B1B92FACE005E1472 /* DDInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81743A1B92FACE005E1472 /* DDInputValidator.m */; };
 		2C8174401B930072005E1472 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81743F1B930072005E1472 /* DDAppDelegate.m */; };
 		2C8174441B9300BC005E1472 /* DDDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8174431B9300BC005E1472 /* DDDataManager.m */; };
@@ -77,6 +78,8 @@
 		2C6E02F01B91BCBE00B465A7 /* UIColor+AppColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+AppColors.m"; path = "UIColor+AppColors/UIColor+AppColors.m"; sourceTree = "<group>"; };
 		2C6E02F31B91BEF000B465A7 /* CAGradientLayer+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAGradientLayer+Colors.h"; path = "CAGradientLayer+Colors/CAGradientLayer+Colors.h"; sourceTree = "<group>"; };
 		2C6E02F41B91BEF000B465A7 /* CAGradientLayer+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CAGradientLayer+Colors.m"; path = "CAGradientLayer+Colors/CAGradientLayer+Colors.m"; sourceTree = "<group>"; };
+		2C78A3731B9A2B6A00281D7D /* DDCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCoreDataManager.h; sourceTree = "<group>"; };
+		2C78A3741B9A2B6A00281D7D /* DDCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCoreDataManager.m; sourceTree = "<group>"; };
 		2C8174391B92FACE005E1472 /* DDInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDInputValidator.h; path = Utils/DDInputValidator/DDInputValidator.h; sourceTree = "<group>"; };
 		2C81743A1B92FACE005E1472 /* DDInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDInputValidator.m; path = Utils/DDInputValidator/DDInputValidator.m; sourceTree = "<group>"; };
 		2C81743E1B930072005E1472 /* DDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAppDelegate.h; sourceTree = "<group>"; };
@@ -243,10 +246,21 @@
 			name = "CAGradientLayer+Colors";
 			sourceTree = "<group>";
 		};
+		2C78A3721B9A2B6A00281D7D /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C78A3731B9A2B6A00281D7D /* DDCoreDataManager.h */,
+				2C78A3741B9A2B6A00281D7D /* DDCoreDataManager.m */,
+			);
+			name = CoreDataManager;
+			path = Utils/DDCoreDataManager;
+			sourceTree = "<group>";
+		};
 		2C8174381B92FA94005E1472 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2C8174411B9300BC005E1472 /* DDDataManager */,
+				2C78A3721B9A2B6A00281D7D /* CoreDataManager */,
+				2C8174411B9300BC005E1472 /* DataManager */,
 				2C81743C1B92FAD6005E1472 /* InputValidator */,
 			);
 			name = Utils;
@@ -270,13 +284,13 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		2C8174411B9300BC005E1472 /* DDDataManager */ = {
+		2C8174411B9300BC005E1472 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
 				2C8174421B9300BC005E1472 /* DDDataManager.h */,
 				2C8174431B9300BC005E1472 /* DDDataManager.m */,
 			);
-			name = DDDataManager;
+			name = DataManager;
 			path = Utils/DDDataManager;
 			sourceTree = "<group>";
 		};
@@ -589,6 +603,7 @@
 			files = (
 				2C81744C1B9300F1005E1472 /* DDCharacterFactory.m in Sources */,
 				2C65E5C81B889A6900FBCF1E /* DDCharacterCollectionCell.m in Sources */,
+				2C78A3751B9A2B6A00281D7D /* DDCoreDataManager.m in Sources */,
 				2C81744D1B9300F1005E1472 /* DDDataSource.m in Sources */,
 				2C6E02F11B91BCBE00B465A7 /* UIColor+AppColors.m in Sources */,
 				2C8174401B930072005E1472 /* DDAppDelegate.m in Sources */,
