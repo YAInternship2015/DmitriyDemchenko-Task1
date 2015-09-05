@@ -15,7 +15,10 @@
 #import "CAGradientLayer+Colors.h"
 #import "UIAlertView+Convenience.h"
 
-#pragma mark - MagicalRecord
+#pragma mark - CoreDate and MagicalRecord
+
+#import "DDCharacter.h"
+#import "DDCoreDataManager.h"
 
 #import <MagicalRecord/MagicalRecord.h>
 #import <MagicalRecord/MagicalRecord+ShorthandMethods.h>
