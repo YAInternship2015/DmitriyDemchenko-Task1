@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2C1727F81B8C24610088402C /* DDMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1727F71B8C24610088402C /* DDMainController.m */; };
 		2C1DBA661B8E08C30030E807 /* NSString+ResourcePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DBA651B8E08C30030E807 /* NSString+ResourcePath.m */; };
+		2C456F941B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C456F921B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld */; };
+		2C456F971B9AE789006EE3D3 /* DDCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C456F961B9AE789006EE3D3 /* DDCharacter.m */; };
 		2C4B9D8A1B8EF37000FE3A1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B9D891B8EF37000FE3A1D /* Default-568h@2x.png */; };
 		2C4B9D8C1B8F1F3400FE3A1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B9D8B1B8F1F3400FE3A1D /* Images.xcassets */; };
 		2C4E440D1B9232D100C62188 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E440F1B9232D100C62188 /* Localizable.strings */; };
@@ -55,6 +57,9 @@
 		2C1727F71B8C24610088402C /* DDMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMainController.m; path = DDMainController/DDMainController.m; sourceTree = "<group>"; };
 		2C1DBA641B8E08C30030E807 /* NSString+ResourcePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ResourcePath.h"; path = "NSString+ResourcePath/NSString+ResourcePath.h"; sourceTree = "<group>"; };
 		2C1DBA651B8E08C30030E807 /* NSString+ResourcePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ResourcePath.m"; path = "NSString+ResourcePath/NSString+ResourcePath.m"; sourceTree = "<group>"; };
+		2C456F931B9AE24C006EE3D3 /* CharacterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CharacterModel.xcdatamodel; sourceTree = "<group>"; };
+		2C456F951B9AE789006EE3D3 /* DDCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCharacter.h; path = CoreData/DDCharacter.h; sourceTree = "<group>"; };
+		2C456F961B9AE789006EE3D3 /* DDCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCharacter.m; path = CoreData/DDCharacter.m; sourceTree = "<group>"; };
 		2C4B9D891B8EF37000FE3A1D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2C4B9D8B1B8F1F3400FE3A1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C4E440E1B9232D100C62188 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -143,6 +148,16 @@
 				2C1727F71B8C24610088402C /* DDMainController.m */,
 			);
 			name = MainController;
+			sourceTree = "<group>";
+		};
+		2C456F911B9AE1B1006EE3D3 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2C456F921B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld */,
+				2C456F951B9AE789006EE3D3 /* DDCharacter.h */,
+				2C456F961B9AE789006EE3D3 /* DDCharacter.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		2C65E5A41B88887400FBCF1E /* Resources */ = {
@@ -344,6 +359,7 @@
 		2C990FB31B753F63001EAFA1 /* Cartoons */ = {
 			isa = PBXGroup;
 			children = (
+				2C456F911B9AE1B1006EE3D3 /* CoreData */,
 				2C81743D1B930072005E1472 /* AppDelegate */,
 				2C8174381B92FA94005E1472 /* Utils */,
 				2C65E5DA1B88AA1500FBCF1E /* Categories */,
@@ -609,10 +625,12 @@
 				2C8174401B930072005E1472 /* DDAppDelegate.m in Sources */,
 				2C1727F81B8C24610088402C /* DDMainController.m in Sources */,
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
+				2C456F941B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld in Sources */,
 				2CC0D2541B91D265005E1EDC /* UIAlertView+Convenience.m in Sources */,
 				2C8174441B9300BC005E1472 /* DDDataManager.m in Sources */,
 				2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */,
 				2C6E02F51B91BEF000B465A7 /* CAGradientLayer+Colors.m in Sources */,
+				2C456F971B9AE789006EE3D3 /* DDCharacter.m in Sources */,
 				2C997EB01B8B321000EB2E74 /* DDAddCharacterController.m in Sources */,
 				2CC0D2631B91DB20005E1EDC /* DDContainerSegue.m in Sources */,
 				2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */,
@@ -827,6 +845,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C456F921B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C456F931B9AE24C006EE3D3 /* CharacterModel.xcdatamodel */,
+			);
+			currentVersion = 2C456F931B9AE24C006EE3D3 /* CharacterModel.xcdatamodel */;
+			name = CharacterModel.xcdatamodeld;
+			path = CoreData/CharacterModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2C990FA91B753F63001EAFA1 /* Project object */;
 }

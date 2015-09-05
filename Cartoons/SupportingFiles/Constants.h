@@ -30,4 +30,10 @@ static NSString *const CollectionControllerID = @"DDCharacterCollectionControlle
 
 static NSString *const NotificationDataFileContentDidChange = @"NotificationDataFileContentDidChange";
 
+
+#pragma mark - CoreData
+
+static NSString *const EntityCharacter = @"DDCharacter";
+
+
 #endif
