@@ -9,7 +9,7 @@
 #import "NSString+ResourcePath.h"
 
 static NSString *const ResourceName = @"Characters";
-static NSString *const ResourceType = @".plist";
+static NSString *const ResourceType = @"plist";
 
 @implementation NSString (ResourcePath)
 

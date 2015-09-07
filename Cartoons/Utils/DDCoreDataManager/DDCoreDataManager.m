@@ -26,7 +26,7 @@
 #pragma mark - Application's Documents directory
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.dmitriy.demchenko.EtsyModel" in the application's documents directory.
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.dmitriy.demchenko.CharacterModel" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 

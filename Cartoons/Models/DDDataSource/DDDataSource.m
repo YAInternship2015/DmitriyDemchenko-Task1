@@ -14,7 +14,6 @@
 
 //#warning (nonatomic, strong)
 @property (nonatomic, strong) NSArray *charactersArray;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -40,8 +39,11 @@
 #pragma mark - DataSource methods
 
 - (void)loadArrayWithPlist {
-    _charactersArray = [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
-    [self copyDataFromPlistToCoreData];
+    
+//    [self copyDataFromPlistToCoreData];
+//    [self showData];
+    
+    self.charactersArray = [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
     [self.delegate dataWasChanged:self];
 }
 
@@ -56,41 +58,34 @@
 - (void)reloadArrayWithPlist {
     [self loadArrayWithPlist];
 }
-
+// ---------------------------------------------------------------------------------------------
 - (void)copyDataFromPlistToCoreData {
-    
-    self.managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
-    
-    NSArray *tempArray = [NSArray arrayWithContentsOfFile:[NSString resourcesFolderPath]];
-    
-    for (NSDictionary *dict in tempArray) {
+    NSArray *tempArray = [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
+    for (NSDictionary *model in tempArray) {
+        DDCharacter *addItem = [NSEntityDescription insertNewObjectForEntityForName:EntityCharacter inManagedObjectContext:[[DDCoreDataManager sharedManager] managedObjectContext]];
         
-        NSFetchRequest *request = [[NSFetchRequest alloc] init];
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", dict[kName]];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:EntityCharacter inManagedObjectContext:self.managedObjectContext];
-        [request setEntity:entity];
-        [request setPredicate:predicate];
+        addItem.name = model[kName];
+        addItem.imageName = model[kImageName];
         
-        NSError *error;
-        NSArray *result = [self.managedObjectContext executeFetchRequest:request error:&error];
-        if (error) {
-            NSLog(@"%@", [error localizedDescription]);
+        NSError *error = nil;
+        if (![[[DDCoreDataManager sharedManager] managedObjectContext] save:&error]) {
+            NSLog(@"%@", [NSString stringWithFormat:@"%@, %@", error, [error description]]);
         }
-        DDCharacter *addCharacter = nil;
-        if ([result count]) {
-            addCharacter = result[0];
-        } else {
-            addCharacter = [NSEntityDescription insertNewObjectForEntityForName:EntityCharacter inManagedObjectContext:self.managedObjectContext];
-        }
-        
-        addCharacter.name = dict[kName];
-        addCharacter.imageName = dict[kImageName];
+    }
+}
+
+- (NSArray *)showData {
+    NSMutableArray *itemsArray = [[NSMutableArray alloc] init];
+    NSManagedObjectContext *managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:EntityCharacter];
+    itemsArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    for (int i = 0; i < itemsArray.count; i++) {
+        DDCharacter *ch = itemsArray[i];
+        NSLog(@"%@", ch.name);
     }
     
-    NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
-        [UIAlertView showAlertWithMessage:[NSString stringWithFormat:@"%@, %@", error, [error description]]];
-    }
+    return itemsArray;
 }
 
 @end
