@@ -17,9 +17,7 @@
 
 @property (nonatomic, weak) id<DDModelsDataSourceDelegate>delegate;
 
-- (instancetype)initWithDelegate:(id<DDModelsDataSourceDelegate>)delegate;
-//- (NSUInteger)countModels;
-//- (NSDictionary *)modelForIndex:(NSInteger)index;
+//- (instancetype)initWithDelegate:(id<DDModelsDataSourceDelegate>)delegate;
 - (NSFetchedResultsController *)getFetchedResultsController;
 
 @end

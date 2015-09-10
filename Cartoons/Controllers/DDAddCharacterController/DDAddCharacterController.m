@@ -7,8 +7,6 @@
 //
 
 #import "DDAddCharacterController.h"
-#import "DDCharacterFactory.h"
-#import "DDDataManager.h"
 #import "DDInputValidator.h"
 
 @interface DDAddCharacterController () <UITextFieldDelegate>
@@ -32,14 +30,6 @@
     [self.view.layer insertSublayer:gradient atIndex:0];
     
     [self.tap addTarget:self action:@selector(dismissKeyboard)];
-/*
-#warning рекогнайзер можно дабавить в сториборде
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
-    [self.view addGestureRecognizer:tap];
-    
-#warning это лучше сделать в сториборде
-    self.textField.backgroundColor = [UIColor whiteColor];
- */
 }
 
 #pragma mark - UITextFieldDelegate
@@ -65,7 +55,7 @@
         
         NSString *name = ([self.textField.text isEqualToString:NSLocalizedString(@"New Character", nil)]) ? [NSString stringWithFormat: @"%@ (%@)", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
         
-        [DDDataManager addCharacter:[DDCharacterFactory modelWithName:name]];
+//        [DDDataManager addCharacter:[DDCharacterFactory modelWithName:name]];
         
         [self.navigationController popViewControllerAnimated:YES];
     }

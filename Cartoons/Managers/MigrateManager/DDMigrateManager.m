@@ -18,43 +18,34 @@ static NSString *const ResourceType = @"plist";
 
 + (void)migrateContentFromPlistToCoreData {
     
+    NSError *error = nil;
     BOOL isEmpty;
+    NSManagedObjectContext *managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:EntityCharacter inManagedObjectContext:[[DDCoreDataManager sharedManager] managedObjectContext]];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:EntityCharacter inManagedObjectContext:managedObjectContext];
     [request setEntity:entity];
     [request setFetchLimit:1];
-    NSError *error = nil;
-    NSArray *results = [[[DDCoreDataManager sharedManager] managedObjectContext] executeFetchRequest:request error:&error];
-    if (!results) {
-        NSLog(@"Fetch error: %@", error);
-        abort();
-    }
-    if ([results count] == 0) {
-        isEmpty = NO;
-    }
-    isEmpty = YES;
+    
+    isEmpty = ([managedObjectContext countForFetchRequest:request error:&error] == 0) ? YES : NO;
     
     if (isEmpty) {
         NSArray *tempArray = [[NSArray alloc] init];
         tempArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:ResourceName ofType:ResourceType]];
         for (NSDictionary *model in tempArray) {
-            DDCharacter *addItem = [NSEntityDescription insertNewObjectForEntityForName:EntityCharacter inManagedObjectContext:[[DDCoreDataManager sharedManager] managedObjectContext]];
+            DDCharacter *addItem = [NSEntityDescription insertNewObjectForEntityForName:EntityCharacter inManagedObjectContext:managedObjectContext];
             
             addItem.name = model[kName];
             addItem.imageName = model[kImageName];
             
             NSError *error = nil;
-            if (![[[DDCoreDataManager sharedManager] managedObjectContext] save:&error]) {
+            if (![managedObjectContext save:&error]) {
                 NSLog(@"%@", [NSString stringWithFormat:@"%@, %@", error, [error description]]);
             }
         }
     }
 }
 /*
-- (NSString *)resourcesFolderPath {
-    return [[NSBundle mainBundle] pathForResource:ResourceName ofType:ResourceType];
-}
 
 - (BOOL)coreDataHasEntriesForEntityName:(NSString *)entityName {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];

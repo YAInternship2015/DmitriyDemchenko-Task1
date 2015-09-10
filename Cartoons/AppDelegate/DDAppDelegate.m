@@ -7,25 +7,14 @@
 //
 
 #import "DDAppDelegate.h"
-#import "DDDataManager.h"
 #import "DDMigrateManager.h"
-
-@interface DDAppDelegate ()
-
-@end
-
 
 @implementation DDAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [DDDataManager copyCharactersPlistToAppDocumentsFolder];
-//    [DDMigrateManager migrateContentFromPlistToCoreData];
-    
-    
-//#warning настройку Appearance лучше вынести в какой-нибудь AppearanceConfigurator
+    [DDMigrateManager migrateContentFromPlistToCoreData];
     [self appearanceConfigurator];
-    
     return YES;
 }
 

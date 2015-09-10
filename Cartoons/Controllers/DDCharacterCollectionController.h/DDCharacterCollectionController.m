@@ -25,9 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
     self.dataSource = [[DDDataSource alloc] init];
     self.fetchedResultsController = [self.dataSource getFetchedResultsController];
+    self.managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
 }
 
 #pragma mark UICollectionViewDataSource

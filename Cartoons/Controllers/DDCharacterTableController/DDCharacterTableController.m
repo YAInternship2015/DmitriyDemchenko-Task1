@@ -25,15 +25,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
     self.dataSource = [[DDDataSource alloc] init];
     self.fetchedResultsController = [self.dataSource getFetchedResultsController];
+    self.managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return [self.dataSource countModels];
     return [self.fetchedResultsController.fetchedObjects count];
 }
 
@@ -66,7 +65,6 @@
 //        [self.tableView reloadData];
     }
 }
-
 
 #pragma mark - DDModelsDataSourceDelegate
 

@@ -10,6 +10,6 @@
 
 @interface DDCharacterCollectionCell : UICollectionViewCell
 
-- (void)configWithCartoons:(NSDictionary *)model;
+- (void)configWithCartoons:(DDCharacter *)model;
 
 @end

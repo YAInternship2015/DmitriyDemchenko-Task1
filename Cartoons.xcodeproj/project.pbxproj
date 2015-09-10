@@ -29,8 +29,6 @@
 		2C7CAD061BA1E5BE00C43197 /* DDMigrateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CAD051BA1E5BE00C43197 /* DDMigrateManager.m */; };
 		2C81743B1B92FACE005E1472 /* DDInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81743A1B92FACE005E1472 /* DDInputValidator.m */; };
 		2C8174401B930072005E1472 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81743F1B930072005E1472 /* DDAppDelegate.m */; };
-		2C8174441B9300BC005E1472 /* DDDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8174431B9300BC005E1472 /* DDDataManager.m */; };
-		2C81744C1B9300F1005E1472 /* DDCharacterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8174481B9300F1005E1472 /* DDCharacterFactory.m */; };
 		2C81744D1B9300F1005E1472 /* DDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81744B1B9300F1005E1472 /* DDDataSource.m */; };
 		2C990FB71B753F63001EAFA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FB61B753F63001EAFA1 /* main.m */; };
 		2C990FD11B753F63001EAFA1 /* CartoonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C990FD01B753F63001EAFA1 /* CartoonsTests.m */; };
@@ -92,10 +90,6 @@
 		2C81743A1B92FACE005E1472 /* DDInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDInputValidator.m; path = Utils/DDInputValidator/DDInputValidator.m; sourceTree = "<group>"; };
 		2C81743E1B930072005E1472 /* DDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAppDelegate.h; sourceTree = "<group>"; };
 		2C81743F1B930072005E1472 /* DDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAppDelegate.m; sourceTree = "<group>"; };
-		2C8174421B9300BC005E1472 /* DDDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDataManager.h; sourceTree = "<group>"; };
-		2C8174431B9300BC005E1472 /* DDDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDataManager.m; sourceTree = "<group>"; };
-		2C8174471B9300F1005E1472 /* DDCharacterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCharacterFactory.h; sourceTree = "<group>"; };
-		2C8174481B9300F1005E1472 /* DDCharacterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCharacterFactory.m; sourceTree = "<group>"; };
 		2C81744A1B9300F1005E1472 /* DDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDataSource.h; sourceTree = "<group>"; };
 		2C81744B1B9300F1005E1472 /* DDDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDataSource.m; sourceTree = "<group>"; };
 		2C990FB11B753F63001EAFA1 /* Cartoons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cartoons.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,14 +147,15 @@
 			name = MainController;
 			sourceTree = "<group>";
 		};
-		2C456F911B9AE1B1006EE3D3 /* CoreData */ = {
+		2C456F911B9AE1B1006EE3D3 /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
 				2C456F921B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld */,
 				2C456F951B9AE789006EE3D3 /* DDCharacter.h */,
 				2C456F961B9AE789006EE3D3 /* DDCharacter.m */,
 			);
-			name = CoreData;
+			name = CoreDataModel;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2C65E5A41B88887400FBCF1E /* Resources */ = {
@@ -286,10 +281,9 @@
 		2C8174381B92FA94005E1472 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2C78A3721B9A2B6A00281D7D /* CoreDataManager */,
-				2C8174411B9300BC005E1472 /* DataManager */,
-				2C81743C1B92FAD6005E1472 /* InputValidator */,
 				2C7CAD071BA1E5C800C43197 /* MigrateManager */,
+				2C78A3721B9A2B6A00281D7D /* CoreDataManager */,
+				2C81743C1B92FAD6005E1472 /* InputValidator */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -312,40 +306,22 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		2C8174411B9300BC005E1472 /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				2C8174421B9300BC005E1472 /* DDDataManager.h */,
-				2C8174431B9300BC005E1472 /* DDDataManager.m */,
-			);
-			name = DataManager;
-			path = Utils/DDDataManager;
-			sourceTree = "<group>";
-		};
 		2C8174451B9300F1005E1472 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2C8174461B9300F1005E1472 /* DDCharacterFactory */,
-				2C8174491B9300F1005E1472 /* DDDataSource */,
+				2C456F911B9AE1B1006EE3D3 /* CoreDataModel */,
+				2C8174491B9300F1005E1472 /* DataSource */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2C8174461B9300F1005E1472 /* DDCharacterFactory */ = {
-			isa = PBXGroup;
-			children = (
-				2C8174471B9300F1005E1472 /* DDCharacterFactory.h */,
-				2C8174481B9300F1005E1472 /* DDCharacterFactory.m */,
-			);
-			path = DDCharacterFactory;
-			sourceTree = "<group>";
-		};
-		2C8174491B9300F1005E1472 /* DDDataSource */ = {
+		2C8174491B9300F1005E1472 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
 				2C81744A1B9300F1005E1472 /* DDDataSource.h */,
 				2C81744B1B9300F1005E1472 /* DDDataSource.m */,
 			);
+			name = DataSource;
 			path = DDDataSource;
 			sourceTree = "<group>";
 		};
@@ -372,10 +348,9 @@
 		2C990FB31B753F63001EAFA1 /* Cartoons */ = {
 			isa = PBXGroup;
 			children = (
-				2C456F911B9AE1B1006EE3D3 /* CoreData */,
 				2C81743D1B930072005E1472 /* AppDelegate */,
-				2C8174381B92FA94005E1472 /* Utils */,
 				2C65E5DA1B88AA1500FBCF1E /* Categories */,
+				2C8174381B92FA94005E1472 /* Utils */,
 				2C8174451B9300F1005E1472 /* Models */,
 				2C65E5D11B889B2F00FBCF1E /* Controllers */,
 				2C65E5C41B889A0900FBCF1E /* Cells */,
@@ -630,7 +605,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C81744C1B9300F1005E1472 /* DDCharacterFactory.m in Sources */,
 				2C65E5C81B889A6900FBCF1E /* DDCharacterCollectionCell.m in Sources */,
 				2C78A3751B9A2B6A00281D7D /* DDCoreDataManager.m in Sources */,
 				2C81744D1B9300F1005E1472 /* DDDataSource.m in Sources */,
@@ -641,7 +615,6 @@
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
 				2C456F941B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld in Sources */,
 				2CC0D2541B91D265005E1EDC /* UIAlertView+Convenience.m in Sources */,
-				2C8174441B9300BC005E1472 /* DDDataManager.m in Sources */,
 				2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */,
 				2C6E02F51B91BEF000B465A7 /* CAGradientLayer+Colors.m in Sources */,
 				2C456F971B9AE789006EE3D3 /* DDCharacter.m in Sources */,
