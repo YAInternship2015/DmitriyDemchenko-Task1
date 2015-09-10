@@ -40,9 +40,8 @@
 
 - (void)loadArrayWithPlist {
     
-//    [self copyDataFromPlistToCoreData];
-//    [self showData];
-    
+    [self showData];
+#warning Сделать метод для получения массива из DataManager
     self.charactersArray = [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
     [self.delegate dataWasChanged:self];
 }
@@ -59,20 +58,8 @@
     [self loadArrayWithPlist];
 }
 // ---------------------------------------------------------------------------------------------
-- (void)copyDataFromPlistToCoreData {
-    NSArray *tempArray = [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
-    for (NSDictionary *model in tempArray) {
-        DDCharacter *addItem = [NSEntityDescription insertNewObjectForEntityForName:EntityCharacter inManagedObjectContext:[[DDCoreDataManager sharedManager] managedObjectContext]];
-        
-        addItem.name = model[kName];
-        addItem.imageName = model[kImageName];
-        
-        NSError *error = nil;
-        if (![[[DDCoreDataManager sharedManager] managedObjectContext] save:&error]) {
-            NSLog(@"%@", [NSString stringWithFormat:@"%@, %@", error, [error description]]);
-        }
-    }
-}
+
+
 
 - (NSArray *)showData {
     NSMutableArray *itemsArray = [[NSMutableArray alloc] init];

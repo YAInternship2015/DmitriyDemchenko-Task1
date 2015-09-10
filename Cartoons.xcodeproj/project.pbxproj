@@ -26,6 +26,7 @@
 		2C6E02F11B91BCBE00B465A7 /* UIColor+AppColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E02F01B91BCBE00B465A7 /* UIColor+AppColors.m */; };
 		2C6E02F51B91BEF000B465A7 /* CAGradientLayer+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E02F41B91BEF000B465A7 /* CAGradientLayer+Colors.m */; };
 		2C78A3751B9A2B6A00281D7D /* DDCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C78A3741B9A2B6A00281D7D /* DDCoreDataManager.m */; };
+		2C7CAD061BA1E5BE00C43197 /* DDMigrateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CAD051BA1E5BE00C43197 /* DDMigrateManager.m */; };
 		2C81743B1B92FACE005E1472 /* DDInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81743A1B92FACE005E1472 /* DDInputValidator.m */; };
 		2C8174401B930072005E1472 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81743F1B930072005E1472 /* DDAppDelegate.m */; };
 		2C8174441B9300BC005E1472 /* DDDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8174431B9300BC005E1472 /* DDDataManager.m */; };
@@ -85,6 +86,8 @@
 		2C6E02F41B91BEF000B465A7 /* CAGradientLayer+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CAGradientLayer+Colors.m"; path = "CAGradientLayer+Colors/CAGradientLayer+Colors.m"; sourceTree = "<group>"; };
 		2C78A3731B9A2B6A00281D7D /* DDCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCoreDataManager.h; sourceTree = "<group>"; };
 		2C78A3741B9A2B6A00281D7D /* DDCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCoreDataManager.m; sourceTree = "<group>"; };
+		2C7CAD041BA1E5BE00C43197 /* DDMigrateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMigrateManager.h; path = Managers/MigrateManager/DDMigrateManager.h; sourceTree = "<group>"; };
+		2C7CAD051BA1E5BE00C43197 /* DDMigrateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMigrateManager.m; path = Managers/MigrateManager/DDMigrateManager.m; sourceTree = "<group>"; };
 		2C8174391B92FACE005E1472 /* DDInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDInputValidator.h; path = Utils/DDInputValidator/DDInputValidator.h; sourceTree = "<group>"; };
 		2C81743A1B92FACE005E1472 /* DDInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDInputValidator.m; path = Utils/DDInputValidator/DDInputValidator.m; sourceTree = "<group>"; };
 		2C81743E1B930072005E1472 /* DDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAppDelegate.h; sourceTree = "<group>"; };
@@ -271,12 +274,22 @@
 			path = Utils/DDCoreDataManager;
 			sourceTree = "<group>";
 		};
+		2C7CAD071BA1E5C800C43197 /* MigrateManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C7CAD041BA1E5BE00C43197 /* DDMigrateManager.h */,
+				2C7CAD051BA1E5BE00C43197 /* DDMigrateManager.m */,
+			);
+			name = MigrateManager;
+			sourceTree = "<group>";
+		};
 		2C8174381B92FA94005E1472 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				2C78A3721B9A2B6A00281D7D /* CoreDataManager */,
 				2C8174411B9300BC005E1472 /* DataManager */,
 				2C81743C1B92FAD6005E1472 /* InputValidator */,
+				2C7CAD071BA1E5C800C43197 /* MigrateManager */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -622,6 +635,7 @@
 				2C78A3751B9A2B6A00281D7D /* DDCoreDataManager.m in Sources */,
 				2C81744D1B9300F1005E1472 /* DDDataSource.m in Sources */,
 				2C6E02F11B91BCBE00B465A7 /* UIColor+AppColors.m in Sources */,
+				2C7CAD061BA1E5BE00C43197 /* DDMigrateManager.m in Sources */,
 				2C8174401B930072005E1472 /* DDAppDelegate.m in Sources */,
 				2C1727F81B8C24610088402C /* DDMainController.m in Sources */,
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
