@@ -53,19 +53,18 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    /*
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+#warning Удаление не работает
+    if (editingStyle == UITableViewCellEditingStyleDelete){
         [self.managedObjectContext deleteObject:self.fetchedResultsController.fetchedObjects[indexPath.row]];
         
         NSError *error = nil;
-        if (![self.managedObjectContext save:&error]) {
-            NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+        if(![self.managedObjectContext save:&error]){
+            NSLog(@"Can't delete! %@ %@", error, [error localizedDescription]);
             return;
         }
-        
-        [self.itemsArray removeObjectAtIndex:indexPath.row];
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }*/
+//        [self.tableView reloadData];
+    }
 }
 
 
