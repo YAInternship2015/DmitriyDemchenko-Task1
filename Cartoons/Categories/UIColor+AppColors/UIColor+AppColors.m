@@ -12,10 +12,6 @@
 
 #pragma mark - Random color
 
-//#warning честно говоря, не понимаю, каково назначение данного класса (DDSerialConstructor). Не забывайте, что каждый класс должен выполнять какую-то одну задачу (принцип SRP). Возможно, сделует разбить его на несколько классов, либо вообще обойтись без него
-
-//#warning открывающаяся фигурная скобка должна быть на той же строке, что и имя метода
-
 + (UIColor *)randomColor {
     CGFloat redLevel = rand() / (float) RAND_MAX;
     CGFloat greenLevel = rand() / (float) RAND_MAX;

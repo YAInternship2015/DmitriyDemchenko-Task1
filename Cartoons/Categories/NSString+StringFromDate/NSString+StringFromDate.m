@@ -8,14 +8,13 @@
 
 #import "NSString+StringFromDate.h"
 
-static NSString *const DateFormatHHmmss =   @"HH:mm:ss";
+static NSString *const DateFormatHHmmss = @"HH:mm:ss";
 
 @implementation NSString (StringFromDate)
 
 + (NSString *)stringWithDate:(NSDate *)date {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:NSLocalizedString(@"en_US", nil)]];
-//#warning зачем остальные форматы даты объявлены?)
     [dateFormatter setDateFormat:DateFormatHHmmss];
     
     return [dateFormatter stringFromDate:date];
