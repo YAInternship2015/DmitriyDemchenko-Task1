@@ -17,9 +17,9 @@
 
 @implementation DDCharacterCollectionCell
 
-- (void)configWithCartoons:(NSDictionary *)model {
+- (void)configWithCartoons:(DDCharacter *)model {
     self.backgroundColor = [UIColor randomColor];
-    self.characterImage.image = [UIImage imageNamed:model[kImageName]];
+    self.characterImage.image = [UIImage imageNamed:model.imageName];
 }
 
 @end

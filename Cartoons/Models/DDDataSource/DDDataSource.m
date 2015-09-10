@@ -10,10 +10,12 @@
 #import "DDCharacterFactory.h"
 #import "NSString+ResourcePath.h"
 
-@interface DDDataSource ()
+@interface DDDataSource () <NSFetchedResultsControllerDelegate>
 
-//#warning (nonatomic, strong)
 @property (nonatomic, strong) NSArray *charactersArray;
+
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end
 
@@ -22,6 +24,15 @@
 
 #pragma mark - Lifecycle
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
+        self.fetchedResultsController = [self fetchedResultsController];
+    }
+    return self;
+}
+/*
 - (instancetype)initWithDelegate:(id<DDModelsDataSourceDelegate>)delegate {
     self = [self init];
     if (self) {
@@ -35,13 +46,11 @@
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
+*/
 #pragma mark - DataSource methods
-
+/*
 - (void)loadArrayWithPlist {
-    
-    [self showData];
-#warning Сделать метод для получения массива из DataManager
+
     self.charactersArray = [NSArray arrayWithContentsOfFile:[NSString documentsFolderPath]];
     [self.delegate dataWasChanged:self];
 }
@@ -54,25 +63,100 @@
     return self.charactersArray[index];
 }
 
-- (void)reloadArrayWithPlist {
-    [self loadArrayWithPlist];
+ - (void)reloadArrayWithPlist {
+ [self loadArrayWithPlist];
+ }
+
+*/
+- (NSFetchedResultsController *)getFetchedResultsController {
+    return self.fetchedResultsController;
 }
-// ---------------------------------------------------------------------------------------------
 
-
-
-- (NSArray *)showData {
-    NSMutableArray *itemsArray = [[NSMutableArray alloc] init];
-    NSManagedObjectContext *managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:EntityCharacter];
-    itemsArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+- (NSFetchedResultsController *)fetchedResultsController {
     
-    for (int i = 0; i < itemsArray.count; i++) {
-        DDCharacter *ch = itemsArray[i];
-        NSLog(@"%@", ch.name);
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
     }
     
-    return itemsArray;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:EntityCharacter inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    [fetchRequest setFetchLimit:100];
+    [fetchRequest setFetchBatchSize:20];
+    
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:kName ascending:YES];
+    NSArray *sortDescriptors = @[sortDescriptor];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    
+    aFetchedResultsController.delegate = self;
+    self.fetchedResultsController = aFetchedResultsController;
+    
+    NSError *error = nil;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    return _fetchedResultsController;
 }
+/*
+
+// NSFetchedResultsControllerDelegate methods
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
+           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+    
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        default:
+            return;
+    }
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    UITableView *tableView = self.tableView;
+    
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            //            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView endUpdates];
+}
+*/
 
 @end

@@ -10,10 +10,11 @@
 #import "DDCharacterTableCell.h"
 #import "DDDataSource.h"
 
-@interface DDCharacterTableController () <DDModelsDataSourceDelegate>
+@interface DDCharacterTableController () <DDModelsDataSourceDelegate, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) DDDataSource *dataSource;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @end
 
@@ -25,13 +26,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
-    self.dataSource = [[DDDataSource alloc] initWithDelegate:self];
+    self.dataSource = [[DDDataSource alloc] init];
+    self.fetchedResultsController = [self.dataSource getFetchedResultsController];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.dataSource countModels];
+//    return [self.dataSource countModels];
+    return [self.fetchedResultsController.fetchedObjects count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -40,7 +43,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([DDCharacterTableCell class]) owner:nil options:nil];
         cell = nib[0];
     }
-    [cell configWithCartoons:[self.dataSource modelForIndex:indexPath.row]];
+    [cell configWithCartoons:self.fetchedResultsController.fetchedObjects[indexPath.row]];
     
     return cell;
 }
@@ -52,7 +55,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     /*
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.managedObjectContext deleteObject:self.itemsArray[indexPath.row]];
+        [self.managedObjectContext deleteObject:self.fetchedResultsController.fetchedObjects[indexPath.row]];
         
         NSError *error = nil;
         if (![self.managedObjectContext save:&error]) {
