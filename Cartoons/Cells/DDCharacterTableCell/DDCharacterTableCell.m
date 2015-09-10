@@ -28,6 +28,7 @@
 */
 
 - (void)configWithCartoons:(NSDictionary *)model {
+
     self.backgroundColor = [UIColor randomColor];
     self.characterName.text = model[kName];
     self.characterImame.image = [UIImage imageNamed:model[kImageName]];
