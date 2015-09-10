@@ -30,38 +30,19 @@ static NSString *const ResourceType = @"plist";
     isEmpty = ([managedObjectContext countForFetchRequest:request error:&error] == 0) ? YES : NO;
     
     if (isEmpty) {
-        NSArray *tempArray = [[NSArray alloc] init];
-        tempArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:ResourceName ofType:ResourceType]];
-        for (NSDictionary *model in tempArray) {
+        NSArray *tempArray = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:ResourceName ofType:ResourceType]];
+        [tempArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             DDCharacter *addItem = [NSEntityDescription insertNewObjectForEntityForName:EntityCharacter inManagedObjectContext:managedObjectContext];
             
-            addItem.name = model[kName];
-            addItem.imageName = model[kImageName];
+            addItem.name = obj[kName];
+            addItem.imageName = obj[kImageName];
             
             NSError *error = nil;
             if (![managedObjectContext save:&error]) {
                 NSLog(@"%@", [NSString stringWithFormat:@"%@, %@", error, [error description]]);
             }
-        }
+        }];
     }
 }
-/*
 
-- (BOOL)coreDataHasEntriesForEntityName:(NSString *)entityName {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:[[DDCoreDataManager sharedManager] managedObjectContext]];
-    [request setEntity:entity];
-    [request setFetchLimit:1];
-    NSError *error = nil;
-    NSArray *results = [[[DDCoreDataManager sharedManager] managedObjectContext] executeFetchRequest:request error:&error];
-    if (!results) {
-        NSLog(@"Fetch error: %@", error);
-        abort();
-    }
-    if ([results count] == 0) {
-        return NO;
-    }
-    return YES;
-}
-*/
 @end
