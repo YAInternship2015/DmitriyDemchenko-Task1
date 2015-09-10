@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2C1727F81B8C24610088402C /* DDMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1727F71B8C24610088402C /* DDMainController.m */; };
-		2C1DBA661B8E08C30030E807 /* NSString+ResourcePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DBA651B8E08C30030E807 /* NSString+ResourcePath.m */; };
 		2C456F941B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C456F921B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld */; };
 		2C456F971B9AE789006EE3D3 /* DDCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C456F961B9AE789006EE3D3 /* DDCharacter.m */; };
 		2C4B9D8A1B8EF37000FE3A1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B9D891B8EF37000FE3A1D /* Default-568h@2x.png */; };
@@ -54,8 +53,6 @@
 		12B092A7EA6E9F36D441E234 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2C1727F61B8C24610088402C /* DDMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMainController.h; path = DDMainController/DDMainController.h; sourceTree = "<group>"; };
 		2C1727F71B8C24610088402C /* DDMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMainController.m; path = DDMainController/DDMainController.m; sourceTree = "<group>"; };
-		2C1DBA641B8E08C30030E807 /* NSString+ResourcePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+ResourcePath.h"; path = "NSString+ResourcePath/NSString+ResourcePath.h"; sourceTree = "<group>"; };
-		2C1DBA651B8E08C30030E807 /* NSString+ResourcePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+ResourcePath.m"; path = "NSString+ResourcePath/NSString+ResourcePath.m"; sourceTree = "<group>"; };
 		2C456F931B9AE24C006EE3D3 /* CharacterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CharacterModel.xcdatamodel; sourceTree = "<group>"; };
 		2C456F951B9AE789006EE3D3 /* DDCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCharacter.h; path = CoreData/DDCharacter.h; sourceTree = "<group>"; };
 		2C456F961B9AE789006EE3D3 /* DDCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCharacter.m; path = CoreData/DDCharacter.m; sourceTree = "<group>"; };
@@ -232,7 +229,6 @@
 		2C65E5DA1B88AA1500FBCF1E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				2CACA18B1B8DC44D008EA41D /* NSString+ResourcePath */,
 				2CACA1961B8DD956008EA41D /* NSString+StringFromDate */,
 				2C6E02F21B91BCC700B465A7 /* UIColor+AppColors */,
 				2C6E02F61B91BEF400B465A7 /* CAGradientLayer+Colors */,
@@ -406,15 +402,6 @@
 				2C997EAF1B8B321000EB2E74 /* DDAddCharacterController.m */,
 			);
 			name = AddCharacterController;
-			sourceTree = "<group>";
-		};
-		2CACA18B1B8DC44D008EA41D /* NSString+ResourcePath */ = {
-			isa = PBXGroup;
-			children = (
-				2C1DBA641B8E08C30030E807 /* NSString+ResourcePath.h */,
-				2C1DBA651B8E08C30030E807 /* NSString+ResourcePath.m */,
-			);
-			name = "NSString+ResourcePath";
 			sourceTree = "<group>";
 		};
 		2CACA1961B8DD956008EA41D /* NSString+StringFromDate */ = {
@@ -624,7 +611,6 @@
 				2C81743B1B92FACE005E1472 /* DDInputValidator.m in Sources */,
 				2C997EAC1B8B308E00EB2E74 /* DDContainerViewController.m in Sources */,
 				2C65E5CF1B889AD000FBCF1E /* DDCharacterTableCell.m in Sources */,
-				2C1DBA661B8E08C30030E807 /* NSString+ResourcePath.m in Sources */,
 				2CACA1951B8DD953008EA41D /* NSString+StringFromDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
