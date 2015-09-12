@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C1727F81B8C24610088402C /* DDMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1727F71B8C24610088402C /* DDMainController.m */; };
+		2C32A8C51BA46A2500221B0E /* NSString+Localized.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C32A8C41BA46A2500221B0E /* NSString+Localized.m */; };
 		2C456F941B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C456F921B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld */; };
 		2C456F971B9AE789006EE3D3 /* DDCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C456F961B9AE789006EE3D3 /* DDCharacter.m */; };
 		2C4B9D8A1B8EF37000FE3A1D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4B9D891B8EF37000FE3A1D /* Default-568h@2x.png */; };
@@ -52,6 +53,8 @@
 		12B092A7EA6E9F36D441E234 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2C1727F61B8C24610088402C /* DDMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMainController.h; path = DDMainController/DDMainController.h; sourceTree = "<group>"; };
 		2C1727F71B8C24610088402C /* DDMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMainController.m; path = DDMainController/DDMainController.m; sourceTree = "<group>"; };
+		2C32A8C31BA46A2500221B0E /* NSString+Localized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Localized.h"; path = "NSString+Localized/NSString+Localized.h"; sourceTree = "<group>"; };
+		2C32A8C41BA46A2500221B0E /* NSString+Localized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Localized.m"; path = "NSString+Localized/NSString+Localized.m"; sourceTree = "<group>"; };
 		2C456F931B9AE24C006EE3D3 /* CharacterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CharacterModel.xcdatamodel; sourceTree = "<group>"; };
 		2C456F951B9AE789006EE3D3 /* DDCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDCharacter.h; path = CoreData/DDCharacter.h; sourceTree = "<group>"; };
 		2C456F961B9AE789006EE3D3 /* DDCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDCharacter.m; path = CoreData/DDCharacter.m; sourceTree = "<group>"; };
@@ -139,6 +142,15 @@
 				2C1727F71B8C24610088402C /* DDMainController.m */,
 			);
 			name = MainController;
+			sourceTree = "<group>";
+		};
+		2C32A8C61BA46A2D00221B0E /* NSString+Localized */ = {
+			isa = PBXGroup;
+			children = (
+				2C32A8C31BA46A2500221B0E /* NSString+Localized.h */,
+				2C32A8C41BA46A2500221B0E /* NSString+Localized.m */,
+			);
+			name = "NSString+Localized";
 			sourceTree = "<group>";
 		};
 		2C456F911B9AE1B1006EE3D3 /* CoreDataModel */ = {
@@ -230,6 +242,7 @@
 				2C6E02F21B91BCC700B465A7 /* UIColor+AppColors */,
 				2C6E02F61B91BEF400B465A7 /* CAGradientLayer+Colors */,
 				2CC0D2551B91D26B005E1EDC /* UIAlertView+Convenience */,
+				2C32A8C61BA46A2D00221B0E /* NSString+Localized */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -587,6 +600,7 @@
 				2C990FB71B753F63001EAFA1 /* main.m in Sources */,
 				2C456F941B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld in Sources */,
 				2CC0D2541B91D265005E1EDC /* UIAlertView+Convenience.m in Sources */,
+				2C32A8C51BA46A2500221B0E /* NSString+Localized.m in Sources */,
 				2C65E5D81B889B2F00FBCF1E /* DDCharacterCollectionController.m in Sources */,
 				2C6E02F51B91BEF000B465A7 /* CAGradientLayer+Colors.m in Sources */,
 				2C456F971B9AE789006EE3D3 /* DDCharacter.m in Sources */,

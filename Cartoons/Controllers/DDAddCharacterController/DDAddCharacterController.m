@@ -54,8 +54,11 @@
     if ([DDInputValidator validateInputString:self.textField.text error:&error]) {
         
         NSString *name = ([self.textField.text isEqualToString:NSLocalizedString(@"New Character", nil)]) ? [NSString stringWithFormat: @"%@ (%@)", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
-        
-//        [DDDataManager addCharacter:[DDCharacterFactory modelWithName:name]];
+#warning Reload data
+        DDCharacter *item = [DDCharacter MR_createEntity];
+        item.name = name;
+        item.imageName = NoImage;
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         
         [self.navigationController popViewControllerAnimated:YES];
     }
