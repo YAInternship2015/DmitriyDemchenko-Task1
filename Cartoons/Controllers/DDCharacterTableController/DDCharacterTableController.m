@@ -10,7 +10,7 @@
 #import "DDCharacterTableCell.h"
 #import "DDDataSource.h"
 
-@interface DDCharacterTableController () <DDModelsDataSourceDelegate, NSFetchedResultsControllerDelegate>
+@interface DDCharacterTableController () <DDModelsDataSourceDelegate>
 
 @property (nonatomic, strong) DDDataSource *dataSource;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;

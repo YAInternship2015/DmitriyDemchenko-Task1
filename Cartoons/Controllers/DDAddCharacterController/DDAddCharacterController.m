@@ -45,7 +45,7 @@
     [self.textField resignFirstResponder];
 }
 
-#pragma mark - Actions
+#pragma mark - IBActions
 
 - (IBAction)saveItemAction:(id)sender {
     
