@@ -16,6 +16,8 @@
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
+@property (nonatomic, strong) NSMutableArray *items;
+
 @end
 
 
@@ -28,12 +30,14 @@
     self.dataSource = [[DDDataSource alloc] init];
     self.fetchedResultsController = [self.dataSource getFetchedResultsController];
     self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
+    self.items = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.fetchedResultsController.fetchedObjects count];
+    return [self.items count];
+//    return [self.fetchedResultsController.fetchedObjects count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -42,9 +46,15 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([DDCharacterTableCell class]) owner:nil options:nil];
         cell = nib[0];
     }
-    [cell configWithCartoons:self.fetchedResultsController.fetchedObjects[indexPath.row]];
+//    [cell configWithCartoons:self.fetchedResultsController.fetchedObjects[indexPath.row]];
+    [cell configWithCartoons:self.items[indexPath.row]];
     
     return cell;
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView reloadData];
+    [self viewDidLoad];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,17 +62,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-#warning Удаление не работает
-    if (editingStyle == UITableViewCellEditingStyleDelete){
-        [self.managedObjectContext deleteObject:self.fetchedResultsController.fetchedObjects[indexPath.row]];
-        
-        NSError *error = nil;
-        if(![self.managedObjectContext save:&error]){
-            NSLog(@"Can't delete! %@ %@", error, [error localizedDescription]);
-            return;
-        }
-        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//        [self.tableView reloadData];
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.tableView beginUpdates];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        DDCharacter *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [item MR_deleteEntity];
+        [self.items removeObjectAtIndex:indexPath.row];
+        [self.tableView endUpdates];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
     }
 }
 
