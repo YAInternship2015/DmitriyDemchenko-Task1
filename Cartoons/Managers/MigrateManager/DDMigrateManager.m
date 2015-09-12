@@ -20,11 +20,9 @@ static NSString *const ResourceType = @"plist";
     if (![DDCharacter MR_countOfEntities]) {
         NSArray *tempArray = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:ResourceName ofType:ResourceType]];
         [tempArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            
             DDCharacter *addItem = [DDCharacter MR_createEntity];
             addItem.name = obj[kName];
             addItem.imageName = obj[kImageName];
-            
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         }];
     }

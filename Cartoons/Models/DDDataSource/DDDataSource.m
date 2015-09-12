@@ -10,7 +10,6 @@
 
 @interface DDDataSource () <NSFetchedResultsControllerDelegate>
 
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @end
@@ -24,7 +23,6 @@
     self = [super init];
     if (self) {
         self.delegate = delegate;
-        self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
         [self loadContentWithCoreData];
     }
     return self;
@@ -32,15 +30,24 @@
 
 #pragma mark - DataSource methods
 
-- (NSFetchedResultsController *)getFetchedResultsController {
-    return self.fetchedResultsController;
-}
-
 - (void)loadContentWithCoreData {
     self.fetchedResultsController = [DDCharacter MR_fetchAllSortedBy:kName ascending:YES withPredicate:nil groupBy:nil delegate:self];
     [self.delegate dataWasChanged:self];
 }
 
+- (NSUInteger)countModels {
+    return [DDCharacter MR_countOfEntities];
+}
+
+- (DDCharacter *)modelForIndex:(NSInteger)index {
+    return self.fetchedResultsController.fetchedObjects[index];
+}
+
+- (void)removeModelAtIndex:(NSIndexPath *)indexPath {
+    DDCharacter *characterToRemove = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [characterToRemove MR_deleteEntity];
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+}
 
 #pragma mark - NSFetchedResultsControllerDelegate
 

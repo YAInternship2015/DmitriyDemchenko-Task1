@@ -58,7 +58,6 @@
         DDCharacter *addCharacter = [DDCharacter MR_createEntity];
         addCharacter.name = name;
         addCharacter.imageName = NoImage;
-        
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         
         [self.navigationController popViewControllerAnimated:YES];

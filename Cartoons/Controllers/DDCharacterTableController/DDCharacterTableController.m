@@ -13,7 +13,6 @@
 @interface DDCharacterTableController () <DDModelsDataSourceDelegate>
 
 @property (nonatomic, strong) DDDataSource *dataSource;
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @end
 
@@ -25,13 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = [[DDDataSource alloc] initWithDelegate:self];
-    self.fetchedResultsController = [self.dataSource getFetchedResultsController];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.fetchedResultsController.fetchedObjects count];
+    return [self.dataSource countModels];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -40,7 +38,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([DDCharacterTableCell class]) owner:nil options:nil];
         cell = nib[0];
     }
-    [cell configWithCartoons:self.fetchedResultsController.fetchedObjects[indexPath.row]];
+    [cell configWithCartoons:[self.dataSource modelForIndex:indexPath.row]];
     return cell;
 }
 
@@ -51,9 +49,7 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
 #warning Приложение падает при удалении с анимацией
-        DDCharacter *characterToRemove = [self.fetchedResultsController objectAtIndexPath:indexPath];
-                [characterToRemove MR_deleteEntity];
-        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        [self.dataSource removeModelAtIndex:indexPath];
 //        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
