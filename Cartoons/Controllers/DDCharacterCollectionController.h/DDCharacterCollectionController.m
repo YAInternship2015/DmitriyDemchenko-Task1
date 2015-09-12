@@ -14,10 +14,7 @@
 
 @property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *lpgr;
 @property (nonatomic, strong) DDDataSource *dataSource;
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
-
-@property (nonatomic, strong) NSMutableArray *items;
 
 @end
 
@@ -30,7 +27,6 @@
     [super viewDidLoad];
     self.dataSource = [[DDDataSource alloc] initWithDelegate:self];
     self.fetchedResultsController = [self.dataSource getFetchedResultsController];
-    self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
     [self.lpgr addTarget:self action:@selector(handleLongPress:)];
     self.lpgr.minimumPressDuration = 1.f;
 }
@@ -38,15 +34,12 @@
 #pragma mark UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-//    return [self.fetchedResultsController.fetchedObjects count];
-    return [self.items count];
+    return [self.fetchedResultsController.fetchedObjects count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DDCharacterCollectionCell *cell = (DDCharacterCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([DDCharacterCollectionCell class]) forIndexPath:indexPath];
-//    [cell configWithCartoons:self.fetchedResultsController.fetchedObjects[indexPath.row]];
-    [cell configWithCartoons:self.items[indexPath.row]];
-    
+    [cell configWithCartoons:self.fetchedResultsController.fetchedObjects[indexPath.row]];
     return cell;
 }
 
@@ -61,7 +54,6 @@
 #pragma mark - DDModelsDataSourceDelegate
 
 - (void)dataWasChanged:(DDDataSource *)dataSource {
-    self.items = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
     [self.collectionView reloadData];
 }
 
@@ -71,7 +63,6 @@
     if (lpgr.state == UIGestureRecognizerStateBegan) {
         CGPoint point = [lpgr locationInView:self.collectionView];
         NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
-        [self.items removeObjectAtIndex:indexPath.row];
         [self.collectionView performBatchUpdates: ^{
             [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
             DDCharacter *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
