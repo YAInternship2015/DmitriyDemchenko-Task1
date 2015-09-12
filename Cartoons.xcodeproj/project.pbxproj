@@ -24,7 +24,6 @@
 		2C65E5D91B889B2F00FBCF1E /* DDCharacterTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65E5D71B889B2F00FBCF1E /* DDCharacterTableController.m */; };
 		2C6E02F11B91BCBE00B465A7 /* UIColor+AppColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E02F01B91BCBE00B465A7 /* UIColor+AppColors.m */; };
 		2C6E02F51B91BEF000B465A7 /* CAGradientLayer+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6E02F41B91BEF000B465A7 /* CAGradientLayer+Colors.m */; };
-		2C78A3751B9A2B6A00281D7D /* DDCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C78A3741B9A2B6A00281D7D /* DDCoreDataManager.m */; };
 		2C7CAD061BA1E5BE00C43197 /* DDMigrateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CAD051BA1E5BE00C43197 /* DDMigrateManager.m */; };
 		2C81743B1B92FACE005E1472 /* DDInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81743A1B92FACE005E1472 /* DDInputValidator.m */; };
 		2C8174401B930072005E1472 /* DDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C81743F1B930072005E1472 /* DDAppDelegate.m */; };
@@ -79,8 +78,6 @@
 		2C6E02F01B91BCBE00B465A7 /* UIColor+AppColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+AppColors.m"; path = "UIColor+AppColors/UIColor+AppColors.m"; sourceTree = "<group>"; };
 		2C6E02F31B91BEF000B465A7 /* CAGradientLayer+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAGradientLayer+Colors.h"; path = "CAGradientLayer+Colors/CAGradientLayer+Colors.h"; sourceTree = "<group>"; };
 		2C6E02F41B91BEF000B465A7 /* CAGradientLayer+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CAGradientLayer+Colors.m"; path = "CAGradientLayer+Colors/CAGradientLayer+Colors.m"; sourceTree = "<group>"; };
-		2C78A3731B9A2B6A00281D7D /* DDCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCoreDataManager.h; sourceTree = "<group>"; };
-		2C78A3741B9A2B6A00281D7D /* DDCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCoreDataManager.m; sourceTree = "<group>"; };
 		2C7CAD041BA1E5BE00C43197 /* DDMigrateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMigrateManager.h; path = Managers/MigrateManager/DDMigrateManager.h; sourceTree = "<group>"; };
 		2C7CAD051BA1E5BE00C43197 /* DDMigrateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMigrateManager.m; path = Managers/MigrateManager/DDMigrateManager.m; sourceTree = "<group>"; };
 		2C8174391B92FACE005E1472 /* DDInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDInputValidator.h; path = Utils/DDInputValidator/DDInputValidator.h; sourceTree = "<group>"; };
@@ -255,16 +252,6 @@
 			name = "CAGradientLayer+Colors";
 			sourceTree = "<group>";
 		};
-		2C78A3721B9A2B6A00281D7D /* CoreDataManager */ = {
-			isa = PBXGroup;
-			children = (
-				2C78A3731B9A2B6A00281D7D /* DDCoreDataManager.h */,
-				2C78A3741B9A2B6A00281D7D /* DDCoreDataManager.m */,
-			);
-			name = CoreDataManager;
-			path = Utils/DDCoreDataManager;
-			sourceTree = "<group>";
-		};
 		2C7CAD071BA1E5C800C43197 /* MigrateManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				2C7CAD071BA1E5C800C43197 /* MigrateManager */,
-				2C78A3721B9A2B6A00281D7D /* CoreDataManager */,
 				2C81743C1B92FAD6005E1472 /* InputValidator */,
 			);
 			name = Utils;
@@ -593,7 +579,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C65E5C81B889A6900FBCF1E /* DDCharacterCollectionCell.m in Sources */,
-				2C78A3751B9A2B6A00281D7D /* DDCoreDataManager.m in Sources */,
 				2C81744D1B9300F1005E1472 /* DDDataSource.m in Sources */,
 				2C6E02F11B91BCBE00B465A7 /* UIColor+AppColors.m in Sources */,
 				2C7CAD061BA1E5BE00C43197 /* DDMigrateManager.m in Sources */,

@@ -27,7 +27,7 @@
     [super viewDidLoad];
     self.dataSource = [[DDDataSource alloc] init];
     self.fetchedResultsController = [self.dataSource getFetchedResultsController];
-    self.managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
+    self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
 }
 
 #pragma mark - UITableViewDataSource

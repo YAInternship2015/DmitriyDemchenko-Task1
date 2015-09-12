@@ -20,7 +20,7 @@ static NSString *const ResourceType = @"plist";
     
     NSError *error = nil;
     BOOL isEmpty;
-    NSManagedObjectContext *managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
+    NSManagedObjectContext *managedObjectContext = [NSManagedObjectContext MR_defaultContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:EntityCharacter inManagedObjectContext:managedObjectContext];
@@ -32,7 +32,8 @@ static NSString *const ResourceType = @"plist";
     if (isEmpty) {
         NSArray *tempArray = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:ResourceName ofType:ResourceType]];
         [tempArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            DDCharacter *addItem = [NSEntityDescription insertNewObjectForEntityForName:EntityCharacter inManagedObjectContext:managedObjectContext];
+            
+            DDCharacter *addItem = [DDCharacter MR_createEntity];
             
             addItem.name = obj[kName];
             addItem.imageName = obj[kImageName];

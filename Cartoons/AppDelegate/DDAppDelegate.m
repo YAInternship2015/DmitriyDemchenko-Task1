@@ -13,6 +13,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [MagicalRecord setupCoreDataStackWithStoreNamed:EntityCharacter];
     [DDMigrateManager migrateContentFromPlistToCoreData];
     [self appearanceConfigurator];
     return YES;

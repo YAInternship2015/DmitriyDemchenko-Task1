@@ -23,8 +23,9 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.managedObjectContext = [[DDCoreDataManager sharedManager] managedObjectContext];
-        self.fetchedResultsController = [self fetchedResultsController];
+        self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
+//        self.fetchedResultsController = [self fetchedResultsController];
+        self.fetchedResultsController = [DDCharacter MR_fetchAllSortedBy:kName ascending:YES withPredicate:nil groupBy:nil delegate:self];
     }
     return self;
 }
@@ -38,12 +39,13 @@
     }
     return self;
 }
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
 */
 #pragma mark - DataSource methods
+
+- (NSFetchedResultsController *)getFetchedResultsController {
+    return self.fetchedResultsController;
+}
+
 /*
 - (void)loadArrayWithPlist {
 
@@ -63,7 +65,6 @@
  [self loadArrayWithPlist];
  }
 
-*/
 - (NSFetchedResultsController *)getFetchedResultsController {
     
     if (_fetchedResultsController != nil) {
@@ -94,7 +95,6 @@
     }
     return _fetchedResultsController;
 }
-/*
 
 // NSFetchedResultsControllerDelegate methods
 

@@ -10,15 +10,22 @@
 #define CARTOONS_PrefixHeader_pch
 
 #import "Constants.h"
+
+
+#pragma mark - Categories
+
 #import "NSString+StringFromDate.h"
 #import "UIColor+AppColors.h"
 #import "CAGradientLayer+Colors.h"
 #import "UIAlertView+Convenience.h"
 
-#pragma mark - CoreDate and MagicalRecord
+
+#pragma mark - Model
 
 #import "DDCharacter.h"
-#import "DDCoreDataManager.h"
+
+
+#pragma mark - CoreDate and MagicalRecord
 
 #import <MagicalRecord/MagicalRecord.h>
 #import <MagicalRecord/MagicalRecord+ShorthandMethods.h>
