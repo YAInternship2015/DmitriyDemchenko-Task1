@@ -48,16 +48,4 @@
     [self loadContentWithCoreData];
 }
 
-
-
-/*
-- (NSUInteger)countModels {
-    return [self.charactersArray count];
-}
-
-- (NSDictionary *)modelForIndex:(NSInteger)index {
-    return self.charactersArray[index];
-}
-*/
-
 @end

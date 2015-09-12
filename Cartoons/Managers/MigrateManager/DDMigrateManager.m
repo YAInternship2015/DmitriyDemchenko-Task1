@@ -17,19 +17,7 @@ static NSString *const ResourceType = @"plist";
 
 
 + (void)migrateContentFromPlistToCoreData {
-    
-    NSError *error = nil;
-    BOOL isEmpty;
-    NSManagedObjectContext *managedObjectContext = [NSManagedObjectContext MR_defaultContext];
-    
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:EntityCharacter inManagedObjectContext:managedObjectContext];
-    [request setEntity:entity];
-    [request setFetchLimit:1];
-    
-    isEmpty = ([managedObjectContext countForFetchRequest:request error:&error] == 0) ? YES : NO;
-    
-    if (isEmpty) {
+    if (![DDCharacter MR_countOfEntities]) {
         NSArray *tempArray = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:ResourceName ofType:ResourceType]];
         [tempArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             
@@ -37,11 +25,7 @@ static NSString *const ResourceType = @"plist";
             addItem.name = obj[kName];
             addItem.imageName = obj[kImageName];
             
-            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError *error) {
-                if (!contextDidSave) {
-                    NSLog(@"%@", [NSString stringWithFormat:@"%@, %@", error, [error description]]);
-                }
-            }];
+            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         }];
     }
 }

@@ -59,11 +59,8 @@
         addCharacter.name = name;
         addCharacter.imageName = NoImage;
         
-        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError *error) {
-            if (!contextDidSave) {
-                NSLog(@"%@", [NSString stringWithFormat:@"%@, %@", error, [error description]]);
-            }
-        }];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
