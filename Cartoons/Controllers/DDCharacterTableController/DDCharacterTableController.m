@@ -27,10 +27,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSource = [[DDDataSource alloc] init];
+    self.dataSource = [[DDDataSource alloc] initWithDelegate:self];
     self.fetchedResultsController = [self.dataSource getFetchedResultsController];
     self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
-    self.items = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
+//    self.items = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
 }
 
 #pragma mark - UITableViewDataSource
@@ -52,11 +52,6 @@
     return cell;
 }
 
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    [self.tableView reloadData];
-    [self viewDidLoad];
-}
-
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
@@ -76,6 +71,7 @@
 #pragma mark - DDModelsDataSourceDelegate
 
 - (void)dataWasChanged:(DDDataSource *)dataSource {
+    self.items = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
     [self.tableView reloadData];
 }
 

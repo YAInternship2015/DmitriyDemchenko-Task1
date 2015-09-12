@@ -12,8 +12,6 @@
 
 static NSString *const RegularExpression = @"[\\w\\s]{3,100}";
 
-//#warning сильно жирное расширение NSString выходит. Все же валидатор надо вынести в отдельный класс-валидатор (категория удалена)
-
 + (BOOL)validateInputString:(NSString *)string error:(NSError **)error {
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES[cd] %@", RegularExpression];

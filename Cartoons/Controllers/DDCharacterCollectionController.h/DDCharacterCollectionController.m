@@ -10,7 +10,7 @@
 #import "DDCharacterCollectionCell.h"
 #import "DDDataSource.h"
 
-@interface DDCharacterCollectionController () <DDModelsDataSourceDelegate, NSFetchedResultsControllerDelegate>
+@interface DDCharacterCollectionController () <DDModelsDataSourceDelegate>
 
 @property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *lpgr;
 @property (nonatomic, strong) DDDataSource *dataSource;
@@ -28,10 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSource = [[DDDataSource alloc] init];
+    self.dataSource = [[DDDataSource alloc] initWithDelegate:self];
     self.fetchedResultsController = [self.dataSource getFetchedResultsController];
     self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
-    self.items = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
     [self.lpgr addTarget:self action:@selector(handleLongPress:)];
     self.lpgr.minimumPressDuration = 1.f;
 }
@@ -62,6 +61,7 @@
 #pragma mark - DDModelsDataSourceDelegate
 
 - (void)dataWasChanged:(DDDataSource *)dataSource {
+    self.items = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
     [self.collectionView reloadData];
 }
 
