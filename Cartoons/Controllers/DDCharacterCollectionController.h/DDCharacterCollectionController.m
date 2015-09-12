@@ -65,8 +65,8 @@
         NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
         [self.collectionView performBatchUpdates: ^{
             [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
-            DDCharacter *character = [self.fetchedResultsController objectAtIndexPath:indexPath];
-            [character MR_deleteEntity];
+            DDCharacter *characterToRemove = [self.fetchedResultsController objectAtIndexPath:indexPath];
+            [characterToRemove MR_deleteEntity];
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         } completion:nil];
     }

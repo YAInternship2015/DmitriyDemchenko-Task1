@@ -13,10 +13,9 @@
 @interface DDCharacterTableController () <DDModelsDataSourceDelegate>
 
 @property (nonatomic, strong) DDDataSource *dataSource;
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
-@property (nonatomic, strong) NSMutableArray *items;
+@property (nonatomic, strong) NSMutableArray *charactersArray;
 
 @end
 
@@ -29,14 +28,13 @@
     [super viewDidLoad];
     self.dataSource = [[DDDataSource alloc] initWithDelegate:self];
     self.fetchedResultsController = [self.dataSource getFetchedResultsController];
-    self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
-//    self.items = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
+    self.charactersArray = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.items count];
+    return [self.charactersArray count];
 //    return [self.fetchedResultsController.fetchedObjects count];
 }
 
@@ -47,7 +45,7 @@
         cell = nib[0];
     }
 //    [cell configWithCartoons:self.fetchedResultsController.fetchedObjects[indexPath.row]];
-    [cell configWithCartoons:self.items[indexPath.row]];
+    [cell configWithCartoons:self.charactersArray[indexPath.row]];
     
     return cell;
 }
@@ -60,9 +58,9 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.tableView beginUpdates];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        DDCharacter *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        [item MR_deleteEntity];
-        [self.items removeObjectAtIndex:indexPath.row];
+        DDCharacter *characterToRemove = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [characterToRemove MR_deleteEntity];
+        [self.charactersArray removeObjectAtIndex:indexPath.row];
         [self.tableView endUpdates];
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
     }
@@ -71,7 +69,7 @@
 #pragma mark - DDModelsDataSourceDelegate
 
 - (void)dataWasChanged:(DDDataSource *)dataSource {
-    self.items = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
+    self.charactersArray = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
     [self.tableView reloadData];
 }
 
