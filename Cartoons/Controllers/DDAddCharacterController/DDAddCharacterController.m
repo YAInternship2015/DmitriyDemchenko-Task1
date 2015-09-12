@@ -54,10 +54,11 @@
     if ([DDInputValidator validateInputString:self.textField.text error:&error]) {
         
         NSString *name = ([self.textField.text isEqualToString:[@"New Character" localized]]) ? [NSString stringWithFormat: @"%@ (%@)", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
-#warning Reload data
+        
         DDCharacter *addCharacter = [DDCharacter MR_createEntity];
         addCharacter.name = name;
         addCharacter.imageName = NoImage;
+        
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError *error) {
             if (!contextDidSave) {
                 NSLog(@"%@", [NSString stringWithFormat:@"%@, %@", error, [error description]]);

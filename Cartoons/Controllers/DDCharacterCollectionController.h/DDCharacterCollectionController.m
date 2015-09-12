@@ -12,7 +12,7 @@
 
 @interface DDCharacterCollectionController () <DDModelsDataSourceDelegate>
 
-@property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *lpgr;
+@property (nonatomic, strong) IBOutlet UILongPressGestureRecognizer *lpgr;
 @property (nonatomic, strong) DDDataSource *dataSource;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
@@ -65,8 +65,8 @@
         NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
         [self.collectionView performBatchUpdates: ^{
             [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
-            DDCharacter *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
-            [item MR_deleteEntity];
+            DDCharacter *character = [self.fetchedResultsController objectAtIndexPath:indexPath];
+            [character MR_deleteEntity];
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         } completion:nil];
     }
