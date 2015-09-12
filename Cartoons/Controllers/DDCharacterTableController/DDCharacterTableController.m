@@ -15,8 +15,6 @@
 @property (nonatomic, strong) DDDataSource *dataSource;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
-@property (nonatomic, strong) NSMutableArray *charactersArray;
-
 @end
 
 
@@ -28,14 +26,12 @@
     [super viewDidLoad];
     self.dataSource = [[DDDataSource alloc] initWithDelegate:self];
     self.fetchedResultsController = [self.dataSource getFetchedResultsController];
-    self.charactersArray = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.charactersArray count];
-//    return [self.fetchedResultsController.fetchedObjects count];
+    return [self.fetchedResultsController.fetchedObjects count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -44,9 +40,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([DDCharacterTableCell class]) owner:nil options:nil];
         cell = nib[0];
     }
-//    [cell configWithCartoons:self.fetchedResultsController.fetchedObjects[indexPath.row]];
-    [cell configWithCartoons:self.charactersArray[indexPath.row]];
-    
+    [cell configWithCartoons:self.fetchedResultsController.fetchedObjects[indexPath.row]];
     return cell;
 }
 
@@ -54,22 +48,23 @@
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.tableView beginUpdates];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+#warning Приложение падает при удалении с анимацией
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         DDCharacter *characterToRemove = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        [characterToRemove MR_deleteEntity];
-        [self.charactersArray removeObjectAtIndex:indexPath.row];
-        [self.tableView endUpdates];
-        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+                [characterToRemove MR_deleteEntity];
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError *error) {
+            if (!contextDidSave) {
+                NSLog(@"%@", [NSString stringWithFormat:@"%@, %@", error, [error description]]);
+            }
+        }];
     }
 }
 
 #pragma mark - DDModelsDataSourceDelegate
 
 - (void)dataWasChanged:(DDDataSource *)dataSource {
-    self.charactersArray = [[NSMutableArray alloc] initWithArray:[DDCharacter MR_findAll]];
     [self.tableView reloadData];
 }
 
