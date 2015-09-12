@@ -11,7 +11,7 @@
 @implementation UIAlertView (Convenience)
 
 + (void)showAlertWithMessage:(NSString *)message {
-    [[[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:NSLocalizedString(@"Dismiss", nil) otherButtonTitles:nil] show];
+    [[[UIAlertView alloc] initWithTitle:[@"Cartoons" localized] message:message delegate:nil cancelButtonTitle:[@"Dismiss" localized] otherButtonTitles:nil] show];
 }
 
 @end

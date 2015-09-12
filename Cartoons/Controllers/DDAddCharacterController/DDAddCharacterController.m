@@ -24,7 +24,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.topItem.title = @"";
     
-    self.textField.text = NSLocalizedString(@"New Character", nil);
+    self.textField.text = [@"New Character" localized];
     
     CAGradientLayer *gradient = [CAGradientLayer gradientForFrame:self.view.frame fromColor:[UIColor appYellowColor] toColor:[UIColor whiteColor]];
     [self.view.layer insertSublayer:gradient atIndex:0];
@@ -53,13 +53,16 @@
     
     if ([DDInputValidator validateInputString:self.textField.text error:&error]) {
         
-        NSString *name = ([self.textField.text isEqualToString:NSLocalizedString(@"New Character", nil)]) ? [NSString stringWithFormat: @"%@ (%@)", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
+        NSString *name = ([self.textField.text isEqualToString:[@"New Character" localized]]) ? [NSString stringWithFormat: @"%@ (%@)", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
 #warning Reload data
-        DDCharacter *item = [DDCharacter MR_createEntity];
-        item.name = name;
-        item.imageName = NoImage;
-        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
-        
+        DDCharacter *addCharacter = [DDCharacter MR_createEntity];
+        addCharacter.name = name;
+        addCharacter.imageName = NoImage;
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError *error) {
+            if (!contextDidSave) {
+                NSLog(@"%@", [NSString stringWithFormat:@"%@, %@", error, [error description]]);
+            }
+        }];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

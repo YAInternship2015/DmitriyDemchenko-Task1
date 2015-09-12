@@ -23,7 +23,7 @@ static NSString *const RegularExpression = @"[\\w\\s]{3,100}";
     NSInteger errorCode = 0;
     
     if (!success) {
-        errorMessage = NSLocalizedString(@"Name can't be less than 3 characters", nil);
+        errorMessage = [@"Name can't be less than 3 characters" localized];
         errorCode = 9000;
         
         NSDictionary *userInfo = @{NSLocalizedDescriptionKey : errorMessage};

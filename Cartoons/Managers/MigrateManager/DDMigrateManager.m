@@ -34,14 +34,14 @@ static NSString *const ResourceType = @"plist";
         [tempArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             
             DDCharacter *addItem = [DDCharacter MR_createEntity];
-            
             addItem.name = obj[kName];
             addItem.imageName = obj[kImageName];
             
-            NSError *error = nil;
-            if (![managedObjectContext save:&error]) {
-                NSLog(@"%@", [NSString stringWithFormat:@"%@, %@", error, [error description]]);
-            }
+            [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError *error) {
+                if (!contextDidSave) {
+                    NSLog(@"%@", [NSString stringWithFormat:@"%@, %@", error, [error description]]);
+                }
+            }];
         }];
     }
 }

@@ -14,7 +14,7 @@ static NSString *const DateFormatHHmmss = @"HH:mm:ss";
 
 + (NSString *)stringWithDate:(NSDate *)date {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:NSLocalizedString(@"en_US", nil)]];
+    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:[@"en_US" localized]]];
     [dateFormatter setDateFormat:DateFormatHHmmss];
     
     return [dateFormatter stringFromDate:date];
