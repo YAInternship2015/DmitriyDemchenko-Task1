@@ -80,12 +80,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Character" textAlignment="center" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zTZ-MM-zc7">
-                                <rect key="frame" x="0.0" y="56" width="600" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoImage" translatesAutoresizingMaskIntoConstraints="NO" id="Blg-vM-QZ4">
+                                <rect key="frame" x="0.0" y="40" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="33q-zf-65y"/>
+                                    <constraint firstAttribute="width" constant="80" id="4Hf-iQ-KAB"/>
+                                    <constraint firstAttribute="height" constant="80" id="ovy-WS-tyh"/>
                                 </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Character" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zTZ-MM-zc7">
+                                <rect key="frame" x="80" y="40" width="520" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardAppearance="light" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
@@ -96,9 +101,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zTZ-MM-zc7" secondAttribute="trailing" id="Gjs-f2-QP5"/>
-                            <constraint firstItem="zTZ-MM-zc7" firstAttribute="leading" secondItem="cK5-Oz-3a8" secondAttribute="leading" id="wNj-U2-ce9"/>
-                            <constraint firstItem="zTZ-MM-zc7" firstAttribute="top" secondItem="6OZ-gf-J4v" secondAttribute="bottom" constant="56" id="x6E-1D-nDY"/>
+                            <constraint firstItem="Blg-vM-QZ4" firstAttribute="top" secondItem="zTZ-MM-zc7" secondAttribute="top" id="NtT-41-87o"/>
+                            <constraint firstItem="Blg-vM-QZ4" firstAttribute="top" secondItem="6OZ-gf-J4v" secondAttribute="bottom" constant="40" id="O0T-kD-KP9"/>
+                            <constraint firstItem="Blg-vM-QZ4" firstAttribute="height" secondItem="zTZ-MM-zc7" secondAttribute="height" id="OLX-wi-8Dw"/>
+                            <constraint firstAttribute="trailing" secondItem="zTZ-MM-zc7" secondAttribute="trailing" id="Q8Q-Ys-wsh"/>
+                            <constraint firstItem="Blg-vM-QZ4" firstAttribute="leading" secondItem="cK5-Oz-3a8" secondAttribute="leading" id="Uhu-z0-mk7"/>
+                            <constraint firstItem="zTZ-MM-zc7" firstAttribute="leading" secondItem="Blg-vM-QZ4" secondAttribute="trailing" id="k4f-ID-kuZ"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Nfz-Qr-xZ8" appends="YES" id="dKM-aU-fvO"/>
@@ -228,5 +236,6 @@
     </scenes>
     <resources>
         <image name="CollectionViewIcon" width="32" height="32"/>
+        <image name="NoImage" width="64" height="64"/>
     </resources>
 </document>
