@@ -24,6 +24,7 @@ static NSString *const NoImage = @"NoImage";
 
 static NSString *const TableControllerID = @"DDCharacterTableController";
 static NSString *const CollectionControllerID = @"DDCharacterCollectionController";
+static NSString *const AddCharacterControllerID = @"DDAddCharacterController";
 
 
 #pragma mark - Notifications

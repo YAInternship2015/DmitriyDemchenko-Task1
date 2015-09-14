@@ -26,7 +26,7 @@
 #import "DDCharacter.h"
 
 
-#pragma mark - CoreDate and MagicalRecord
+#pragma mark - MagicalRecord
 
 #import <MagicalRecord/MagicalRecord.h>
 #import <MagicalRecord/MagicalRecord+ShorthandMethods.h>

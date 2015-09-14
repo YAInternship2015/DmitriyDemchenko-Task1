@@ -9,6 +9,7 @@
 #import "DDCharacterTableController.h"
 #import "DDCharacterTableCell.h"
 #import "DDDataSource.h"
+#import "DDAddCharacterController.h"
 
 @interface DDCharacterTableController () <DDModelsDataSourceDelegate>
 
@@ -54,6 +55,14 @@
         [self.dataSource removeModelAtIndex:indexPath];
         [tableView endUpdates];
     }
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DDAddCharacterController *controller = (DDAddCharacterController *)[self.storyboard instantiateViewControllerWithIdentifier:AddCharacterControllerID];
+    controller.editModel = [self.dataSource modelForIndex:indexPath.row];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - DDModelsDataSourceDelegate

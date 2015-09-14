@@ -8,7 +8,7 @@
         <scene sceneID="Y8M-dh-Ofw">
             <objects>
                 <tableViewController storyboardIdentifier="DDCharacterTableController" id="5eY-Pa-NF3" customClass="DDCharacterTableController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="izm-kp-qZd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="izm-kp-qZd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,7 +71,7 @@
         <!--Add Character Controller-->
         <scene sceneID="c9Q-eJ-tHY">
             <objects>
-                <viewController id="MVO-RX-mcz" customClass="DDAddCharacterController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DDAddCharacterController" id="MVO-RX-mcz" customClass="DDAddCharacterController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6OZ-gf-J4v"/>
                         <viewControllerLayoutGuide type="bottom" id="ea6-Nn-uoc"/>
@@ -121,6 +121,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageView" destination="Blg-vM-QZ4" id="jpI-LL-SRW"/>
                         <outlet property="tap" destination="Nfz-Qr-xZ8" id="eot-bU-fg8"/>
                         <outlet property="textField" destination="zTZ-MM-zc7" id="Gwr-oY-eOF"/>
                     </connections>

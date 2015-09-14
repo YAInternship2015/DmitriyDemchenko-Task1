@@ -33,7 +33,7 @@ static NSString *const EmbedContainer = @"EmbedContainer";
     }
 }
 
-#pragma mark - Actions
+#pragma mark - IBActions
 
 - (IBAction)changeView:(id)sender {
     [self.containerViewController swapViewControllers:self.navigationItem];

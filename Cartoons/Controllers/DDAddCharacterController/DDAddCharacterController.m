@@ -12,6 +12,7 @@
 @interface DDAddCharacterController () <UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *textField;
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) IBOutlet UITapGestureRecognizer *tap;
 
 @end
@@ -22,9 +23,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.navigationController.navigationBar.topItem.title = @"";
     
-    self.textField.text = [@"New Character" localized];
+    self.textField.text = (!self.editModel) ? [@"New Character" localized] : self.editModel.name;
+    self.imageView.image = (!self.editModel) ? [UIImage imageNamed:NoImage] : [UIImage imageNamed:self.editModel.imageName];
     
     CAGradientLayer *gradient = [CAGradientLayer gradientForFrame:self.view.frame fromColor:[UIColor appYellowColor] toColor:[UIColor whiteColor]];
     [self.view.layer insertSublayer:gradient atIndex:0];
@@ -55,11 +58,16 @@
         
         NSString *name = ([self.textField.text isEqualToString:[@"New Character" localized]]) ? [NSString stringWithFormat: @"%@ (%@)", self.textField.text, [NSString stringWithDate:[NSDate date]]]  : self.textField.text;
         
-        DDCharacter *addCharacter = [DDCharacter MR_createEntity];
-        addCharacter.name = name;
-        addCharacter.imageName = NoImage;
-        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        if (!self.editModel) {
+            DDCharacter *addCharacter = [DDCharacter MR_createEntity];
+            addCharacter.name = name;
+            addCharacter.imageName = NoImage;
+            
+        } else {
+            self.editModel.name = name;
+        }
         
+        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

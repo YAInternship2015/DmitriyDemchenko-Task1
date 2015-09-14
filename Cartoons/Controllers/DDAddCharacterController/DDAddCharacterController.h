@@ -10,4 +10,6 @@
 
 @interface DDAddCharacterController : UIViewController
 
+@property (nonatomic, strong) DDCharacter *editModel;
+
 @end
