@@ -42,7 +42,7 @@
     return cell;
 }
 
-#pragma mark UICollectionViewDelegate
+#pragma mark    
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     DDAddCharacterController *controller = (DDAddCharacterController *)[self.storyboard instantiateViewControllerWithIdentifier:AddCharacterControllerID];
@@ -54,6 +54,7 @@
     // setup sizes of cell: if (iPhone6+) ? 4 columns : 3 columns
     CGFloat widthOfScreen = CGRectGetWidth([UIScreen mainScreen].bounds);
     CGFloat widthOfCell = (widthOfScreen / 100 < 4) ? (widthOfScreen - 20.f) / 3 : (widthOfScreen - 25.f) / 4;
+    // height of cell = widthOfCell
     return CGSizeMake(widthOfCell, widthOfCell);
 }
 
