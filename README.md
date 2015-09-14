@@ -1,6 +1,6 @@
 # TASK #3
 
-# Подключена библиотека MagicalRecord с помощью менеджера-зависимостей CocoaPods
+Подключена библиотека MagicalRecord с помощью менеджера-зависимостей CocoaPods
 # Реализован менеджер миграции контента из .plist в CoreData
 # Добавлен суб-класс модели CoreData
 # Изменен DataSource с использованием NSFetchedResultsController
