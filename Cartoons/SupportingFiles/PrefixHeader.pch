@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  Cartoons
+//
+//  Created by Dmitriy Demchenko on 8/21/15.
+//  Copyright (c) 2015 Dmitriy Demchenko. All rights reserved.
+//
+
+#ifndef CARTOONS_PrefixHeader_pch
+#define CARTOONS_PrefixHeader_pch
+
+#import "Constants.h"
+
+
+#pragma mark - Categories
+
+#import "NSString+Localized.h"
+#import "NSString+StringFromDate.h"
+#import "UIColor+AppColors.h"
+#import "CAGradientLayer+Colors.h"
+#import "UIAlertView+Convenience.h"
+
+
+#pragma mark - Model
+
+#import "DDCharacter.h"
+
+
+#pragma mark - MagicalRecord
+
+#import <MagicalRecord/MagicalRecord.h>
+#import <MagicalRecord/MagicalRecord+ShorthandMethods.h>
+#import <MagicalRecord/MagicalRecordShorthandMethodAliases.h>
+
+#endif
