@@ -19,6 +19,7 @@
     return YES;
 }
 
+#warning Этот код следует вынести в отдельный класс, вроде AppearanceConfigurator
 - (void)appearanceConfigurator {
     [[UINavigationBar appearance] setBarTintColor:[UIColor appYellowColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor appPurpleColor]];

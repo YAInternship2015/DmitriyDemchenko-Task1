@@ -57,6 +57,7 @@
 - (void)swapCurrentControllerWith:(UIViewController *)controller {
     
     __block CGRect tempRect;
+#warning цифры 2000, 1.3f и т.д. надо объявить константами в рамках данного метода
     tempRect.origin.x = 0.f;
     tempRect.origin.y = 2000.f;
     tempRect.size = CGSizeMake(CGRectGetWidth(controller.view.frame), CGRectGetHeight(controller.view.frame));

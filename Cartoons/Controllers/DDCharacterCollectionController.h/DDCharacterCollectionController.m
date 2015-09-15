@@ -13,6 +13,7 @@
 
 @interface DDCharacterCollectionController () <DDModelsDataSourceDelegate>
 
+#warning не стоит сокращать имя свойства до lpgr, в obj-c не экономят на длине селекторов :)
 @property (nonatomic, strong) IBOutlet UILongPressGestureRecognizer *lpgr;
 @property (nonatomic, strong) DDDataSource *dataSource;
 
@@ -26,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = [[DDDataSource alloc] initWithDelegate:self];
+#warning селектор можно было задать в сториборде
     [self.lpgr addTarget:self action:@selector(handleLongPress:)];
     self.lpgr.minimumPressDuration = 1.f;
 }
@@ -52,6 +54,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     // setup sizes of cell: if (iPhone6+) ? 4 columns : 3 columns
+#warning цифры нужно объявить константами
     CGFloat widthOfScreen = CGRectGetWidth([UIScreen mainScreen].bounds);
     CGFloat widthOfCell = (widthOfScreen / 100 < 4) ? (widthOfScreen - 20.f) / 3 : (widthOfScreen - 25.f) / 4;
     // height of cell = widthOfCell
@@ -76,6 +79,7 @@
             cell.layer.transform = CATransform3DMakeRotation(M_PI,1.0,0.0,0.0);;
         } completion:^(BOOL finished) {
             [weakSelf.collectionView performBatchUpdates:^{
+#warning удаление в collectionView делать не нужно, вы только удаляете модель, и далее через NSFetchedResultsController изменения отображаются в UI
                 [weakSelf.collectionView deleteItemsAtIndexPaths:@[indexPath]];
                 [weakSelf.dataSource removeModelAtIndex:indexPath];
             } completion:nil];
