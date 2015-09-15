@@ -13,6 +13,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DDCharacterTableCell" rowHeight="81" id="ujg-e6-4dY" customClass="DDCharacterTableCell">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ujg-e6-4dY" id="Sar-5f-ecX">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKJ-re-YQI">
+                                            <rect key="frame" x="8" y="8" width="64" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="sYY-s8-jm2"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqt-U5-96E">
+                                            <rect key="frame" x="80" y="8" width="512" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="y0d-UT-PGa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="iKJ-re-YQI" firstAttribute="leading" secondItem="Sar-5f-ecX" secondAttribute="leading" constant="8" id="CUQ-Ns-bIi"/>
+                                        <constraint firstItem="iKJ-re-YQI" firstAttribute="top" secondItem="Sar-5f-ecX" secondAttribute="top" constant="8" id="ML6-nw-zSt"/>
+                                        <constraint firstAttribute="trailing" secondItem="zqt-U5-96E" secondAttribute="trailing" constant="8" id="apX-DM-kn7"/>
+                                        <constraint firstAttribute="bottom" secondItem="iKJ-re-YQI" secondAttribute="bottom" constant="8" id="c4T-wh-Bcu"/>
+                                        <constraint firstItem="iKJ-re-YQI" firstAttribute="top" secondItem="zqt-U5-96E" secondAttribute="top" id="gEQ-WI-u7d"/>
+                                        <constraint firstAttribute="centerY" secondItem="iKJ-re-YQI" secondAttribute="centerY" id="i54-wP-Rgb"/>
+                                        <constraint firstItem="zqt-U5-96E" firstAttribute="leading" secondItem="iKJ-re-YQI" secondAttribute="trailing" constant="8" id="iuO-LW-K84"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="characterImame" destination="iKJ-re-YQI" id="BtF-MR-w1A"/>
+                                    <outlet property="characterName" destination="zqt-U5-96E" id="8Me-WF-0SC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="5eY-Pa-NF3" id="G9d-nj-9VO"/>
                             <outlet property="delegate" destination="5eY-Pa-NF3" id="VHf-ns-LN8"/>
