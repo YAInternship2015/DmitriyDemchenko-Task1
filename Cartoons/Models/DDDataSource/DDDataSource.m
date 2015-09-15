@@ -23,15 +23,15 @@
     self = [super init];
     if (self) {
         self.delegate = delegate;
-        [self loadContentWithCoreData];
+        [self setupFetchedResultsController];
     }
     return self;
 }
 
 #pragma mark - DataSource methods
 
-#warning лушче setupFetchedResultsController
-- (void)loadContentWithCoreData {
+//#warning лушче setupFetchedResultsController
+- (void)setupFetchedResultsController {
     self.fetchedResultsController = [DDCharacter MR_fetchAllSortedBy:kName ascending:YES withPredicate:nil groupBy:nil delegate:self];
 #warning следующая трока не нужна
     [self.delegate dataWasChanged:self];
@@ -56,7 +56,7 @@
 #warning чтобы понять, какие изменения происходят в базе, необходимо реализовать метод - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath;
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    [self loadContentWithCoreData];
+    [self setupFetchedResultsController];
 }
 
 @end

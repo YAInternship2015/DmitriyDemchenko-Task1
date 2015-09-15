@@ -7,24 +7,21 @@
 //
 
 #import "DDAppDelegate.h"
+#import "DDAppearanceConfigurator.h"
 #import "DDMigrateManager.h"
 
 @implementation DDAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     [MagicalRecord setupCoreDataStackWithStoreNamed:EntityCharacter];
-    [DDMigrateManager migrateContentFromPlistToCoreData];
-    [self appearanceConfigurator];
+    [DDMigrateManager migrateContentFromPlistToCoreDataIfNeeded];
+    
+    [DDAppearanceConfigurator configurateNavigationBar];
+    [DDAppearanceConfigurator configurateTextField];
+    
     return YES;
-}
-
-#warning Этот код следует вынести в отдельный класс, вроде AppearanceConfigurator
-- (void)appearanceConfigurator {
-    [[UINavigationBar appearance] setBarTintColor:[UIColor appYellowColor]];
-    [[UINavigationBar appearance] setTintColor:[UIColor appPurpleColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor appPurpleColor]}];
-    [[UITextField appearance] setTintColor:[UIColor appPurpleColor]];
 }
 
 @end

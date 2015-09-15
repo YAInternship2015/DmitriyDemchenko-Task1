@@ -10,6 +10,6 @@
 
 @interface DDMigrateManager : NSObject
 
-+ (void)migrateContentFromPlistToCoreData;
++ (void)migrateContentFromPlistToCoreDataIfNeeded;
 
 @end

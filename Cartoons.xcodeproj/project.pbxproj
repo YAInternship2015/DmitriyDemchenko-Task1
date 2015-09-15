@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C1727F81B8C24610088402C /* DDMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1727F71B8C24610088402C /* DDMainController.m */; };
+		2C1AEF011BA85AC000379533 /* DDAppearanceConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1AEF001BA85AC000379533 /* DDAppearanceConfigurator.m */; };
 		2C32A8C51BA46A2500221B0E /* NSString+Localized.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C32A8C41BA46A2500221B0E /* NSString+Localized.m */; };
 		2C456F941B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C456F921B9AE24C006EE3D3 /* CharacterModel.xcdatamodeld */; };
 		2C456F971B9AE789006EE3D3 /* DDCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C456F961B9AE789006EE3D3 /* DDCharacter.m */; };
@@ -53,6 +54,8 @@
 		12B092A7EA6E9F36D441E234 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2C1727F61B8C24610088402C /* DDMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMainController.h; path = DDMainController/DDMainController.h; sourceTree = "<group>"; };
 		2C1727F71B8C24610088402C /* DDMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMainController.m; path = DDMainController/DDMainController.m; sourceTree = "<group>"; };
+		2C1AEEFF1BA85AC000379533 /* DDAppearanceConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAppearanceConfigurator.h; path = Cartoons/Utils/DDAppearanceConfigurator/DDAppearanceConfigurator.h; sourceTree = SOURCE_ROOT; };
+		2C1AEF001BA85AC000379533 /* DDAppearanceConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAppearanceConfigurator.m; path = Cartoons/Utils/DDAppearanceConfigurator/DDAppearanceConfigurator.m; sourceTree = SOURCE_ROOT; };
 		2C32A8C31BA46A2500221B0E /* NSString+Localized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Localized.h"; path = "NSString+Localized/NSString+Localized.h"; sourceTree = "<group>"; };
 		2C32A8C41BA46A2500221B0E /* NSString+Localized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Localized.m"; path = "NSString+Localized/NSString+Localized.m"; sourceTree = "<group>"; };
 		2C456F931B9AE24C006EE3D3 /* CharacterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CharacterModel.xcdatamodel; sourceTree = "<group>"; };
@@ -142,6 +145,16 @@
 				2C1727F71B8C24610088402C /* DDMainController.m */,
 			);
 			name = MainController;
+			sourceTree = "<group>";
+		};
+		2C1AEF021BA85AC600379533 /* AppearanceConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				2C1AEEFF1BA85AC000379533 /* DDAppearanceConfigurator.h */,
+				2C1AEF001BA85AC000379533 /* DDAppearanceConfigurator.m */,
+			);
+			name = AppearanceConfigurator;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		2C32A8C61BA46A2D00221B0E /* NSString+Localized */ = {
@@ -277,6 +290,7 @@
 		2C8174381B92FA94005E1472 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2C1AEF021BA85AC600379533 /* AppearanceConfigurator */,
 				2C7CAD071BA1E5C800C43197 /* MigrateManager */,
 				2C81743C1B92FAD6005E1472 /* InputValidator */,
 			);
@@ -593,6 +607,7 @@
 			files = (
 				2C65E5C81B889A6900FBCF1E /* DDCharacterCollectionCell.m in Sources */,
 				2C81744D1B9300F1005E1472 /* DDDataSource.m in Sources */,
+				2C1AEF011BA85AC000379533 /* DDAppearanceConfigurator.m in Sources */,
 				2C6E02F11B91BCBE00B465A7 /* UIColor+AppColors.m in Sources */,
 				2C7CAD061BA1E5BE00C43197 /* DDMigrateManager.m in Sources */,
 				2C8174401B930072005E1472 /* DDAppDelegate.m in Sources */,
