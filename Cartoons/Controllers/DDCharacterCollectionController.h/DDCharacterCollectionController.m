@@ -38,7 +38,7 @@ static CGFloat const CellSpasing = 5.f;
 //    self.lpgr.minimumPressDuration = 1.f;
 }
 
-#pragma mark UICollectionViewDataSource
+#pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [self.dataSource countModels];
@@ -50,7 +50,7 @@ static CGFloat const CellSpasing = 5.f;
     return cell;
 }
 
-#pragma mark    
+#pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     DDAddCharacterController *controller = (DDAddCharacterController *)[self.storyboard instantiateViewControllerWithIdentifier:AddCharacterControllerID];
