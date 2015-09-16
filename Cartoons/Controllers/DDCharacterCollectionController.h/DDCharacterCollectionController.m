@@ -94,7 +94,7 @@ static CGFloat const CellSpasing = 5.f;
             cell.layer.transform = CATransform3DMakeRotation(M_PI,1.0,0.0,0.0);;
         } completion:^(BOOL finished) {
             [weakSelf.collectionView performBatchUpdates:^{
-                [weakSelf.dataSource removeModelAtIndex:indexPath];
+                [weakSelf.dataSource removeModelAtIndex:indexPath]; 
             } completion:nil];
         }];
     }
