@@ -59,9 +59,8 @@ static CGFloat const AnimateDuration = 1.3f;
 - (void)swapCurrentControllerWith:(UIViewController *)controller {
     
     __block CGRect tempRect;
-//#warning цифры 2000, 1.3f и т.д. надо объявить константами в рамках данного метода
     tempRect.origin.x = 0.f;
-    tempRect.origin.y = CGRectGetHeight([UIScreen mainScreen].bounds) * 2;//2000.f;
+    tempRect.origin.y = CGRectGetHeight([UIScreen mainScreen].bounds) * 2;
     tempRect.size = CGSizeMake(CGRectGetWidth(controller.view.frame), CGRectGetHeight(controller.view.frame));
     
     [self.currentViewController willMoveToParentViewController:nil];
@@ -72,7 +71,7 @@ static CGFloat const AnimateDuration = 1.3f;
     [UIView animateWithDuration:AnimateDuration animations:^{
         
         controller.view.frame = self.currentViewController.view.frame;
-        tempRect.origin.y = -(CGRectGetHeight([UIScreen mainScreen].bounds) * 2);// -2000.f;
+        tempRect.origin.y = -(CGRectGetHeight([UIScreen mainScreen].bounds) * 2);
         self.currentViewController.view.frame = tempRect;
         
     } completion:^(BOOL finished) {

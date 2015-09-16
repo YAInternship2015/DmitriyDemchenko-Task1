@@ -27,7 +27,7 @@ static NSString *const RegularExpression = @"[\\w\\s]{3,100}";
         NSDictionary *userInfo = @{NSLocalizedDescriptionKey : errorMessage};
         
         if (error != NULL) {
-            *error = [NSError errorWithDomain:@"TestTask2" code:errorCode userInfo:userInfo];
+            *error = [NSError errorWithDomain:@"com.dmitriy.demchenko.Cartoons" code:errorCode userInfo:userInfo];
         }
         
         [UIAlertView showAlertWithMessage:userInfo[NSLocalizedDescriptionKey]];

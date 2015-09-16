@@ -21,8 +21,6 @@
 
 #pragma mark - Application colors
 
-//#warning цвета надо вынести в категорию UIColor
-
 + (UIColor *)appYellowColor {
     return [UIColor colorWithRed:204.f/255.f green:255.f/255.f blue:102.f/255.f alpha:1.f];
 }

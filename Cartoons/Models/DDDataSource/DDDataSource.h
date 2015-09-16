@@ -27,11 +27,7 @@
 
 @protocol DDModelsDataSourceDelegate <NSObject>
 
-//#warning чтобы появились анимации при изменении данных в базе, делегат необходимо изменить так, чтобы контроллер понимал, какое изменение происходит и что собственно необходимо анимировать. reloadData теперь недостаточно 
 @required
-//- (void)dataWasChanged:(DDDataSource *)dataSource;
-
 - (void)contentWasChangedAtIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath;
-
 
 @end

@@ -10,8 +10,6 @@
 
 @implementation DDAppearanceConfigurator
 
-//#warning Этот код следует вынести в отдельный класс, вроде AppearanceConfigurator
-
 + (void)configurateNavigationBar {
     [[UINavigationBar appearance] setBarTintColor:[UIColor appYellowColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor appPurpleColor]];
