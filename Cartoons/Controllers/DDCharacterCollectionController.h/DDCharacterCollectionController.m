@@ -54,7 +54,7 @@ static CGFloat const CellSpasing = 5.f;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-#warning вынести эту магию в UICollectionViewLayout
+#warning вынести эту магию в UICollectionViewLayout?
     // setup sizes of cell: if (iPhone6+) ? 4 columns : 3 columns
     
     CGFloat widthOfScreen = CGRectGetWidth([UIScreen mainScreen].bounds);
