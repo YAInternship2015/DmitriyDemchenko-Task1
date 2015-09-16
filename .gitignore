@@ -17,7 +17,12 @@ DerivedData
 *.ipa
 *.xcuserstate
 *.xcscmblueprint
-*.DS_Store
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
 
 #CocoaPod
 Pods/*
