@@ -41,7 +41,7 @@ static CGFloat const CellSpasing = 5.f;
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.dataSource countModels];
+    return [self.dataSource numberOfModels];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -74,8 +74,13 @@ static CGFloat const CellSpasing = 5.f;
 }
 
 #pragma mark - DDModelsDataSourceDelegate
-
+/*
 - (void)dataWasChanged:(DDDataSource *)dataSource {
+    [self.collectionView reloadData];
+}
+*/
+
+- (void)contentWasChangedAtIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
     [self.collectionView reloadData];
 }
 
@@ -114,13 +119,12 @@ static CGFloat const CellSpasing = 5.f;
             cell.layer.transform = CATransform3DMakeRotation(M_PI,1.0,0.0,0.0);;
         } completion:^(BOOL finished) {
             [weakSelf.collectionView performBatchUpdates:^{
-#warning удаление в collectionView делать не нужно, вы только удаляете модель, и далее через NSFetchedResultsController изменения отображаются в UI
-                [weakSelf.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+//#warning удаление в collectionView делать не нужно, вы только удаляете модель, и далее через NSFetchedResultsController изменения отображаются в UI
+//                [weakSelf.collectionView deleteItemsAtIndexPaths:@[indexPath]];
                 [weakSelf.dataSource removeModelAtIndex:indexPath];
             } completion:nil];
         }];
     }
-    
 }
 
 @end

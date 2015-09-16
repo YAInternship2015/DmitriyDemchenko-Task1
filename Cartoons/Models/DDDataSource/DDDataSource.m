@@ -33,11 +33,11 @@
 //#warning лушче setupFetchedResultsController
 - (void)setupFetchedResultsController {
     self.fetchedResultsController = [DDCharacter MR_fetchAllSortedBy:kName ascending:YES withPredicate:nil groupBy:nil delegate:self];
-#warning следующая трока не нужна
-    [self.delegate dataWasChanged:self];
+//#warning следующая трока не нужна
+//    [self.delegate dataWasChanged:self];
 }
 
-- (NSUInteger)countModels {
+- (NSUInteger)numberOfModels {
     return [DDCharacter MR_countOfEntities];
 }
 
@@ -47,16 +47,22 @@
 
 - (void)removeModelAtIndex:(NSIndexPath *)indexPath {
     DDCharacter *characterToRemove = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [characterToRemove MR_deleteEntity];
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    [characterToRemove MR_deleteEntityInContext:[NSManagedObjectContext MR_defaultContext]];
+//    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 #pragma mark - NSFetchedResultsControllerDelegate
 
-#warning чтобы понять, какие изменения происходят в базе, необходимо реализовать метод - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath;
-
+/*
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self setupFetchedResultsController];
+}
+*/
+
+//#warning чтобы понять, какие изменения происходят в базе, необходимо реализовать метод - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath;
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    [self.delegate contentWasChangedAtIndexPath:indexPath forChangeType:type newIndexPath:newIndexPath];
 }
 
 @end
