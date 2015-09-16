@@ -81,7 +81,16 @@ static CGFloat const CellSpasing = 5.f;
 */
 
 - (void)contentWasChangedAtIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
-    [self.collectionView reloadData];
+    
+    if (type == NSFetchedResultsChangeInsert) {
+        [self.collectionView insertItemsAtIndexPaths:@[newIndexPath]];
+    } else if (type == NSFetchedResultsChangeDelete) {
+        [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+    } else {
+        [self.collectionView reloadData];
+    }
+    
+//    [self.collectionView reloadData];
 }
 
 #pragma mark - Private methods
@@ -119,8 +128,8 @@ static CGFloat const CellSpasing = 5.f;
             cell.layer.transform = CATransform3DMakeRotation(M_PI,1.0,0.0,0.0);;
         } completion:^(BOOL finished) {
             [weakSelf.collectionView performBatchUpdates:^{
-//#warning удаление в collectionView делать не нужно, вы только удаляете модель, и далее через NSFetchedResultsController изменения отображаются в UI
-//                [weakSelf.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+#warning удаление в collectionView делать не нужно, вы только удаляете модель, и далее через NSFetchedResultsController изменения отображаются в UI
+                [weakSelf.collectionView deleteItemsAtIndexPaths:@[indexPath]];
                 [weakSelf.dataSource removeModelAtIndex:indexPath];
             } completion:nil];
         }];
