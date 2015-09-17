@@ -55,10 +55,11 @@ static CGFloat const CellSpasing = 5.f;
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 #warning вынести эту магию в UICollectionViewLayout?
+#warning по хорошему - да, надо вынести в лэйаут
     // setup sizes of cell: if (iPhone6+) ? 4 columns : 3 columns
     
     CGFloat widthOfScreen = CGRectGetWidth([UIScreen mainScreen].bounds);
-    
+#warning также здесь незачем вычислять два возможных значения и затем выбирать нужныое в if. Лучше сразу в if понять, какое надо вычислить, и вычислять только его
     CGFloat widthOfCellForIPhone6Plus = (widthOfScreen - (CellSpasing * (NumberOfColumnsForIPhone6Plus + 1))) / NumberOfColumnsForIPhone6Plus;
     
     CGFloat widthOfCellForIPhone4ToIPhone6 = (widthOfScreen - (CellSpasing * (NumberOfColumnsForIPhone4ToIPhone6 + 1))) / NumberOfColumnsForIPhone4ToIPhone6;
@@ -89,6 +90,7 @@ static CGFloat const CellSpasing = 5.f;
         CGPoint point = [sender locationInView:self.collectionView];
         NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
         __weak typeof(self) weakSelf = self;
+#warning длину анимации следует вынести в константы
         [UIView animateWithDuration:0.3f animations:^{
             UICollectionViewCell *cell = [weakSelf.collectionView cellForItemAtIndexPath:indexPath];
             cell.layer.transform = CATransform3DMakeRotation(M_PI,1.0,0.0,0.0);;
